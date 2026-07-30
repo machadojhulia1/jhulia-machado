@@ -861,6 +861,262 @@
 
     }
 
+/* ======================================
+   NOVA ÁREA DE CURSOS
+====================================== */
+
+.cursos-etiqueta {
+  display: table;
+  margin: 0 auto 15px;
+  padding: 8px 15px;
+
+  color: var(--verde-escuro);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  background: var(--verde-claro);
+  border-radius: 30px;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.curso-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: none;
+  min-height: 100%;
+  margin: 0;
+  padding: 30px;
+
+  background: #fffdf9;
+  border: 1px solid rgba(47, 104, 91, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 14px 35px rgba(43, 72, 63, 0.13);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.curso-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 21px 42px rgba(43, 72, 63, 0.18);
+}
+
+.curso-disponivel {
+  border: 2px solid rgba(47, 104, 91, 0.22);
+}
+
+.curso-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.curso-numero {
+  color: rgba(47, 104, 91, 0.35);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.curso-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 11px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  border-radius: 30px;
+}
+
+.curso-status.disponivel {
+  color: #ffffff;
+  background: var(--verde-principal);
+}
+
+.curso-status.espera {
+  color: #725c38;
+  background: #f3e4c6;
+}
+
+.curso-icone {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 19px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  background: var(--verde-claro);
+  border-radius: 18px;
+}
+
+.curso-card h3 {
+  min-height: 58px;
+  margin-bottom: 13px;
+
+  color: var(--verde-escuro);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.curso-card > p {
+  margin-bottom: 20px;
+
+  color: #63756e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.curso-beneficios {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.curso-beneficios li {
+  display: flex;
+  gap: 9px;
+
+  color: #52675f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.curso-beneficios li::before {
+  content: "✓";
+
+  display: flex;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+
+  background: var(--verde-principal);
+  border-radius: 50%;
+}
+
+.curso-botao {
+  width: 100%;
+  margin-top: auto;
+}
+
+.botao-espera {
+  color: var(--verde-escuro);
+  background: transparent;
+  border: 1px solid var(--verde-principal);
+  box-shadow: none;
+}
+
+.botao-espera:hover {
+  color: #ffffff;
+  background: var(--verde-principal);
+}
+
+.cursos-aviso {
+  display: flex;
+  max-width: 760px;
+  gap: 18px;
+  align-items: flex-start;
+
+  margin: 34px auto 0;
+  padding: 22px 25px;
+
+  background: #e4eee9;
+  border-radius: 18px;
+}
+
+.cursos-aviso > span {
+  font-size: 25px;
+}
+
+.cursos-aviso strong {
+  display: block;
+  margin-bottom: 6px;
+
+  color: var(--verde-escuro);
+  font-size: 16px;
+}
+
+.cursos-aviso p {
+  margin: 0;
+
+  color: #5c7068;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* Curso final centralizado quando houver 5 cartões */
+
+.curso-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  width: calc(50% - 12px);
+  justify-self: center;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 760px) {
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curso-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .curso-card {
+    padding: 25px 21px;
+  }
+
+  .curso-card h3 {
+    min-height: auto;
+    font-size: 22px;
+  }
+
+  .curso-topo {
+    align-items: flex-start;
+  }
+
+  .curso-status {
+    text-align: center;
+  }
+
+  .cursos-aviso {
+    padding: 20px;
+  }
+
+}
+
   </style>
 </head>
 
@@ -1121,46 +1377,308 @@
        CURSOS
   ======================================= -->
 
-  <section id="cursos" class="cursos">
+<section id="cursos" class="cursos">
 
-    <div class="secao-conteudo">
+  <div class="secao-conteudo">
 
-      <h2 class="secao-titulo">
-        Cursos
-      </h2>
+    <span class="cursos-etiqueta">
+      Formação em Audiologia
+    </span>
 
-      <p class="secao-subtitulo">
-        Conhecimento aplicado, conteúdos atualizados e experiências
-        direcionadas para profissionais e estudantes.
-      </p>
+    <h2 class="secao-titulo">
+      Cursos
+    </h2>
 
-      <div class="curso-card">
+    <p class="secao-subtitulo">
+      Cursos desenvolvidos para estudantes e profissionais que desejam
+      fortalecer o raciocínio clínico, aprimorar a prática e atuar com
+      mais segurança na avaliação audiológica.
+    </p>
+
+
+    <div class="cursos-grid">
+
+
+      <!-- CURSO 1 — DISPONÍVEL -->
+
+      <article class="curso-card curso-disponivel">
+
+        <div class="curso-topo">
+
+          <span class="curso-numero">01</span>
+
+          <span class="curso-status disponivel">
+            Inscrições disponíveis
+          </span>
+
+        </div>
+
+        <div class="curso-icone">
+          🎧
+        </div>
 
         <h3>
-          Audiometria Tonal e Vocal
+          Imersão em Audiometria Tonal e Vocal
         </h3>
 
         <p>
-          Curso presencial voltado ao desenvolvimento e aprimoramento
-          das habilidades práticas necessárias para a realização
-          da audiometria tonal e vocal.
+          Uma formação prática para compreender, realizar e interpretar
+          a audiometria tonal e vocal com mais segurança e confiança
+          na rotina clínica.
         </p>
 
+        <ul class="curso-beneficios">
+
+          <li>Fundamentos essenciais da avaliação auditiva</li>
+
+          <li>Execução prática dos principais procedimentos</li>
+
+          <li>Interpretação dos resultados clínicos</li>
+
+        </ul>
+
         <a
-          href="https://wa.me/5575981405190"
+          href="LINK-DA-INSCRICAO-DO-CURSO"
           target="_blank"
           rel="noopener noreferrer"
-          class="botao"
+          class="botao curso-botao"
         >
-          Quero saber mais
+          Quero me inscrever
           <span>→</span>
         </a>
+
+      </article>
+
+
+      <!-- CURSO 2 — LISTA DE ESPERA -->
+
+      <article class="curso-card">
+
+        <div class="curso-topo">
+
+          <span class="curso-numero">02</span>
+
+          <span class="curso-status espera">
+            Lista de espera
+          </span>
+
+        </div>
+
+        <div class="curso-icone">
+          🎯
+        </div>
+
+        <h3>
+          Mascaramento Clínico sem Complicações
+        </h3>
+
+        <p>
+          Um curso para compreender quando, por que e como aplicar
+          o mascaramento clínico, transformando um tema considerado
+          complexo em uma prática mais clara e segura.
+        </p>
+
+        <ul class="curso-beneficios">
+
+          <li>Critérios para utilização do mascaramento</li>
+
+          <li>Raciocínio clínico passo a passo</li>
+
+          <li>Aplicação em diferentes situações audiológicas</li>
+
+        </ul>
+
+        <a
+          href="LINK-DA-LISTA-DE-ESPERA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="botao curso-botao botao-espera"
+        >
+          Entrar na lista de espera
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- CURSO 3 — LISTA DE ESPERA -->
+
+      <article class="curso-card">
+
+        <div class="curso-topo">
+
+          <span class="curso-numero">03</span>
+
+          <span class="curso-status espera">
+            Lista de espera
+          </span>
+
+        </div>
+
+        <div class="curso-icone">
+          📊
+        </div>
+
+        <h3>
+          Interpretação de Audiogramas na Prática Clínica
+        </h3>
+
+        <p>
+          Desenvolva um olhar clínico mais seguro para analisar
+          audiogramas, reconhecer diferentes configurações e relacionar
+          os resultados aos possíveis achados audiológicos.
+        </p>
+
+        <ul class="curso-beneficios">
+
+          <li>Análise das configurações audiométricas</li>
+
+          <li>Classificação do tipo e grau da perda auditiva</li>
+
+          <li>Discussão de casos clínicos</li>
+
+        </ul>
+
+        <a
+          href="LINK-DA-LISTA-DE-ESPERA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="botao curso-botao botao-espera"
+        >
+          Entrar na lista de espera
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- CURSO 4 — LISTA DE ESPERA -->
+
+      <article class="curso-card">
+
+        <div class="curso-topo">
+
+          <span class="curso-numero">04</span>
+
+          <span class="curso-status espera">
+            Lista de espera
+          </span>
+
+        </div>
+
+        <div class="curso-icone">
+          📝
+        </div>
+
+        <h3>
+          Laudo Audiológico: da Avaliação à Escrita do Laudo
+        </h3>
+
+        <p>
+          Aprenda a organizar os achados da avaliação audiológica
+          e transformá-los em um laudo claro, objetivo, técnico e
+          adequado à prática profissional.
+        </p>
+
+        <ul class="curso-beneficios">
+
+          <li>Organização dos resultados da avaliação</li>
+
+          <li>Estrutura e linguagem do laudo audiológico</li>
+
+          <li>Exemplos e situações práticas</li>
+
+        </ul>
+
+        <a
+          href="LINK-DA-LISTA-DE-ESPERA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="botao curso-botao botao-espera"
+        >
+          Entrar na lista de espera
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- CURSO 5 — LISTA DE ESPERA -->
+
+      <article class="curso-card">
+
+        <div class="curso-topo">
+
+          <span class="curso-numero">05</span>
+
+          <span class="curso-status espera">
+            Lista de espera
+          </span>
+
+        </div>
+
+        <div class="curso-icone">
+          👂
+        </div>
+
+        <h3>
+          Imitanciometria na Prática
+        </h3>
+
+        <p>
+          Uma formação direcionada à realização e interpretação
+          da imitanciometria, relacionando os resultados à avaliação
+          audiológica e às decisões clínicas.
+        </p>
+
+        <ul class="curso-beneficios">
+
+          <li>Princípios da timpanometria</li>
+
+          <li>Pesquisa dos reflexos acústicos</li>
+
+          <li>Interpretação dos principais achados</li>
+
+        </ul>
+
+        <a
+          href="LINK-DA-LISTA-DE-ESPERA"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="botao curso-botao botao-espera"
+        >
+          Entrar na lista de espera
+          <span>→</span>
+        </a>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="cursos-aviso">
+
+      <span>💡</span>
+
+      <div>
+
+        <strong>
+          Não encontrou o curso que procura?
+        </strong>
+
+        <p>
+          Entre na lista de espera. Os próximos cursos serão organizados
+          também de acordo com os temas mais solicitados.
+        </p>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>  
 
 
   <!-- ======================================
