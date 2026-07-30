@@ -632,6 +632,219 @@ font-weight:bold;
     font-size: 12px;
   }
 }
+
+/* SEÇÃO PEQUENOS VIAJANTES */
+
+.pequenos-viajantes {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 20px;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #315f4d 0%,
+      #477762 55%,
+      #5d8b75 100%
+    );
+  color: #ffffff;
+}
+
+.pequenos-viajantes::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -90px;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
+.pequenos-viajantes::after {
+  content: "";
+  position: absolute;
+  bottom: -130px;
+  left: -110px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.pv-conteudo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 55px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Logo */
+
+.pv-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  padding: 18px;
+  background: #fffdf8;
+  border-radius: 34px;
+  box-shadow: 0 18px 45px rgba(20, 43, 34, 0.28);
+  transform: rotate(-2deg);
+}
+
+.pv-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 22px;
+}
+
+/* Textos */
+
+.pv-texto {
+  text-align: left;
+}
+
+.pv-etiqueta {
+  display: inline-block;
+  margin: 0 0 15px;
+  padding: 8px 14px;
+  color: #315f4d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #ead7b8;
+  border-radius: 30px;
+}
+
+.pv-texto h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.pv-texto h3 {
+  max-width: 650px;
+  margin: 18px 0 22px;
+  color: #f3dfbc;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.pv-texto p {
+  max-width: 680px;
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Botão */
+
+.pv-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 15px 24px;
+  color: #315f4d;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #fffdf8;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(20, 43, 34, 0.2);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.pv-botao span {
+  font-size: 22px;
+  transition: transform 0.25s ease;
+}
+
+.pv-botao:hover {
+  transform: translateY(-4px);
+  background: #f3dfbc;
+  box-shadow: 0 15px 30px rgba(20, 43, 34, 0.3);
+}
+
+.pv-botao:hover span {
+  transform: translateX(5px);
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 760px) {
+  .pequenos-viajantes {
+    padding: 70px 18px;
+  }
+
+  .pv-conteudo {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+
+  .pv-logo-container {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto;
+    padding: 14px;
+    border-radius: 28px;
+    transform: rotate(0);
+  }
+
+  .pv-logo {
+    border-radius: 18px;
+  }
+
+  .pv-texto {
+    text-align: center;
+  }
+
+  .pv-texto h2 {
+    font-size: 40px;
+  }
+
+  .pv-texto h3 {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 19px;
+  }
+
+  .pv-texto p {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 15px;
+  }
+
+  .pv-botao {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+    
 </style>
 
 </head>
@@ -810,34 +1023,55 @@ Meu propósito é cuidar, ensinar e contribuir para que cada pessoa alcance seu 
 
 
 
-<section id="projeto" class="destaque-pv">
+<section id="projeto" class="pequenos-viajantes">
 
-<div class="pv-home">
+  <div class="pv-conteudo">
 
-<span class="mini-logo">
-🌎
-</span>
+    <div class="pv-logo-container">
+      <img
+        src="logo-pequenos-viajantes.png"
+        alt="Logo do projeto Pequenos Viajantes"
+        class="pv-logo"
+      >
+    </div>
 
-<h2>
-Pequenos Viajantes
-</h2>
+    <div class="pv-texto">
 
-<h3>
-Cada encontro é uma nova viagem.
-</h3>
+      <p class="pv-etiqueta">
+        Um projeto para famílias
+      </p>
 
-<p>
-Um projeto criado para proporcionar experiências significativas, estimulando habilidades, interação e descobertas através de vivências planejadas.
-</p>
+      <h2>Pequenos Viajantes</h2>
 
+      <h3>
+        Descobertas, experiências e desenvolvimento em cada jornada.
+      </h3>
 
-<a href="pequenos-viajantes.html" class="btn-pv-home">
+      <p>
+        Um espaço pensado para famílias que desejam transformar passeios,
+        viagens e momentos do cotidiano em oportunidades de aprendizagem,
+        comunicação e conexão com as crianças.
+      </p>
 
-✈️ Conhecer o projeto
+      <p>
+        Com orientações práticas e propostas leves, o projeto ajuda os pais
+        a estimularem a linguagem, a autonomia e a participação infantil
+        de forma natural e significativa.
+      </p>
 
-</a>
+      <a
+        href="LINK-DA-PAGINA-PEQUENOS-VIAJANTES"
+        class="pv-botao"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Conhecer o projeto
+        <span>→</span>
+      </a>
 
-</div>
+    </div>
+
+  </div>
 
 </section>
 
