@@ -3,229 +3,1802 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>Pequenos Viajantes | Jhulia Machado</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<link rel="stylesheet" href="style.css">
+  <title>Pequenos Viajantes | Projeto de desenvolvimento infantil</title>
+
+  <meta
+    name="description"
+    content="Encontros temáticos para crianças, com experiências que estimulam comunicação, autonomia, criatividade e interação."
+  >
+
+  <style>
+
+    /* =====================================
+       CONFIGURAÇÕES GERAIS
+    ===================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --verde-escuro: #164f43;
+      --verde-principal: #236858;
+      --verde-medio: #4f897a;
+      --verde-claro: #e1f0eb;
+
+      --azul: #2f9fdb;
+      --azul-escuro: #1786c4;
+      --azul-claro: #dceff8;
+
+      --rosa: #f6678b;
+      --rosa-claro: #fde4eb;
+
+      --amarelo: #f4b526;
+      --amarelo-claro: #fcedbd;
+
+      --creme: #fbf7f0;
+      --creme-claro: #fffdf9;
+      --branco: #ffffff;
+
+      --texto: #253d36;
+      --texto-suave: #5b6e67;
+
+      --sombra: 0 15px 35px rgba(37, 61, 54, 0.12);
+    }
+
+    body {
+      overflow-x: hidden;
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--creme);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =====================================
+       MENU
+    ===================================== */
+
+    .cabecalho {
+      position: relative;
+      z-index: 20;
+      width: 100%;
+      background: rgba(255, 253, 249, 0.95);
+      border-bottom: 1px solid rgba(35, 104, 88, 0.07);
+    }
+
+    .menu {
+      display: flex;
+      min-height: 88px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .marca-simbolo {
+      display: flex;
+      width: 52px;
+      height: 52px;
+      align-items: center;
+      justify-content: center;
+      font-size: 29px;
+      background: var(--azul-claro);
+      border-radius: 50%;
+    }
+
+    .marca-texto {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .marca-texto strong {
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      line-height: 0.95;
+    }
+
+    .marca-texto small {
+      margin-top: 5px;
+      color: var(--amarelo);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .links-menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .links-menu a {
+      color: var(--texto);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .links-menu a:hover {
+      color: var(--azul);
+    }
+
+    .botao-menu {
+      padding: 13px 20px;
+      color: var(--branco) !important;
+      background: var(--verde-principal);
+      border-radius: 30px;
+      box-shadow: 0 8px 20px rgba(35, 104, 88, 0.18);
+    }
+
+    .botao-menu:hover {
+      background: var(--verde-escuro);
+    }
+
+
+    /* =====================================
+       TOPO PRINCIPAL
+    ===================================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 65px 0 75px;
+      background:
+        radial-gradient(
+          circle at 7% 10%,
+          rgba(47, 159, 219, 0.08),
+          transparent 27%
+        ),
+        radial-gradient(
+          circle at 92% 75%,
+          rgba(246, 103, 139, 0.07),
+          transparent 25%
+        ),
+        var(--creme-claro);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      left: -120px;
+      width: 320px;
+      height: 250px;
+      background: var(--verde-claro);
+      border-radius: 40% 60% 64% 36% / 47% 36% 64% 53%;
+      opacity: 0.8;
+    }
+
+    .hero-conteudo {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-texto {
+      text-align: left;
+    }
+
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 19px;
+      padding: 8px 14px;
+      color: #9b7450;
+      font-size: 12px;
+      font-weight: 600;
+      background: #fff9ef;
+      border: 1px solid #efd9b8;
+      border-radius: 30px;
+    }
+
+    .etiqueta span {
+      color: var(--rosa);
+    }
+
+    .hero h1 {
+      max-width: 570px;
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 5.5vw, 68px);
+      font-weight: 500;
+      line-height: 1.03;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 .destaque {
+      display: block;
+      margin-top: 8px;
+      color: var(--rosa);
+    }
+
+    .linha-hero {
+      width: 70px;
+      height: 3px;
+      margin: 23px 0;
+      background: var(--amarelo);
+      border-radius: 10px;
+    }
+
+    .hero-descricao {
+      max-width: 555px;
+      color: var(--texto-suave);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .botoes-hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 29px;
+    }
+
+
+    /* =====================================
+       BOTÕES
+    ===================================== */
+
+    .botao {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid transparent;
+      border-radius: 30px;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .botao:hover {
+      transform: translateY(-3px);
+    }
+
+    .botao-principal {
+      color: var(--branco);
+      background: var(--verde-principal);
+      box-shadow: 0 10px 24px rgba(35, 104, 88, 0.22);
+    }
+
+    .botao-principal:hover {
+      background: var(--verde-escuro);
+      box-shadow: 0 15px 30px rgba(35, 104, 88, 0.27);
+    }
+
+    .botao-secundario {
+      color: var(--verde-escuro);
+      background: var(--creme-claro);
+      border-color: var(--verde-principal);
+    }
+
+    .botao-secundario:hover {
+      background: var(--verde-claro);
+    }
+
+    .botao-azul {
+      color: var(--branco);
+      background: var(--azul-escuro);
+      box-shadow: 0 10px 22px rgba(23, 134, 196, 0.23);
+    }
+
+    .botao-azul:hover {
+      background: #1477ad;
+    }
+
+
+    /* =====================================
+       LOGO ORGÂNICA DO TOPO
+    ===================================== */
+
+    .hero-logo-area {
+      position: relative;
+      display: flex;
+      min-height: 510px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .forma-logo {
+      position: relative;
+      display: flex;
+      width: min(100%, 590px);
+      min-height: 450px;
+      align-items: center;
+      justify-content: center;
+      padding: 55px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(220, 239, 248, 0.95),
+          rgba(255, 255, 255, 0.95)
+        );
+      border-radius: 45% 55% 58% 42% / 47% 40% 60% 53%;
+      box-shadow: 0 22px 50px rgba(37, 61, 54, 0.11);
+    }
+
+    .forma-logo::before {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: 25px;
+      width: 115px;
+      height: 75px;
+      background: var(--amarelo-claro);
+      border-radius: 63% 37% 42% 58% / 45% 61% 39% 55%;
+      z-index: -1;
+    }
+
+    .forma-logo::after {
+      content: "";
+      position: absolute;
+      top: -12px;
+      right: 30px;
+      width: 105px;
+      height: 80px;
+      border-top: 2px dashed var(--rosa);
+      border-radius: 50%;
+      transform: rotate(10deg);
+    }
+
+    .logo-principal {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 420px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .aviao-decorativo {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      color: var(--rosa);
+      font-size: 35px;
+      transform: rotate(-15deg);
+    }
+
+    .localizacao-decorativa {
+      position: absolute;
+      right: 0;
+      bottom: 60px;
+      font-size: 41px;
+    }
+
+    .folha-decorativa {
+      position: absolute;
+      left: 15px;
+      bottom: 25px;
+      color: #a7d2c6;
+      font-size: 65px;
+      transform: rotate(-15deg);
+    }
+
+
+    /* =====================================
+       BENEFÍCIOS
+    ===================================== */
+
+    .beneficios {
+      padding: 0 0 75px;
+      background: var(--creme-claro);
+    }
+
+    .beneficios-caixa {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      padding: 32px 25px;
+      color: var(--branco);
+      background:
+        linear-gradient(
+          130deg,
+          var(--verde-escuro),
+          var(--verde-principal)
+        );
+      border-radius: 25px;
+      box-shadow: var(--sombra);
+    }
+
+    .beneficios-caixa > h2 {
+      grid-column: 1 / -1;
+      margin-bottom: 25px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .beneficio {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      padding: 10px 28px;
+    }
+
+    .beneficio + .beneficio {
+      border-left: 1px solid rgba(255, 255, 255, 0.27);
+    }
+
+    .beneficio-icone {
+      display: flex;
+      flex: 0 0 66px;
+      width: 66px;
+      height: 66px;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      border-radius: 50%;
+    }
+
+    .beneficio:nth-of-type(1) .beneficio-icone {
+      background: var(--azul);
+    }
+
+    .beneficio:nth-of-type(2) .beneficio-icone {
+      background: var(--rosa);
+    }
+
+    .beneficio:nth-of-type(3) .beneficio-icone {
+      background: var(--amarelo);
+    }
+
+    .beneficio h3 {
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    .beneficio p {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+
+    /* =====================================
+       TÍTULOS DAS SEÇÕES
+    ===================================== */
+
+    .titulo-secao {
+      margin-bottom: 13px;
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(35px, 4vw, 48px);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .subtitulo-secao {
+      max-width: 680px;
+      margin: 0 auto 42px;
+      color: var(--texto-suave);
+      font-size: 16px;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+
+    /* =====================================
+       COMO FUNCIONA
+    ===================================== */
+
+    .como-funciona {
+      position: relative;
+      padding: 80px 0;
+      background: #fffaf4;
+    }
+
+    .etapas {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 19px;
+    }
+
+    .etapa {
+      position: relative;
+      min-height: 315px;
+      padding: 26px 20px;
+      text-align: center;
+      background: var(--branco);
+      border: 1px solid rgba(37, 61, 54, 0.06);
+      border-radius: 21px;
+      box-shadow: var(--sombra);
+      transition: transform 0.25s ease;
+    }
+
+    .etapa:hover {
+      transform: translateY(-6px);
+    }
+
+    .numero-etapa {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 50%;
+    }
+
+    .etapa:nth-child(1) .numero-etapa,
+    .etapa:nth-child(4) .numero-etapa {
+      background: var(--azul-escuro);
+    }
+
+    .etapa:nth-child(2) .numero-etapa {
+      background: var(--rosa);
+    }
+
+    .etapa:nth-child(3) .numero-etapa {
+      background: var(--amarelo);
+    }
+
+    .etapa-icone {
+      display: flex;
+      width: 110px;
+      height: 110px;
+      margin: 20px auto 20px;
+      align-items: center;
+      justify-content: center;
+      font-size: 66px;
+      background: #f9f7f2;
+      border-radius: 50%;
+    }
+
+    .etapa h3 {
+      margin-bottom: 11px;
+      color: var(--texto);
+      font-size: 17px;
+    }
+
+    .etapa p {
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+
+    /* =====================================
+       PARA QUEM É E FAQ
+    ===================================== */
+
+    .informacoes {
+      padding: 80px 0;
+      background: var(--creme-claro);
+    }
+
+    .informacoes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .publico {
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+      padding: 36px;
+      background:
+        linear-gradient(
+          135deg,
+          #e8f5fa,
+          #f5fbfd
+        );
+      border-radius: 26px;
+      box-shadow: var(--sombra);
+    }
+
+    .publico h2,
+    .faq h2 {
+      margin-bottom: 18px;
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    .publico > p {
+      max-width: 430px;
+      color: var(--texto-suave);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .lista-publico {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 14px;
+      max-width: 480px;
+      margin-top: 25px;
+      padding-bottom: 235px;
+      list-style: none;
+    }
+
+    .lista-publico li {
+      display: flex;
+      gap: 10px;
+      color: var(--texto);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .lista-publico li::before {
+      content: "✓";
+      display: flex;
+      flex: 0 0 21px;
+      width: 21px;
+      height: 21px;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--azul);
+      border-radius: 50%;
+    }
+
+    .foto-criancas {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 74%;
+      max-height: 285px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 45% 0 0 0;
+    }
+
+    .faq {
+      padding: 36px;
+      background: #fffaf4;
+      border-radius: 26px;
+    }
+
+    .perguntas {
+      display: grid;
+      gap: 10px;
+    }
+
+    .pergunta {
+      overflow: hidden;
+      background: var(--branco);
+      border: 1px solid rgba(37, 61, 54, 0.07);
+      border-radius: 13px;
+      box-shadow: 0 6px 16px rgba(37, 61, 54, 0.06);
+    }
+
+    .pergunta-botao {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 17px 18px;
+      color: var(--texto);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: left;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .pergunta-botao span {
+      color: var(--verde-principal);
+      font-size: 20px;
+      transition: transform 0.25s ease;
+    }
+
+    .pergunta.aberta .pergunta-botao span {
+      transform: rotate(45deg);
+    }
+
+    .resposta {
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.35s ease,
+        padding 0.35s ease;
+    }
+
+    .resposta p {
+      padding: 0 18px 18px;
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .pergunta.aberta .resposta {
+      max-height: 220px;
+    }
+
+
+    /* =====================================
+       CHAMADA FINAL
+    ===================================== */
+
+    .chamada-final {
+      padding: 0 0 75px;
+      background: var(--creme-claro);
+    }
+
+    .chamada-caixa {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 27px;
+      align-items: center;
+      padding: 28px 38px;
+      background:
+        linear-gradient(
+          100deg,
+          #f7fcff,
+          #fffdf9
+        );
+      border: 1px dashed var(--azul);
+      border-radius: 23px;
+    }
+
+    .chamada-logo {
+      display: flex;
+      width: 92px;
+      height: 92px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 7px;
+      background: var(--branco);
+      border: 1px solid var(--azul-claro);
+      border-radius: 50%;
+    }
+
+    .chamada-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .chamada-texto h2 {
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 31px;
+      font-weight: 500;
+    }
+
+    .chamada-texto h2 span {
+      color: var(--rosa);
+    }
+
+    .chamada-texto p {
+      margin-top: 7px;
+      color: var(--texto-suave);
+      font-size: 14px;
+    }
+
+
+    /* =====================================
+       RODAPÉ
+    ===================================== */
+
+    .rodape {
+      padding: 48px 0 25px;
+      color: var(--branco);
+      background:
+        linear-gradient(
+          125deg,
+          #12473d,
+          #1e6253
+        );
+    }
+
+    .rodape-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.8fr 1.35fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .rodape-marca {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .rodape-logo {
+      width: 88px;
+      height: 88px;
+      padding: 5px;
+      object-fit: contain;
+      background: var(--branco);
+      border-radius: 50%;
+      mix-blend-mode: normal;
+    }
+
+    .rodape-marca h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .rodape-marca span {
+      display: block;
+      margin-top: 6px;
+      color: var(--amarelo);
+      font-size: 12px;
+    }
+
+    .rodape-info,
+    .rodape-frase {
+      padding-left: 35px;
+      border-left: 1px solid rgba(255, 255, 255, 0.24);
+    }
+
+    .rodape-info p,
+    .rodape-frase p {
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .redes {
+      display: flex;
+      gap: 11px;
+      margin-top: 15px;
+    }
+
+    .redes a {
+      display: flex;
+      width: 36px;
+      height: 36px;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      font-size: 17px;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 50%;
+    }
+
+    .credito {
+      margin-top: 35px;
+      padding-top: 20px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 12px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+
+    /* =====================================
+       RESPONSIVIDADE
+    ===================================== */
+
+    @media (max-width: 980px) {
+
+      .links-menu a:not(.botao-menu) {
+        display: none;
+      }
+
+      .hero-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .forma-logo {
+        min-height: 390px;
+        padding: 35px;
+      }
+
+      .beneficio {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .etapas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rodape-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .rodape-frase {
+        grid-column: 1 / -1;
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(100% - 30px, 1160px);
+      }
+
+      .menu {
+        min-height: 75px;
+      }
+
+      .marca-simbolo {
+        width: 43px;
+        height: 43px;
+        font-size: 24px;
+      }
+
+      .marca-texto strong {
+        font-size: 18px;
+      }
+
+      .botao-menu {
+        padding: 11px 15px;
+        font-size: 12px !important;
+      }
+
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      .hero-conteudo {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-texto {
+        text-align: center;
+      }
+
+      .etiqueta {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .linha-hero {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero-descricao {
+        margin: 0 auto;
+      }
+
+      .botoes-hero {
+        justify-content: center;
+      }
+
+      .hero-logo-area {
+        min-height: auto;
+        margin-top: 20px;
+      }
+
+      .forma-logo {
+        width: 100%;
+        min-height: 360px;
+        padding: 34px;
+      }
+
+      .beneficios {
+        padding-top: 25px;
+      }
+
+      .beneficios-caixa {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .beneficio {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .beneficio + .beneficio {
+        padding-top: 22px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 0;
+      }
+
+      .etapas {
+        grid-template-columns: 1fr;
+      }
+
+      .informacoes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .publico {
+        min-height: 560px;
+        padding: 28px 24px;
+      }
+
+      .publico h2,
+      .faq h2 {
+        font-size: 32px;
+      }
+
+      .foto-criancas {
+        width: 100%;
+        max-height: 260px;
+        border-radius: 45% 45% 0 0;
+      }
+
+      .faq {
+        padding: 28px 20px;
+      }
+
+      .chamada-caixa {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 29px 22px;
+      }
+
+      .rodape-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rodape-info,
+      .rodape-frase {
+        padding-top: 23px;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: 0;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .marca-texto {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .botoes-hero {
+        flex-direction: column;
+      }
+
+      .botao {
+        width: 100%;
+      }
+
+      .forma-logo {
+        min-height: 305px;
+        padding: 25px;
+      }
+
+      .beneficios-caixa {
+        padding: 27px 18px;
+      }
+
+      .beneficio {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+
+      .etapa {
+        min-height: auto;
+      }
+
+      .chamada-texto h2 {
+        font-size: 27px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
-<style>
-
-.pv-capa{
-
-background:#79D4C5;
-
-padding:100px 10%;
-
-text-align:center;
-
-color:white;
-
-}
-
-
-.pv-conteudo{
-
-max-width:800px;
-
-margin:auto;
-
-}
-
-
-.pv-emoji{
-
-font-size:55px;
-
-}
-
-
-.pv-capa h1{
-
-font-size:50px;
-
-margin:20px 0;
-
-}
-
-
-.pv-capa h2{
-
-font-size:28px;
-
-font-weight:500;
-
-}
-
-
-.pv-capa p{
-
-font-size:18px;
-
-line-height:1.7;
-
-margin:30px auto;
-
-}
-
-
-.btn-pv{
-
-display:inline-block;
-
-background:white;
-
-color:#2F7F73;
-
-padding:16px 35px;
-
-border-radius:30px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-margin-top:20px;
-
-}
-
-
-.pv-experiencia{
-
-padding:80px 10%;
-
-text-align:center;
-
-background:#faf7f2;
-
-}
-
-
-.pv-cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
-gap:25px;
-
-margin:50px 0;
-
-}
-
-
-.pv-cards div{
-
-background:white;
-
-padding:35px;
-
-border-radius:25px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-
-}
-
-
-.pv-cards span{
-
-font-size:40px;
-
-}
-
-
-.pv-cards h3{
-
-color:#2F7F73;
-
-}
-.logo-pv{
-
-width:180px;
-
-height:auto;
-
-margin-bottom:30px;
-
-filter: drop-shadow(0 8px 15px rgba(0,0,0,.15));
-
-}
-
-</style>
 
 <body>
 
-<section class="pv-capa">
 
-<div class="pv-conteudo">
+  <!-- =====================================
+       MENU
+  ====================================== -->
 
-<img src="WhatsApp Image 2026-07-30 at 09.34.21.jpeg" class="logo-pv" alt="Logo Pequenos Viajantes">
+  <header class="cabecalho">
 
-<h1>
-Pequenos Viajantes
-</h1>
+    <div class="container menu">
 
-<h2>
-Cada encontro é uma nova viagem.
-</h2>
+      <a
+        href="index.html"
+        class="marca"
+        aria-label="Voltar para a página de Jhulia Machado"
+      >
 
-<p>
-Um projeto criado para proporcionar experiências significativas, estimulando habilidades importantes do desenvolvimento infantil através de interação, descobertas e vivências planejadas.
-</p>
+        <span class="marca-simbolo">🎈</span>
 
-<a href="#experiencia" class="btn-pv">
-✈️ Conhecer o projeto
-</a>
+        <span class="marca-texto">
+          <strong>Pequenos<br>Viajantes</strong>
+          <small>Projeto</small>
+        </span>
 
-</div>
-
-</section>
+      </a>
 
 
-<section id="experiencia" class="pv-experiencia">
+      <nav class="links-menu">
 
-<h2>
-Uma experiência pensada para desenvolver
-</h2>
+        <a href="#projeto">O projeto</a>
 
+        <a href="#como-funciona">Como funciona</a>
 
-<div class="pv-cards">
+        <a href="#para-quem">Para quem é</a>
 
-<div>
-<span>🗣️</span>
-<h3>Comunicação</h3>
-</div>
+        <a href="#duvidas">Dúvidas frequentes</a>
 
+        <a
+          href="LINK-DO-FORMULARIO"
+          class="botao-menu"
+        >
+          ♥ Quero me inscrever
+        </a>
 
-<div>
-<span>🤝</span>
-<h3>Interação</h3>
-</div>
+      </nav>
 
+    </div>
 
-<div>
-<span>🌱</span>
-<h3>Autonomia</h3>
-</div>
+  </header>
 
 
-<div>
-<span>🎨</span>
-<h3>Criatividade</h3>
-</div>
+  <!-- =====================================
+       TOPO
+  ====================================== -->
 
-</div>
+  <main>
+
+    <section id="projeto" class="hero">
+
+      <div class="container hero-conteudo">
+
+        <div class="hero-texto">
+
+          <p class="etiqueta">
+            <span>♥</span>
+            Um projeto de Jhulia Machado
+          </p>
+
+          <h1>
+            Cada encontro é uma nova viagem.
+
+            <span class="destaque">
+              Cada descoberta pode se transformar em desenvolvimento.
+            </span>
+          </h1>
+
+          <div class="linha-hero"></div>
+
+          <p class="hero-descricao">
+            O Pequenos Viajantes é um projeto de encontros temáticos
+            criado para estimular comunicação, interação, autonomia e
+            criatividade de forma leve, planejada e significativa.
+          </p>
+
+          <div class="botoes-hero">
+
+            <a
+              href="LINK-DO-FORMULARIO"
+              class="botao botao-principal"
+            >
+              ★ Quero garantir uma vaga
+            </a>
+
+            <a
+              href="https://wa.me/5575981405190"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="botao botao-secundario"
+            >
+              ◉ Falar pelo WhatsApp
+            </a>
+
+          </div>
+
+        </div>
 
 
-<a href="#" class="btn-pv">
-✈️ Quero inscrever meu filho
-</a>
+        <div class="hero-logo-area">
+
+          <div class="forma-logo">
+
+            <span class="aviao-decorativo">✈</span>
+
+            <img
+              src="logo-pequenos-viajantes.jpeg"
+              alt="Logo do projeto Pequenos Viajantes"
+              class="logo-principal"
+            >
+
+            <span class="localizacao-decorativa">📍</span>
+
+            <span class="folha-decorativa">❧</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
 
-</section>
+    <!-- =====================================
+         BENEFÍCIOS
+    ====================================== -->
+
+    <section class="beneficios">
+
+      <div class="container">
+
+        <div class="beneficios-caixa">
+
+          <h2>
+            O que trabalhamos por meio das experiências
+          </h2>
+
+
+          <article class="beneficio">
+
+            <span class="beneficio-icone">💬</span>
+
+            <div>
+
+              <h3>Comunicação</h3>
+
+              <p>
+                Estimulamos a linguagem de forma natural,
+                significativa e contextualizada.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="beneficio">
+
+            <span class="beneficio-icone">♡</span>
+
+            <div>
+
+              <h3>Autonomia</h3>
+
+              <p>
+                Propostas que incentivam independência,
+                participação e confiança.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="beneficio">
+
+            <span class="beneficio-icone">☆</span>
+
+            <div>
+
+              <h3>Criatividade</h3>
+
+              <p>
+                Atividades que despertam imaginação,
+                curiosidade e novas formas de expressão.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         COMO FUNCIONA
+    ====================================== -->
+
+    <section id="como-funciona" class="como-funciona">
+
+      <div class="container">
+
+        <h2 class="titulo-secao">
+          Como funcionam os encontros
+        </h2>
+
+        <p class="subtitulo-secao">
+          Cada etapa é cuidadosamente planejada para oferecer
+          experiências adequadas às necessidades e ao momento
+          de desenvolvimento das crianças.
+        </p>
+
+
+        <div class="etapas">
+
+          <article class="etapa">
+
+            <span class="numero-etapa">1</span>
+
+            <span class="etapa-icone">🎈</span>
+
+            <h3>Escolha da turma</h3>
+
+            <p>
+              As turmas são organizadas por faixa etária,
+              favorecendo encontros e experiências mais adequados.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="numero-etapa">2</span>
+
+            <span class="etapa-icone">🌍</span>
+
+            <h3>Encontros temáticos</h3>
+
+            <p>
+              Cada encontro representa uma nova viagem,
+              com atividades planejadas e envolventes.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="numero-etapa">3</span>
+
+            <span class="etapa-icone">📷</span>
+
+            <h3>Descobertas e estímulos</h3>
+
+            <p>
+              Trabalhamos habilidades de maneira lúdica,
+              respeitando o ritmo e a participação de cada criança.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="numero-etapa">4</span>
+
+            <span class="etapa-icone">🧳</span>
+
+            <h3>Acompanhamento</h3>
+
+            <p>
+              Ao final, as famílias recebem informações sobre
+              a experiência e orientações importantes.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         PARA QUEM É E DÚVIDAS
+    ====================================== -->
+
+    <section class="informacoes">
+
+      <div class="container informacoes-grid">
+
+
+        <article id="para-quem" class="publico">
+
+          <h2>Para quem é</h2>
+
+          <p>
+            Para crianças que podem se beneficiar de experiências
+            de comunicação, interação e desenvolvimento em grupo.
+          </p>
+
+          <ul class="lista-publico">
+
+            <li>
+              Crianças que estão iniciando ou ampliando suas
+              habilidades de comunicação.
+            </li>
+
+            <li>
+              Crianças que se beneficiam de oportunidades de
+              interação, participação e socialização.
+            </li>
+
+            <li>
+              Famílias que procuram experiências planejadas,
+              acolhedoras e significativas para seus filhos.
+            </li>
+
+          </ul>
+
+          <img
+            src="criancas-brincando.jpeg"
+            alt="Duas crianças brincando juntas"
+            class="foto-criancas"
+          >
+
+        </article>
+
+
+        <article id="duvidas" class="faq">
+
+          <h2>Dúvidas frequentes</h2>
+
+          <div class="perguntas">
+
+
+            <div class="pergunta">
+
+              <button
+                type="button"
+                class="pergunta-botao"
+              >
+                Qual é a faixa etária das crianças?
+                <span>+</span>
+              </button>
+
+              <div class="resposta">
+
+                <p>
+                  As turmas são organizadas de acordo com a faixa
+                  etária e o perfil das crianças. As informações
+                  sobre as próximas turmas serão divulgadas durante
+                  o período de inscrição.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="pergunta">
+
+              <button
+                type="button"
+                class="pergunta-botao"
+              >
+                Os pais participam dos encontros?
+                <span>+</span>
+              </button>
+
+              <div class="resposta">
+
+                <p>
+                  Os encontros são momentos destinados às crianças.
+                  Os responsáveis levam e buscam seus filhos e recebem
+                  as informações necessárias da equipe.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="pergunta">
+
+              <button
+                type="button"
+                class="pergunta-botao"
+              >
+                Como são as atividades?
+                <span>+</span>
+              </button>
+
+              <div class="resposta">
+
+                <p>
+                  As atividades são temáticas, planejadas e adaptadas
+                  para a idade das crianças, com propostas de comunicação,
+                  interação, criatividade e autonomia.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="pergunta">
+
+              <button
+                type="button"
+                class="pergunta-botao"
+              >
+                Onde acontecem os encontros?
+                <span>+</span>
+              </button>
+
+              <div class="resposta">
+
+                <p>
+                  O local, as datas e os horários serão informados
+                  na divulgação de cada turma e durante o processo
+                  de inscrição.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="pergunta">
+
+              <button
+                type="button"
+                class="pergunta-botao"
+              >
+                Como faço para garantir uma vaga?
+                <span>+</span>
+              </button>
+
+              <div class="resposta">
+
+                <p>
+                  Clique no botão de inscrição, preencha o formulário
+                  e aguarde o contato com as orientações sobre a turma
+                  disponível.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CHAMADA FINAL
+    ====================================== -->
+
+    <section class="chamada-final">
+
+      <div class="container">
+
+        <div class="chamada-caixa">
+
+          <div class="chamada-logo">
+
+            <img
+              src="logo-pequenos-viajantes.jpeg"
+              alt=""
+            >
+
+          </div>
+
+          <div class="chamada-texto">
+
+            <h2>
+              Pronto para embarcar
+              <span>nessa jornada?</span>
+            </h2>
+
+            <p>
+              Vamos transformar descobertas em desenvolvimento,
+              respeitando a infância e a individualidade de cada criança.
+            </p>
+
+          </div>
+
+          <a
+            href="LINK-DO-FORMULARIO"
+            class="botao botao-azul"
+          >
+            ★ Quero me inscrever
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       RODAPÉ
+  ====================================== -->
+
+  <footer class="rodape">
+
+    <div class="container">
+
+      <div class="rodape-grid">
+
+
+        <div class="rodape-marca">
+
+          <img
+            src="logo-pequenos-viajantes.jpeg"
+            alt="Pequenos Viajantes"
+            class="rodape-logo"
+          >
+
+          <div>
+
+            <h3>
+              Pequenos<br>Viajantes
+            </h3>
+
+            <span>Projeto</span>
+
+          </div>
+
+        </div>
+
+
+        <div class="rodape-info">
+
+          <p>
+            Um projeto de<br>
+            <strong>Jhulia Machado</strong><br>
+            Fonoaudióloga
+          </p>
+
+          <div class="redes">
+
+            <a
+              href="LINK-DO-INSTAGRAM"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              ◎
+            </a>
+
+            <a
+              href="https://wa.me/5575981405190"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              ◉
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="rodape-frase">
+
+          <p>
+            Desenvolvendo habilidades, fortalecendo conexões
+            e transformando cada etapa da comunicação em uma
+            experiência significativa.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <p class="credito">
+        © 2026 Jhulia Machado • Todos os direitos reservados
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================
+       FUNCIONAMENTO DAS PERGUNTAS
+  ====================================== -->
+
+  <script>
+
+    const perguntas = document.querySelectorAll(".pergunta");
+
+    perguntas.forEach(function (pergunta) {
+
+      const botao = pergunta.querySelector(".pergunta-botao");
+
+      botao.addEventListener("click", function () {
+
+        const estavaAberta = pergunta.classList.contains("aberta");
+
+        perguntas.forEach(function (outraPergunta) {
+          outraPergunta.classList.remove("aberta");
+        });
+
+        if (!estavaAberta) {
+          pergunta.classList.add("aberta");
+        }
+
+      });
+
+    });
+
+  </script>
 
 
 </body>
