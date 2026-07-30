@@ -368,6 +368,270 @@ text-decoration:none;
 font-weight:bold;
 
 }
+
+/* NOVO TOPO DA PÁGINA */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 20px 80px;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.16),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #315f4d 0%,
+      #477762 55%,
+      #5b8a74 100%
+    );
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Detalhe decorativo do fundo */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -90px;
+  right: -90px;
+  width: 230px;
+  height: 230px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -120px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Foto */
+
+.foto-container {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 26px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 14px 35px rgba(22, 48, 38, 0.28);
+}
+
+.foto-perfil {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* Textos do topo */
+
+.hero-apresentacao {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 7vw, 58px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  margin: 13px 0 4px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero-areas {
+  margin: 0;
+  color: #e9d6b7;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+.hero-areas span {
+  display: inline-block;
+  margin: 0 7px;
+  opacity: 0.7;
+}
+
+.hero-descricao {
+  max-width: 570px;
+  margin: 23px auto 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-divisor {
+  width: 60px;
+  height: 2px;
+  margin: 33px auto 24px;
+  background: #e9d6b7;
+  border-radius: 10px;
+}
+
+.hero-chamada {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Cartões de navegação */
+
+.atalhos-home {
+  display: grid;
+  gap: 13px;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.atalho-home {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  color: #294d3e;
+  text-decoration: none;
+  text-align: left;
+  background: rgba(255, 253, 248, 0.97);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  box-shadow: 0 8px 22px rgba(23, 48, 38, 0.15);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.atalho-home:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: 0 14px 28px rgba(23, 48, 38, 0.25);
+}
+
+.atalho-icone {
+  display: flex;
+  flex: 0 0 48px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  background: #e7f0ea;
+  border-radius: 14px;
+}
+
+.atalho-texto {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.atalho-texto strong {
+  color: #294d3e;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.atalho-texto small {
+  color: #6e7f77;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.atalho-seta {
+  color: #477762;
+  font-size: 24px;
+  transition: transform 0.25s ease;
+}
+
+.atalho-home:hover .atalho-seta {
+  transform: translateX(5px);
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 16px 60px;
+  }
+
+  .foto-container {
+    width: 135px;
+    height: 135px;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero-descricao {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .atalho-home {
+    gap: 13px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .atalho-icone {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+
+  .atalho-texto strong {
+    font-size: 16px;
+  }
+
+  .atalho-texto small {
+    font-size: 12px;
+  }
+}
 </style>
 
 </head>
@@ -377,56 +641,93 @@ font-weight:bold;
 
 
 
-
 <section class="hero">
 
+  <div class="hero-conteudo">
 
-<img src="WhatsApp Image 2026-07-30 at 00.01.26.jpeg" alt="Foto Jhulia Machado">
+    <div class="foto-container">
+      <img
+        class="foto-perfil"
+        src="WhatsApp Image 2026-07-30 at 00.01.26.jpeg"
+        alt="Foto da fonoaudióloga Jhulia Machado"
+      >
+    </div>
 
+    <p class="hero-apresentacao">Olá, eu sou</p>
 
-<div class="hero-text">
+    <h1>Jhulia Machado</h1>
 
-<h1>Jhulia Machado</h1>
+    <h2>Fonoaudióloga</h2>
 
-<h2>Fonoaudióloga</h2>
+    <p class="hero-areas">
+      Linguagem <span>•</span> Audiologia
+    </p>
 
-<h3>Linguagem | Audiologia</h3>
-<p>
-Desenvolvendo habilidades, fortalecendo conexões e transformando cada etapa da comunicação em uma experiência significativa.
-</p>
+    <p class="hero-descricao">
+      Desenvolvendo habilidades, fortalecendo conexões e transformando
+      cada etapa da comunicação em uma experiência significativa.
+    </p>
 
+    <div class="hero-divisor"></div>
 
+    <p class="hero-chamada">
+      Escolha por onde deseja começar
+    </p>
 
-<div class="atalhos-home">
+    <div class="atalhos-home">
 
-<h3>Escolha por onde deseja começar</h3>
+      <a href="#sobre" class="atalho-home">
+        <span class="atalho-icone">👩‍⚕️</span>
 
-<a href="https://wa.me/5575981405190" target="_blank" class="atalho-home">
-Agendar atendimento
-</a>
+        <span class="atalho-texto">
+          <strong>Sobre mim</strong>
+          <small>Conheça minha trajetória e meu trabalho</small>
+        </span>
 
-<a href="#sobre" class="atalho-home">
-Conheça meu trabalho
-</a>
+        <span class="atalho-seta">→</span>
+      </a>
 
-<a href="#projeto" class="atalho-home">
-Pequenos Viajantes
-</a>
+      <a href="https://machadojhulia1.github.io/jhulia-machado/pequenos-viajantes.html" class="atalho-home">
+        <span class="atalho-icone">🌎</span>
 
-<a href="#cursos" class="atalho-home">
-Cursos
-</a>
+        <span class="atalho-texto">
+          <strong>Pequenos Viajantes</strong>
+          <small>Experiências para crianças e suas famílias</small>
+        </span>
 
+        <span class="atalho-seta">→</span>
+      </a>
 
-</div>
+      <a href="LINK-DA-PAGINA-DE-CURSOS" class="atalho-home">
+        <span class="atalho-icone">🎓</span>
 
-<div class="scroll-down">
-    ↓
-    <p>Conheça meu trabalho</p>
-</div>
-    
-</div>
+        <span class="atalho-texto">
+          <strong>Cursos</strong>
+          <small>Conteúdos para famílias e profissionais</small>
+        </span>
 
+        <span class="atalho-seta">→</span>
+      </a>
+
+      <a
+        href="https://wa.me/5575981405190"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="atalho-home"
+      >
+        <span class="atalho-icone">💬</span>
+
+        <span class="atalho-texto">
+          <strong>Entrar em contato</strong>
+          <small>Fale comigo pelo WhatsApp</small>
+        </span>
+
+        <span class="atalho-seta">→</span>
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
