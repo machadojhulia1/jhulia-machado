@@ -2,1137 +2,1203 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Jhulia Machado | Fonoaudióloga</title>
-
-<style>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background: #F8F5F0;
-    color: #333;
-}
-
-header {
-    background: white;
-    padding: 25px;
-    text-align: center;
-}
-
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #2F7F73;
-}
-
-nav {
-    margin-top: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #555;
-    margin: 10px;
-    font-size: 15px;
-}
-
-
-.hero{
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-gap:80px;
-
-padding:80px 10%;
-
-}
-
-.hero img{
-
-width:330px;
-
-height:330px;
-
-border-radius:50%;
-
-object-fit:cover;
-
-box-shadow:0 10px 30px rgba(0,0,0,.12);
-
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero h1{
-    font-size:48px;
-    color:#2F7F73;
-    margin-bottom:8px;
-}
-
-.hero h2{
-    font-size:30px;
-    font-weight:600;
-    color:#333;
-    margin-bottom:8px;
-}
-
-.hero h3{
-    font-size:22px;
-    font-weight:400;
-    color:#666;
-    margin-bottom:25px;
-}
-
-.hero h2 {
-    margin: 15px 0;
-    font-weight: normal;
-}
-
-.hero p {
-    line-height: 1.7;
-    color: #666;
-}
-
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 25px;
-    border-radius: 30px;
-    background: #79D4C5;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-section {
-    padding: 70px 10%;
-}
-
-
-.title {
-    text-align: center;
-    color: #2F7F73;
-    font-size: 32px;
-    margin-bottom: 30px;
-}
-
-
-.about {
-    background: #F8F5F0;
-    text-align: center;
-    line-height: 1.8;
-}
-
-
-.cards {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-
-.card {
-    background: white;
-    padding: 30px;
-    width: 280px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-
-.card h3 {
-    color:#2F7F73;
-    margin-bottom:15px;
-}
-
-
-
-.viagem {
-    background:#79D4C5;
-    color:white;
-    text-align:center;
-}
-
-
-.viagem h2 {
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-
-.viagem .btn {
-    background:white;
-    color:#2F7F73;
-}
-
-
-
-.cursos {
-    background:white;
-}
-
-
-
-footer {
-    background:#2F7F73;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-
-
-
-@media(max-width:800px){
-
-.hero{
-    flex-direction:column;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:35px;
-}
-
-}
-
-.scroll-down{
-    text-align:center;
-    margin-top:40px;
-    color:#2F7F73;
-    font-size:22px;
-    animation: sobeDesce 1.5s infinite;
-}
-
-.scroll-down p{
-    font-size:14px;
-    margin-top:8px;
-    color:#666;
-}
-
-@keyframes sobeDesce{
-
-0%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(10px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-
-.atalhos-home{
-    margin-top:40px;
-}
-
-.atalhos-home h3{
-    color:#2F7F73;
-    margin-bottom:20px;
-    font-size:18px;
-}
-
-.atalho-home{
-
-display:block;
-
-margin-top:18px;
-
-padding:18px;
-
-background:#79D4C5;
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
-font-size:18px;
-
-border-radius:30px;
-
-transition:.3s;
-
-text-align:center;
-
-box-shadow:0 6px 18px rgba(0,0,0,.08);
-
-}
-
-.atalho-home:hover{
-
-background:#67c8ba;
-
-transform:translateY(-3px);
-
-}
-
-.atalho-home:hover{
-    transform:translateY(-4px);
-}
-
-.destaque-pv{
-
-background:#79D4C5;
-
-padding:80px 10%;
-
-color:white;
-
-text-align:center;
-
-}
-
-
-.pv-home{
-
-max-width:750px;
-
-margin:auto;
-
-}
-
-
-.mini-logo{
-
-font-size:45px;
-
-}
-
-
-.destaque-pv h2{
-
-font-size:40px;
-
-margin:15px 0;
-
-}
-
-
-.destaque-pv h3{
-
-font-size:25px;
-
-font-weight:500;
-
-}
-
-
-.destaque-pv p{
-
-font-size:18px;
-
-line-height:1.7;
-
-margin:25px auto;
-
-}
-
-
-.btn-pv-home{
-
-display:inline-block;
-
-background:white;
-
-color:#2F7F73;
-
-padding:15px 35px;
-
-border-radius:30px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-}
-
-/* NOVO TOPO DA PÁGINA */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  padding: 70px 20px 80px;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(255, 255, 255, 0.16),
-      transparent 35%
-    ),
-    linear-gradient(
-      145deg,
-      #315f4d 0%,
-      #477762 55%,
-      #5b8a74 100%
-    );
-  color: #ffffff;
-  text-align: center;
-}
-
-/* Detalhe decorativo do fundo */
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -90px;
-  right: -90px;
-  width: 230px;
-  height: 230px;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 50%;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  bottom: -120px;
-  left: -100px;
-  width: 280px;
-  height: 280px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-}
-
-.hero-conteudo {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Foto */
-
-.foto-container {
-  width: 160px;
-  height: 160px;
-  margin: 0 auto 26px;
-  padding: 6px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  box-shadow: 0 14px 35px rgba(22, 48, 38, 0.28);
-}
-
-.foto-perfil {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-}
-
-/* Textos do topo */
-
-.hero-apresentacao {
-  margin: 0 0 6px;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 0;
-  color: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(38px, 7vw, 58px);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -1px;
-}
-
-.hero h2 {
-  margin: 13px 0 4px;
-  color: #ffffff;
-  font-size: 22px;
-  font-weight: 600;
-}
-
-.hero-areas {
-  margin: 0;
-  color: #e9d6b7;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.6px;
-}
-
-.hero-areas span {
-  display: inline-block;
-  margin: 0 7px;
-  opacity: 0.7;
-}
-
-.hero-descricao {
-  max-width: 570px;
-  margin: 23px auto 0;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.hero-divisor {
-  width: 60px;
-  height: 2px;
-  margin: 33px auto 24px;
-  background: #e9d6b7;
-  border-radius: 10px;
-}
-
-.hero-chamada {
-  margin: 0 0 18px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* Cartões de navegação */
-
-.atalhos-home {
-  display: grid;
-  gap: 13px;
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-}
-
-.atalho-home {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  width: 100%;
-  padding: 18px 20px;
-  color: #294d3e;
-  text-decoration: none;
-  text-align: left;
-  background: rgba(255, 253, 248, 0.97);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 18px;
-  box-shadow: 0 8px 22px rgba(23, 48, 38, 0.15);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.atalho-home:hover {
-  transform: translateY(-4px);
-  background: #ffffff;
-  box-shadow: 0 14px 28px rgba(23, 48, 38, 0.25);
-}
-
-.atalho-icone {
-  display: flex;
-  flex: 0 0 48px;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  font-size: 24px;
-  background: #e7f0ea;
-  border-radius: 14px;
-}
-
-.atalho-texto {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.atalho-texto strong {
-  color: #294d3e;
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.atalho-texto small {
-  color: #6e7f77;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.atalho-seta {
-  color: #477762;
-  font-size: 24px;
-  transition: transform 0.25s ease;
-}
-
-.atalho-home:hover .atalho-seta {
-  transform: translateX(5px);
-}
-
-/* Ajustes para celular */
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 50px 16px 60px;
-  }
-
-  .foto-container {
-    width: 135px;
-    height: 135px;
-    margin-bottom: 22px;
-  }
-
-  .hero h1 {
-    font-size: 39px;
-  }
-
-  .hero h2 {
-    font-size: 20px;
-  }
-
-  .hero-descricao {
-    font-size: 15px;
-    line-height: 1.65;
-  }
-
-  .atalho-home {
-    gap: 13px;
-    padding: 16px;
-    border-radius: 16px;
-  }
-
-  .atalho-icone {
-    flex-basis: 44px;
-    width: 44px;
-    height: 44px;
-    font-size: 21px;
-  }
-
-  .atalho-texto strong {
-    font-size: 16px;
-  }
-
-  .atalho-texto small {
-    font-size: 12px;
-  }
-}
-
-/* SEÇÃO PEQUENOS VIAJANTES */
-
-.pequenos-viajantes {
-  position: relative;
-  overflow: hidden;
-  padding: 90px 20px;
-  background:
-    radial-gradient(
-      circle at top right,
-      rgba(255, 255, 255, 0.12),
-      transparent 35%
-    ),
-    linear-gradient(
-      135deg,
-      #315f4d 0%,
-      #477762 55%,
-      #5d8b75 100%
-    );
-  color: #ffffff;
-}
-
-.pequenos-viajantes::before {
-  content: "";
-  position: absolute;
-  top: -100px;
-  right: -90px;
-  width: 260px;
-  height: 260px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-}
-
-.pequenos-viajantes::after {
-  content: "";
-  position: absolute;
-  bottom: -130px;
-  left: -110px;
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
-}
-
-.pv-conteudo {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  align-items: center;
-  gap: 55px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Logo */
-
-.pv-logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 240px;
-  height: 240px;
-  padding: 18px;
-  background: #fffdf8;
-  border-radius: 34px;
-  box-shadow: 0 18px 45px rgba(20, 43, 34, 0.28);
-  transform: rotate(-2deg);
-}
-
-.pv-logo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 22px;
-}
-
-/* Textos */
-
-.pv-texto {
-  text-align: left;
-}
-
-.pv-etiqueta {
-  display: inline-block;
-  margin: 0 0 15px;
-  padding: 8px 14px;
-  color: #315f4d;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  background: #ead7b8;
-  border-radius: 30px;
-}
-
-.pv-texto h2 {
-  margin: 0;
-  color: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(38px, 6vw, 58px);
-  font-weight: 500;
-  line-height: 1.08;
-}
-
-.pv-texto h3 {
-  max-width: 650px;
-  margin: 18px 0 22px;
-  color: #f3dfbc;
-  font-size: 21px;
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-.pv-texto p {
-  max-width: 680px;
-  margin: 0 0 16px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 16px;
-  line-height: 1.75;
-}
-
-/* Botão */
-
-.pv-botao {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 18px;
-  padding: 15px 24px;
-  color: #315f4d;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  background: #fffdf8;
-  border-radius: 14px;
-  box-shadow: 0 10px 24px rgba(20, 43, 34, 0.2);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
-}
-
-.pv-botao span {
-  font-size: 22px;
-  transition: transform 0.25s ease;
-}
-
-.pv-botao:hover {
-  transform: translateY(-4px);
-  background: #f3dfbc;
-  box-shadow: 0 15px 30px rgba(20, 43, 34, 0.3);
-}
-
-.pv-botao:hover span {
-  transform: translateX(5px);
-}
-
-/* Ajustes para celular */
-
-@media (max-width: 760px) {
-  .pequenos-viajantes {
-    padding: 70px 18px;
-  }
-
-  .pv-conteudo {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    text-align: center;
-  }
-
-  .pv-logo-container {
-    width: 190px;
-    height: 190px;
-    margin: 0 auto;
-    padding: 14px;
-    border-radius: 28px;
-    transform: rotate(0);
-  }
-
-  .pv-logo {
-    border-radius: 18px;
-  }
-
-  .pv-texto {
-    text-align: center;
-  }
-
-  .pv-texto h2 {
-    font-size: 40px;
-  }
-
-  .pv-texto h3 {
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 19px;
-  }
-
-  .pv-texto p {
-    margin-right: auto;
-    margin-left: auto;
-    font-size: 15px;
-  }
-
-  .pv-botao {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-    
-</style>
-
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Jhulia Machado | Fonoaudióloga</title>
+
+  <meta
+    name="description"
+    content="Jhulia Machado, fonoaudióloga com atuação em linguagem e audiologia."
+  >
+
+  <style>
+
+    /* ======================================
+       CONFIGURAÇÕES GERAIS
+    ====================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #294a40;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f1e8;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    section {
+      scroll-margin-top: 30px;
+    }
+
+    :root {
+      --verde-escuro: #1f5148;
+      --verde-principal: #2f685b;
+      --verde-medio: #4c7e70;
+      --verde-claro: #dbe9e3;
+
+      --creme: #f7f1e8;
+      --creme-claro: #fffdf9;
+
+      --dourado: #d8b77e;
+      --texto: #294a40;
+      --texto-claro: #ffffff;
+    }
+
+
+    /* ======================================
+       TOPO
+    ====================================== */
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      overflow: hidden;
+      padding: 34px 20px 160px;
+      color: var(--texto-claro);
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(255, 255, 255, 0.12),
+          transparent 38%
+        ),
+        linear-gradient(
+          135deg,
+          #1d4f46 0%,
+          #2e675a 48%,
+          #477a6c 100%
+        );
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 7% 80%,
+          rgba(255, 255, 255, 0.05),
+          transparent 22%
+        ),
+        radial-gradient(
+          circle at 92% 25%,
+          rgba(255, 255, 255, 0.06),
+          transparent 25%
+        );
+
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: -5%;
+      bottom: -105px;
+      width: 110%;
+      height: 180px;
+      background: var(--creme);
+      border-radius: 50% 50% 0 0 / 70% 70% 0 0;
+    }
+
+    .decoracao {
+      position: absolute;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .decoracao-esquerda {
+      left: -35px;
+      bottom: 110px;
+      font-size: 220px;
+      transform: rotate(-20deg);
+    }
+
+    .decoracao-direita {
+      top: 35px;
+      right: -25px;
+      font-size: 210px;
+      transform: rotate(25deg);
+    }
+
+    .hero-conteudo {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+
+    /* FOTO */
+
+    .foto-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 20px;
+      padding: 7px;
+
+      background: rgba(255, 255, 255, 0.95);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      box-shadow: 0 18px 45px rgba(10, 35, 29, 0.28);
+    }
+
+    .foto-perfil {
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+
+      border-radius: 50%;
+    }
+
+    .foto-icone {
+      position: absolute;
+      right: -5px;
+      bottom: 5px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 58px;
+      height: 58px;
+
+      font-size: 25px;
+      background: #5f8d7e;
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+    }
+
+
+    /* TEXTOS */
+
+    .hero h1 {
+      margin: 0;
+
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 72px);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .profissao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+
+      margin: 14px 0 11px;
+
+      color: #efd3a5;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .profissao::before,
+    .profissao::after {
+      content: "";
+      width: 70px;
+      height: 1px;
+      background: #efd3a5;
+    }
+
+    .areas {
+      margin-bottom: 19px;
+
+      color: rgba(255, 255, 255, 0.93);
+      font-size: 17px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .areas span {
+      margin: 0 7px;
+      color: #efd3a5;
+    }
+
+    .descricao-hero {
+      max-width: 650px;
+      margin: 0 auto;
+
+      color: rgba(255, 255, 255, 0.91);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .seta-rolagem {
+      display: inline-block;
+      margin-top: 18px;
+
+      color: #efd3a5;
+      font-size: 34px;
+      line-height: 1;
+      text-decoration: none;
+
+      animation: seta 1.8s infinite;
+    }
+
+    @keyframes seta {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(8px);
+      }
+    }
+
+
+    /* ======================================
+       ÁREA DOS CARTÕES
+    ====================================== */
+
+    .navegacao {
+      position: relative;
+      z-index: 4;
+
+      margin-top: -115px;
+      padding: 0 20px 70px;
+    }
+
+    .navegacao-conteudo {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .titulo-navegacao {
+      margin-bottom: 22px;
+
+      color: var(--verde-escuro);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .titulo-navegacao::before,
+    .titulo-navegacao::after {
+      content: "◇";
+      margin: 0 10px;
+      color: var(--dourado);
+      font-size: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      min-height: 220px;
+      padding: 24px 18px;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      text-align: center;
+      text-decoration: none;
+
+      background: rgba(255, 253, 249, 0.98);
+      border: 1px solid rgba(47, 104, 91, 0.08);
+      border-radius: 18px;
+
+      box-shadow: 0 13px 30px rgba(42, 70, 61, 0.15);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 20px 38px rgba(42, 70, 61, 0.22);
+    }
+
+    .card-icone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 68px;
+      height: 68px;
+      margin-bottom: 15px;
+
+      font-size: 30px;
+      background: var(--verde-claro);
+      border-radius: 50%;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+
+      color: var(--verde-escuro);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .card p {
+      min-height: 42px;
+
+      color: #677a73;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .card-seta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 33px;
+      height: 33px;
+      margin-top: 17px;
+
+      color: #ffffff;
+      font-size: 18px;
+
+      background: var(--verde-principal);
+      border-radius: 50%;
+
+      transition: transform 0.25s ease;
+    }
+
+    .card:hover .card-seta {
+      transform: translateX(4px);
+    }
+
+
+    /* ======================================
+       SOBRE MIM
+    ====================================== */
+
+    .sobre {
+      position: relative;
+      padding: 40px 20px 90px;
+      background: var(--creme);
+    }
+
+    .sobre-conteudo {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 65px;
+      align-items: center;
+
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .sobre-foto-wrapper {
+      position: relative;
+      padding: 8px;
+
+      background: #fffdf9;
+      border: 2px solid #e1c897;
+      border-radius: 50%;
+      box-shadow: 0 16px 35px rgba(51, 83, 73, 0.14);
+    }
+
+    .sobre-foto {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+      object-position: center;
+
+      border-radius: 50%;
+    }
+
+    .sobre-texto h2 {
+      margin-bottom: 13px;
+
+      color: var(--verde-principal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 43px;
+      font-weight: 500;
+    }
+
+    .linha-titulo {
+      width: 75px;
+      height: 2px;
+      margin-bottom: 23px;
+
+      background: var(--dourado);
+      border-radius: 10px;
+    }
+
+    .sobre-texto p {
+      margin-bottom: 15px;
+
+      color: #4f625b;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .sobre-destaques {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 23px;
+    }
+
+    .sobre-destaques span {
+      padding: 9px 14px;
+
+      color: var(--verde-escuro);
+      font-size: 13px;
+      font-weight: 600;
+
+      background: #e4eee9;
+      border-radius: 30px;
+    }
+
+
+    /* ======================================
+       PEQUENOS VIAJANTES
+    ====================================== */
+
+    .pequenos-viajantes {
+      padding: 90px 20px;
+
+      color: #ffffff;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(255, 255, 255, 0.09),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #1f5148,
+          #367063
+        );
+    }
+
+    .pv-conteudo {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 55px;
+      align-items: center;
+
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pv-logo-wrapper {
+      padding: 20px;
+
+      background: #fffdf9;
+      border-radius: 30px;
+      box-shadow: 0 18px 40px rgba(10, 38, 31, 0.3);
+    }
+
+    .pv-logo {
+      display: block;
+      width: 100%;
+      height: 240px;
+
+      object-fit: contain;
+    }
+
+    .pv-etiqueta {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 14px;
+
+      color: var(--verde-escuro);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      background: #efd3a5;
+      border-radius: 30px;
+    }
+
+    .pv-texto h2 {
+      margin-bottom: 15px;
+
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 48px;
+      font-weight: 500;
+    }
+
+    .pv-texto h3 {
+      margin-bottom: 20px;
+
+      color: #f2d8ac;
+      font-size: 20px;
+      line-height: 1.45;
+    }
+
+    .pv-texto p {
+      margin-bottom: 14px;
+
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    /* ======================================
+       CURSOS
+    ====================================== */
+
+    .cursos {
+      padding: 90px 20px;
+      background: var(--creme);
+    }
+
+    .secao-conteudo {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .secao-titulo {
+      margin-bottom: 12px;
+
+      color: var(--verde-principal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 45px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .secao-subtitulo {
+      max-width: 620px;
+      margin: 0 auto 35px;
+
+      color: #60726b;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .curso-card {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 30px;
+
+      background: #fffdf9;
+      border-radius: 22px;
+      box-shadow: 0 14px 35px rgba(43, 72, 63, 0.13);
+    }
+
+    .curso-card h3 {
+      margin-bottom: 12px;
+
+      color: var(--verde-escuro);
+      font-size: 24px;
+    }
+
+    .curso-card p {
+      margin-bottom: 20px;
+
+      color: #63756e;
+      line-height: 1.7;
+    }
+
+
+    /* ======================================
+       BOTÕES
+    ====================================== */
+
+    .botao {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      margin-top: 15px;
+      padding: 14px 23px;
+
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+
+      background: var(--verde-principal);
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(28, 77, 65, 0.2);
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .botao:hover {
+      transform: translateY(-3px);
+      background: var(--verde-escuro);
+    }
+
+    .botao-claro {
+      color: var(--verde-escuro);
+      background: #fffdf9;
+    }
+
+    .botao-claro:hover {
+      color: var(--verde-escuro);
+      background: #f2d8ac;
+    }
+
+
+    /* ======================================
+       CONTATO
+    ====================================== */
+
+    .contato {
+      padding: 80px 20px;
+
+      color: #ffffff;
+      text-align: center;
+
+      background: var(--verde-escuro);
+    }
+
+    .contato h2 {
+      margin-bottom: 12px;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .contato p {
+      max-width: 580px;
+      margin: 0 auto 20px;
+
+      color: rgba(255, 255, 255, 0.86);
+      line-height: 1.7;
+    }
+
+
+    /* ======================================
+       RODAPÉ
+    ====================================== */
+
+    footer {
+      padding: 22px 15px;
+
+      color: #d5e2dd;
+      font-size: 13px;
+      text-align: center;
+
+      background: #153f37;
+    }
+
+
+    /* ======================================
+       CELULAR E TABLET
+    ====================================== */
+
+    @media (max-width: 900px) {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sobre-conteudo {
+        grid-template-columns: 280px 1fr;
+        gap: 40px;
+      }
+
+      .pv-conteudo {
+        grid-template-columns: 230px 1fr;
+        gap: 35px;
+      }
+
+    }
+
+    @media (max-width: 680px) {
+
+      .hero {
+        min-height: auto;
+        padding: 35px 17px 145px;
+      }
+
+      .foto-wrapper {
+        width: 170px;
+        height: 170px;
+      }
+
+      .foto-icone {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .profissao {
+        gap: 9px;
+        font-size: 20px;
+      }
+
+      .profissao::before,
+      .profissao::after {
+        width: 35px;
+      }
+
+      .areas {
+        font-size: 15px;
+      }
+
+      .descricao-hero {
+        font-size: 15px;
+      }
+
+      .navegacao {
+        margin-top: -105px;
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .titulo-navegacao {
+        font-size: 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 190px;
+      }
+
+      .sobre {
+        padding-top: 25px;
+      }
+
+      .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .sobre-foto-wrapper {
+        width: 240px;
+        margin: 0 auto;
+      }
+
+      .sobre-texto {
+        text-align: center;
+      }
+
+      .sobre-texto h2 {
+        font-size: 38px;
+      }
+
+      .linha-titulo {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .sobre-destaques {
+        justify-content: center;
+      }
+
+      .pv-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .pv-logo-wrapper {
+        width: 230px;
+        margin: 0 auto;
+      }
+
+      .pv-logo {
+        height: 190px;
+      }
+
+      .pv-texto h2 {
+        font-size: 39px;
+      }
+
+      .secao-titulo {
+        font-size: 38px;
+      }
+
+    }
+
+  </style>
 </head>
 
 
 <body>
 
 
+  <!-- ======================================
+       TOPO
+  ======================================= -->
 
-<section class="hero">
+  <header class="hero">
 
-  <div class="hero-conteudo">
+    <span class="decoracao decoracao-esquerda">🌿</span>
+    <span class="decoracao decoracao-direita">🌿</span>
 
-    <div class="foto-container">
-      <img
-        class="foto-perfil"
-        src="WhatsApp Image 2026-07-30 at 00.01.26.jpeg"
-        alt="Foto da fonoaudióloga Jhulia Machado"
-      >
-    </div>
+    <div class="hero-conteudo">
 
-    <p class="hero-apresentacao">Olá, eu sou</p>
+      <div class="foto-wrapper">
 
-    <h1>Jhulia Machado</h1>
+        <img
+          class="foto-perfil"
+          src="WhatsApp Image 2026-07-30 at 00.01.26.jpeg"
+          alt="Foto da fonoaudióloga Jhulia Machado"
+        >
 
-    <h2>Fonoaudióloga</h2>
+        <span class="foto-icone">💬</span>
 
-    <p class="hero-areas">
-      Linguagem <span>•</span> Audiologia
-    </p>
+      </div>
 
-    <p class="hero-descricao">
-      Desenvolvendo habilidades, fortalecendo conexões e transformando
-      cada etapa da comunicação em uma experiência significativa.
-    </p>
+      <h1>Jhulia Machado</h1>
 
-    <div class="hero-divisor"></div>
+      <div class="profissao">
+        Fonoaudióloga
+      </div>
 
-    <p class="hero-chamada">
-      Escolha por onde deseja começar
-    </p>
-
-    <div class="atalhos-home">
-
-      <a href="#sobre" class="atalho-home">
-        <span class="atalho-icone">👩‍⚕️</span>
-
-        <span class="atalho-texto">
-          <strong>Sobre mim</strong>
-          <small>Conheça minha trajetória e meu trabalho</small>
-        </span>
-
-        <span class="atalho-seta">→</span>
-      </a>
-
-      <a href="https://machadojhulia1.github.io/jhulia-machado/pequenos-viajantes.html" class="atalho-home">
-        <span class="atalho-icone">🌎</span>
-
-        <span class="atalho-texto">
-          <strong>Pequenos Viajantes</strong>
-          <small>Experiências para crianças e suas famílias</small>
-        </span>
-
-        <span class="atalho-seta">→</span>
-      </a>
-
-      <a href="LINK-DA-PAGINA-DE-CURSOS" class="atalho-home">
-        <span class="atalho-icone">🎓</span>
-
-        <span class="atalho-texto">
-          <strong>Cursos</strong>
-          <small>Conteúdos para famílias e profissionais</small>
-        </span>
-
-        <span class="atalho-seta">→</span>
-      </a>
-
-      <a
-        href="https://wa.me/5575981405190"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="atalho-home"
-      >
-        <span class="atalho-icone">💬</span>
-
-        <span class="atalho-texto">
-          <strong>Entrar em contato</strong>
-          <small>Fale comigo pelo WhatsApp</small>
-        </span>
-
-        <span class="atalho-seta">→</span>
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-
-<section id="sobre" class="about">
-
-<h2 class="title">
-Sobre Mim
-</h2>
-
-
-<p>
-Olá! Sou Jhulia Machado, fonoaudióloga, professora e apaixonada por transformar a comunicação em uma ferramenta de conexão, autonomia e qualidade de vida.
-Atuo nas áreas de linguagem e audiologia, oferecendo um atendimento individualizado e acolhedor. Acredito que cada paciente possui uma história única e, por isso, cada acompanhamento também deve ser único.
-Além da prática clínica, compartilho conhecimento por meio de cursos e capacitações para estudantes e profissionais, e desenvolvo projetos voltados ao desenvolvimento infantil, unindo aprendizado, criatividade e experiências significativas.
-
-Meu propósito é cuidar, ensinar e contribuir para que cada pessoa alcance seu melhor potencial.
-</p>
-
-
-</section>
-
-
-
-
-<section>
-
-
-<h2 class="title">
-Áreas de Atuação
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-🗣️ Linguagem
-</h3>
-
-
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-👂Audiologia
-</h3>
-
-
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-🌱 Desenvolvimento Infantil
-</h3>
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<section id="projeto" class="pequenos-viajantes">
-
-  <div class="pv-conteudo">
-
-    <div class="pv-logo-container">
-      <img
-        src="logo-pequenos-viajantes.png"
-        alt="Logo do projeto Pequenos Viajantes"
-        class="pv-logo"
-      >
-    </div>
-
-    <div class="pv-texto">
-
-      <p class="pv-etiqueta">
-        Um projeto para famílias
+      <p class="areas">
+        💬 Linguagem
+        <span>•</span>
+        👂 Audiologia
       </p>
 
-      <h2>Pequenos Viajantes</h2>
-
-      <h3>
-        Descobertas, experiências e desenvolvimento em cada jornada.
-      </h3>
-
-      <p>
-        Um espaço pensado para famílias que desejam transformar passeios,
-        viagens e momentos do cotidiano em oportunidades de aprendizagem,
-        comunicação e conexão com as crianças.
-      </p>
-
-      <p>
-        Com orientações práticas e propostas leves, o projeto ajuda os pais
-        a estimularem a linguagem, a autonomia e a participação infantil
-        de forma natural e significativa.
+      <p class="descricao-hero">
+        Desenvolvendo habilidades, fortalecendo conexões e transformando
+        cada etapa da comunicação em uma experiência significativa.
       </p>
 
       <a
-        href="LINK-DA-PAGINA-PEQUENOS-VIAJANTES"
-        class="pv-botao"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#navegacao"
+        class="seta-rolagem"
+        aria-label="Ir para as opções"
       >
-        Conhecer o projeto
-        <span>→</span>
+       ⌄
       </a>
 
     </div>
 
-  </div>
-
-</section>
+  </header>
 
 
+  <!-- ======================================
+       CARTÕES
+  ======================================= -->
 
-<section id="cursos" class="cursos">
+  <section id="navegacao" class="navegacao">
 
+    <div class="navegacao-conteudo">
 
-<h2 class="title">
-Cursos
-</h2>
+      <h2 class="titulo-navegacao">
+        Escolha por onde deseja começar
+      </h2>
 
+      <div class="cards">
 
-<div class="cards">
+        <a href="#sobre" class="card">
 
+          <span class="card-icone">👩‍⚕️</span>
 
-<div class="card">
+          <h3>Sobre mim</h3>
 
-<h3>
-Audiometria Tonal e Vocal
-</h3>
+          <p>
+            Conheça minha trajetória e meu trabalho.
+          </p>
 
-<p>
-Curso presencial para profissionais que desejam aprimorar seus conhecimentos em avaliação auditiva.
-</p>
+          <span class="card-seta">→</span>
 
-
-<a class="btn" href="#">
-Inscrição
-</a>
-
-
-</div>
+        </a>
 
 
-</div>
+        <a href="pequenos-viajantes.html" class="card">
+
+          <span class="card-icone">🌎</span>
+
+          <h3>Pequenos Viajantes</h3>
+
+          <p>
+            Experiências para crianças e suas famílias.
+          </p>
+
+          <span class="card-seta">→</span>
+
+        </a>
 
 
-</section>
+        <a href="#cursos" class="card">
+
+          <span class="card-icone">🎓</span>
+
+          <h3>Cursos</h3>
+
+          <p>
+            Conteúdos para famílias e profissionais.
+          </p>
+
+          <span class="card-seta">→</span>
+
+        </a>
 
 
+        <a
+          href="https://wa.me/5575981405190"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="card"
+        >
+
+          <span class="card-icone">💬</span>
+
+          <h3>Entrar em contato</h3>
+
+          <p>
+            Fale comigo diretamente pelo WhatsApp.
+          </p>
+
+          <span class="card-seta">→</span>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-<footer id="contato">
+  <!-- ======================================
+       SOBRE MIM
+  ======================================= -->
 
-<p>
-Entre em contato:
-</p>
+  <section id="sobre" class="sobre">
 
-<p>
-Instagram | WhatsApp
-</p>
+    <div class="sobre-conteudo">
+
+      <div class="sobre-foto-wrapper">
+
+        <img
+          class="sobre-foto"
+          src="WhatsApp Image 2026-07-30 at 00.01.26.jpeg"
+          alt="Jhulia Machado"
+        >
+
+      </div>
+
+      <div class="sobre-texto">
+
+        <h2>Sobre mim</h2>
+
+        <div class="linha-titulo"></div>
+
+        <p>
+          Sou fonoaudióloga apaixonada por pessoas, comunicação e
+          desenvolvimento humano.
+        </p>
+
+        <p>
+          Atuo nas áreas de linguagem e audiologia, oferecendo atendimentos
+          personalizados e humanizados para crianças, adolescentes e adultos.
+        </p>
+
+        <p>
+          Acredito no poder da escuta, do vínculo e de estratégias
+          individualizadas para promover evoluções reais e duradouras.
+        </p>
+
+        <div class="sobre-destaques">
+
+          <span>💬 Linguagem</span>
+          <span>👂 Audiologia</span>
+          <span>🤍 Atendimento humanizado</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-<p>
-© 2026 Jhulia Machado
-</p>
+  <!-- ======================================
+       PEQUENOS VIAJANTES
+  ======================================= -->
+
+  <section id="projeto" class="pequenos-viajantes">
+
+    <div class="pv-conteudo">
+
+      <div class="pv-logo-wrapper">
+
+        <img
+          class="pv-logo"
+          src="logo-pequenos-viajantes.png"
+          alt="Logo Pequenos Viajantes"
+        >
+
+      </div>
+
+      <div class="pv-texto">
+
+        <span class="pv-etiqueta">
+          Um projeto para crianças e famílias
+        </span>
+
+        <h2>Pequenos Viajantes</h2>
+
+        <h3>
+          Descobertas, experiências e desenvolvimento em cada jornada.
+        </h3>
+
+        <p>
+          Um projeto pensado para crianças, no qual cada encontro se
+          transforma em uma nova viagem cheia de descobertas, interação
+          e experiências significativas.
+        </p>
+
+        <p>
+          Por meio de propostas planejadas e atividades envolventes,
+          as crianças desenvolvem comunicação, autonomia, criatividade
+          e habilidades importantes para sua participação no mundo.
+        </p>
+
+        <a
+          href="pequenos-viajantes.html"
+          class="botao botao-claro"
+        >
+          Conhecer o projeto
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-</footer>
+  <!-- ======================================
+       CURSOS
+  ======================================= -->
 
+  <section id="cursos" class="cursos">
+
+    <div class="secao-conteudo">
+
+      <h2 class="secao-titulo">
+        Cursos
+      </h2>
+
+      <p class="secao-subtitulo">
+        Conhecimento aplicado, conteúdos atualizados e experiências
+        direcionadas para profissionais e estudantes.
+      </p>
+
+      <div class="curso-card">
+
+        <h3>
+          Audiometria Tonal e Vocal
+        </h3>
+
+        <p>
+          Curso presencial voltado ao desenvolvimento e aprimoramento
+          das habilidades práticas necessárias para a realização
+          da audiometria tonal e vocal.
+        </p>
+
+        <a
+          href="https://wa.me/5575981405190"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="botao"
+        >
+          Quero saber mais
+          <span>→</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       CONTATO
+  ======================================= -->
+
+  <section id="contato" class="contato">
+
+    <h2>Vamos conversar?</h2>
+
+    <p>
+      Para informações sobre atendimentos, projetos e cursos,
+      entre em contato diretamente comigo.
+    </p>
+
+    <a
+      href="https://wa.me/5575981405190"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="botao botao-claro"
+    >
+      Falar pelo WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- ======================================
+       RODAPÉ
+  ======================================= -->
+
+  <footer>
+
+    <p>
+      © 2026 Jhulia Machado • Fonoaudióloga
+    </p>
+
+  </footer>
 
 
 </body>
