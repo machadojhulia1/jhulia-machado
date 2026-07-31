@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Inscrição para a Imersão Presencial em Audiometria Tonal e Vocal."
+  >
+
+  <title>Inscrição | Imersão em Audiometria Tonal e Vocal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --verde-escuro: #174f43;
+      --verde: #246a5a;
+      --verde-claro: #e5f1ed;
+
+      --dourado: #c99a3b;
+      --dourado-claro: #f5e5bd;
+
+      --creme: #fcf8f1;
+      --branco: #ffffff;
+
+      --texto: #233d36;
+      --texto-suave: #63746e;
+
+      --borda: #e7ded1;
+
+      --sombra:
+        0 20px 55px rgba(34, 63, 54, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+      color: var(--texto);
+      font-family: "DM Sans", sans-serif;
+      background: var(--creme);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(252, 248, 241, 0.96);
+      border-bottom: 1px solid rgba(23, 79, 67, 0.09);
+
+      backdrop-filter: blur(14px);
+    }
+
+    .cabecalho-conteudo {
+      display: flex;
+      min-height: 84px;
+
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .marca-icone {
+      display: grid;
+      width: 54px;
+      height: 54px;
+
+      place-items: center;
+
+      color: var(--dourado);
+      font-size: 24px;
+
+      background: var(--branco);
+      border: 1px solid var(--dourado);
+      border-radius: 50%;
+    }
+
+    .marca-texto strong {
+      display: block;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: 19px;
+      line-height: 1.05;
+    }
+
+    .marca-texto small {
+      display: block;
+      margin-top: 4px;
+
+      color: var(--dourado);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .voltar {
+      display: inline-flex;
+      min-height: 45px;
+
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 0 19px;
+
+      color: var(--verde-escuro);
+      font-size: 13px;
+      font-weight: 700;
+
+      border: 1px solid var(--verde);
+      border-radius: 999px;
+
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .voltar:hover {
+      color: var(--branco);
+      background: var(--verde);
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .apresentacao {
+      position: relative;
+      overflow: hidden;
+
+      padding: 58px 0 36px;
+    }
+
+    .apresentacao::before {
+      content: "";
+
+      position: absolute;
+      top: -135px;
+      right: -110px;
+
+      width: 330px;
+      height: 275px;
+
+      background: var(--verde-claro);
+      border-radius: 46% 54% 62% 38% / 48% 39% 61% 52%;
+    }
+
+    .apresentacao-conteudo {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    .etiqueta {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+
+      margin-bottom: 19px;
+      padding: 8px 15px;
+
+      color: var(--verde-escuro);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+
+      background: var(--dourado-claro);
+      border-radius: 999px;
+    }
+
+    .apresentacao h1 {
+      margin-bottom: 17px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 600;
+      line-height: 1.04;
+      letter-spacing: -1px;
+    }
+
+    .apresentacao h1 span {
+      color: var(--dourado);
+    }
+
+    .apresentacao p {
+      max-width: 720px;
+      margin: 0 auto;
+
+      color: var(--texto-suave);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+
+    /* INFORMAÇÕES PRINCIPAIS */
+
+    .informacoes {
+      padding: 14px 0 48px;
+    }
+
+    .informacoes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .informacao {
+      display: flex;
+      min-height: 130px;
+
+      align-items: center;
+      gap: 14px;
+
+      padding: 22px;
+
+      background: var(--branco);
+      border: 1px solid rgba(23, 79, 67, 0.08);
+      border-radius: 20px;
+
+      box-shadow: 0 12px 28px rgba(34, 63, 54, 0.07);
+    }
+
+    .informacao-icone {
+      display: grid;
+      flex: 0 0 50px;
+
+      width: 50px;
+      height: 50px;
+
+      place-items: center;
+
+      font-size: 22px;
+
+      background: var(--verde-claro);
+      border-radius: 50%;
+    }
+
+    .informacao:nth-child(2) .informacao-icone,
+    .informacao:nth-child(4) .informacao-icone {
+      background: var(--dourado-claro);
+    }
+
+    .informacao strong {
+      display: block;
+      margin-bottom: 4px;
+
+      color: var(--verde-escuro);
+      font-size: 13px;
+    }
+
+    .informacao p {
+      color: var(--texto-suave);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+
+    /* AVISO */
+
+    .aviso {
+      max-width: 920px;
+      margin: 0 auto 40px;
+      padding: 19px 22px;
+
+      color: var(--texto);
+      font-size: 14px;
+      line-height: 1.65;
+      text-align: center;
+
+      background: var(--verde-claro);
+      border-radius: 16px;
+    }
+
+    .aviso strong {
+      color: var(--verde-escuro);
+    }
+
+
+    /* FORMULÁRIO */
+
+    .formulario-secao {
+      padding: 0 0 90px;
+    }
+
+    .formulario-card {
+      padding: 50px;
+
+      background: rgba(255, 255, 255, 0.91);
+      border: 1px solid rgba(23, 79, 67, 0.08);
+      border-radius: 31px;
+
+      box-shadow: var(--sombra);
+    }
+
+    .formulario-cabecalho {
+      max-width: 700px;
+      margin: 0 auto 37px;
+
+      text-align: center;
+    }
+
+    .formulario-icone {
+      display: grid;
+
+      width: 61px;
+      height: 61px;
+
+      place-items: center;
+      margin: 0 auto 15px;
+
+      font-size: 26px;
+
+      background: var(--dourado-claro);
+      border-radius: 50%;
+    }
+
+    .formulario-cabecalho h2 {
+      margin-bottom: 10px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(32px, 4vw, 45px);
+      line-height: 1.1;
+    }
+
+    .formulario-cabecalho p {
+      color: var(--texto-suave);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .formulario-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 19px;
+    }
+
+    .campo {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .campo-largo {
+      grid-column: 1 / -1;
+    }
+
+    .campo label {
+      color: var(--texto);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+      width: 100%;
+
+      color: var(--texto);
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 13px;
+
+      outline: none;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .campo input,
+    .campo select {
+      height: 56px;
+      padding: 0 17px;
+    }
+
+    .campo textarea {
+      min-height: 120px;
+      padding: 16px 17px;
+
+      resize: vertical;
+    }
+
+    .campo input:focus,
+    .campo select:focus,
+    .campo textarea:focus {
+      border-color: var(--verde);
+      box-shadow: 0 0 0 4px rgba(36, 106, 90, 0.10);
+    }
+
+    .campo-ajuda {
+      color: var(--texto-suave);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    .consentimento {
+      grid-column: 1 / -1;
+
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+
+      margin-top: 3px;
+      padding: 17px;
+
+      background: var(--verde-claro);
+      border-radius: 14px;
+    }
+
+    .consentimento input {
+      flex: 0 0 18px;
+
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+    .consentimento label {
+      color: var(--texto);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .botao-formulario {
+      display: flex;
+      width: min(100%, 410px);
+      min-height: 58px;
+
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      margin: 29px auto 0;
+
+      color: var(--branco);
+      font-size: 15px;
+      font-weight: 800;
+
+      background: var(--verde);
+      border: 0;
+      border-radius: 999px;
+
+      cursor: pointer;
+
+      box-shadow: 0 15px 32px rgba(36, 106, 90, 0.22);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .botao-formulario:hover {
+      transform: translateY(-2px);
+      background: var(--verde-escuro);
+    }
+
+    .privacidade {
+      margin-top: 17px;
+
+      color: var(--texto-suave);
+      font-size: 11px;
+      text-align: center;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape {
+      padding: 29px 0;
+
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 12px;
+      text-align: center;
+
+      background: var(--verde-escuro);
+    }
+
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 900px) {
+
+      .informacoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(100% - 28px, 1080px);
+      }
+
+      .cabecalho-conteudo {
+        min-height: 74px;
+      }
+
+      .marca-icone {
+        width: 46px;
+        height: 46px;
+      }
+
+      .marca-texto strong {
+        font-size: 15px;
+      }
+
+      .marca-texto small {
+        font-size: 8px;
+      }
+
+      .voltar {
+        min-height: 40px;
+        padding: 0 13px;
+        font-size: 10px;
+      }
+
+      .apresentacao {
+        padding-top: 44px;
+      }
+
+      .apresentacao h1 {
+        font-size: 40px;
+      }
+
+      .apresentacao p {
+        font-size: 15px;
+      }
+
+      .informacoes-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .informacao {
+        min-height: auto;
+      }
+
+      .formulario-card {
+        padding: 34px 19px;
+        border-radius: 23px;
+      }
+
+      .formulario-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .campo-largo,
+      .consentimento {
+        grid-column: auto;
+      }
+
+    }
+
+    @media (max-width: 430px) {
+
+      .marca-texto {
+        display: none;
+      }
+
+      .apresentacao h1 {
+        font-size: 36px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header class="cabecalho">
+
+    <div class="container cabecalho-conteudo">
+
+      <a
+        href="imersao-audiometria.html"
+        class="marca"
+      >
+
+        <div class="marca-icone">
+          🎧
+        </div>
+
+        <div class="marca-texto">
+
+          <strong>
+            Imersão em Audiometria
+          </strong>
+
+          <small>
+            Inscrição
+          </small>
+
+        </div>
+
+      </a>
+
+      <a
+        href="imersao-audiometria.html"
+        class="voltar"
+      >
+        ← Voltar ao curso
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="apresentacao">
+
+      <div class="container">
+
+        <div class="apresentacao-conteudo">
+
+          <div class="etiqueta">
+            🎧 Formação presencial
+          </div>
+
+          <h1>
+            Inscrição para a
+            <span>Imersão em Audiometria Tonal e Vocal</span>
+          </h1>
+
+          <p>
+            Preencha seus dados para solicitar a inscrição.
+            Após o envio, entraremos em contato com as orientações
+            para confirmação da vaga e pagamento.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="informacoes">
+
+      <div class="container">
+
+        <div class="informacoes-grid">
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              📍
+            </div>
+
+            <div>
+
+              <strong>
+                Modalidade
+              </strong>
+
+              <p>
+                Curso presencial
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              🏙️
+            </div>
+
+            <div>
+
+              <strong>
+                Local
+              </strong>
+
+              <p>
+                Feira de Santana – BA
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              ⏱️
+            </div>
+
+            <div>
+
+              <strong>
+                Carga horária
+              </strong>
+
+              <p>
+                INFORME A CARGA HORÁRIA
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              💰
+            </div>
+
+            <div>
+
+              <strong>
+                Investimento
+              </strong>
+
+              <p>
+                INFORME O VALOR
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="container">
+
+      <div class="aviso">
+
+        <strong>Importante:</strong>
+        o preenchimento deste formulário não confirma automaticamente
+        a vaga. A inscrição será efetivada após nosso contato e a
+        confirmação do pagamento.
+
+      </div>
+
+    </div>
+
+
+    <section
+      id="formulario"
+      class="formulario-secao"
+    >
+
+      <div class="container">
+
+        <div class="formulario-card">
+
+          <div class="formulario-cabecalho">
+
+            <div class="formulario-icone">
+              ✉️
+            </div>
+
+            <h2>
+              Dados para inscrição
+            </h2>
+
+            <p>
+              Preencha as informações abaixo para que possamos
+              entrar em contato e orientar sobre a confirmação da vaga.
+            </p>
+
+          </div>
+
+
+          <form id="formularioImersao">
+
+            <div class="formulario-grid">
+
+
+              <div class="campo">
+
+                <label for="nome">
+                  Nome completo
+                </label>
+
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Digite seu nome completo"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="nomeCertificado">
+                  Nome para o certificado
+                </label>
+
+                <input
+                  type="text"
+                  id="nomeCertificado"
+                  placeholder="Como deve aparecer no certificado"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="whatsapp">
+                  WhatsApp
+                </label>
+
+                <input
+                  type="tel"
+                  id="whatsapp"
+                  placeholder="(75) 99999-9999"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="email">
+                  E-mail
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="cidade">
+                  Cidade
+                </label>
+
+                <input
+                  type="text"
+                  id="cidade"
+                  placeholder="Digite sua cidade"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="perfil">
+                  Você é:
+                </label>
+
+                <select
+                  id="perfil"
+                  required
+                >
+
+                  <option value="">
+                    Selecione
+                  </option>
+
+                  <option value="Estudante de Fonoaudiologia">
+                    Estudante de Fonoaudiologia
+                  </option>
+
+                  <option value="Fonoaudiólogo(a)">
+                    Fonoaudiólogo(a)
+                  </option>
+
+                  <option value="Outro">
+                    Outro
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="instituicao">
+                  Faculdade ou instituição
+                </label>
+
+                <input
+                  type="text"
+                  id="instituicao"
+                  placeholder="Informe a instituição"
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="semestre">
+                  Semestre ou tempo de formação
+                </label>
+
+                <input
+                  type="text"
+                  id="semestre"
+                  placeholder="Exemplo: 7º semestre ou formada há 2 anos"
+                >
+
+              </div>
+
+
+              <div class="campo campo-largo">
+
+                <label for="experiencia">
+                  Qual é sua experiência com audiometria?
+                </label>
+
+                <select
+                  id="experiencia"
+                  required
+                >
+
+                  <option value="">
+                    Selecione
+                  </option>
+
+                  <option value="Ainda não tive contato prático">
+                    Ainda não tive contato prático
+                  </option>
+
+                  <option value="Já acompanhei ou realizei em estágio">
+                    Já acompanhei ou realizei em estágio
+                  </option>
+
+                  <option value="Já realizo na prática clínica">
+                    Já realizo na prática clínica
+                  </option>
+
+                  <option value="Desejo revisar e atualizar conhecimentos">
+                    Desejo revisar e atualizar conhecimentos
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="campo campo-largo">
+
+                <label for="observacoes">
+                  Alguma observação ou dúvida?
+                </label>
+
+                <textarea
+                  id="observacoes"
+                  placeholder="Informe apenas o que considerar necessário para este primeiro contato."
+                ></textarea>
+
+                <span class="campo-ajuda">
+                  Campo opcional.
+                </span>
+
+              </div>
+
+
+              <div class="consentimento">
+
+                <input
+                  type="checkbox"
+                  id="autorizacao"
+                  required
+                >
+
+                <label for="autorizacao">
+                  Estou ciente de que o envio deste formulário não
+                  confirma automaticamente minha vaga e autorizo o
+                  contato pelos dados informados.
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="botao-formulario"
+            >
+              Solicitar inscrição
+              <span>→</span>
+            </button>
+
+
+            <p class="privacidade">
+              🔒 Os dados serão utilizados somente para o contato
+              relacionado à Imersão em Audiometria Tonal e Vocal.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="rodape">
+
+    © 2026 Jhulia Machado • Todos os direitos reservados.
+
+  </footer>
+
+
+  <script>
+
+    const formulario =
+      document.getElementById("formularioImersao");
+
+    formulario.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const nome =
+        document.getElementById("nome").value.trim();
+
+      const nomeCertificado =
+        document.getElementById("nomeCertificado").value.trim();
+
+      const whatsapp =
+        document.getElementById("whatsapp").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const cidade =
+        document.getElementById("cidade").value.trim();
+
+      const perfil =
+        document.getElementById("perfil").value;
+
+      const instituicao =
+        document.getElementById("instituicao").value.trim();
+
+      const semestre =
+        document.getElementById("semestre").value.trim();
+
+      const experiencia =
+        document.getElementById("experiencia").value;
+
+      const observacoes =
+        document.getElementById("observacoes").value.trim();
+
+      const numeroDestino = "5575981405190";
+
+      let mensagem =
+`Olá! Gostaria de solicitar minha inscrição na Imersão em Audiometria Tonal e Vocal.
+
+Nome completo: ${nome}
+Nome para o certificado: ${nomeCertificado}
+WhatsApp: ${whatsapp}
+E-mail: ${email}
+Cidade: ${cidade}
+Perfil: ${perfil}
+Instituição: ${instituicao || "Não informada"}
+Semestre ou tempo de formação: ${semestre || "Não informado"}
+Experiência com audiometria: ${experiencia}`;
+
+      if (observacoes !== "") {
+
+        mensagem += `
+
+Observações ou dúvidas:
+${observacoes}`;
+
+      }
+
+      mensagem += `
+
+Estou ciente de que a vaga será confirmada após o contato e a confirmação do pagamento.`;
+
+      const linkWhatsApp =
+        `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
+
+      window.location.href = linkWhatsApp;
+
+    });
+
+  </script>
+
+</body>
+
+</html>
