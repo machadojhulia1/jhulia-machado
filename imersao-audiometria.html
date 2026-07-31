@@ -340,15 +340,31 @@
 
 
     .hero-conteudo {
-      position: relative;
-      z-index: 2;
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+    .hero-texto {
+  max-width: 850px;
+  margin: 0 auto;
+}
 
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 75px;
-      align-items: center;
-    }
+.hero h1 {
+  max-width: 850px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
+.hero-descricao {
+  max-width: 680px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero-botoes {
+  justify-content: center;
+}
 
     .hero h1 {
       margin-bottom: 25px;
@@ -410,65 +426,7 @@
     }
 
 
-    .hero-imagem {
-      position: relative;
-    }
-
-
-    .hero-imagem-moldura {
-      position: relative;
-      min-height: 590px;
-      overflow: hidden;
-
-      background: #dde7e3;
-      border-radius:
-        170px 35px
-        170px 35px;
-
-      box-shadow: var(--sombra);
-    }
-
-
-    .hero-imagem-moldura img {
-      width: 100%;
-      height: 100%;
-      min-height: 590px;
-      object-fit: cover;
-    }
-
-
-    .hero-selo {
-      position: absolute;
-      right: -18px;
-      bottom: 35px;
-
-      display: grid;
-      width: 175px;
-      height: 130px;
-
-      place-items: center;
-      padding: 18px;
-
-      color: var(--branco);
-      text-align: center;
-      font-weight: 700;
-      line-height: 1.35;
-
-      background: var(--verde-escuro);
-      border: 3px solid var(--creme);
-      border-radius: 28px;
-      box-shadow: var(--sombra);
-    }
-
-
-    .hero-selo span {
-      display: block;
-      margin-bottom: 5px;
-
-      color: var(--dourado-claro);
-      font-size: 27px;
-    }
-
+   
 
     /* ================================
        FAIXA DE INFORMAÇÕES
@@ -1590,36 +1548,8 @@
           </div>
 
 
-        
-
         </div>
 
-
-        <div class="hero-imagem">
-
-          <div class="hero-imagem-moldura">
-
-            <img
-              src="audio 5.jng"
-              alt="Equipamento utilizado em avaliação audiológica"
-            >
-
-          </div>
-
-          <div class="hero-selo">
-
-            <div>
-
-              </span>
-
-              Feira de <br>
-              Santana
-
-            </div>
-
-          </div>
-
-        </div>
 
       </div>
 
