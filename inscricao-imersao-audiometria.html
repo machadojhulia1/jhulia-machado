@@ -372,14 +372,76 @@
       border-radius: 50%;
     }
 
-    .formulario-cabecalho h2 {
-      margin-bottom: 10px;
+.formulario-cabecalho h1{
 
-      color: var(--verde-escuro);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(32px, 4vw, 45px);
-      line-height: 1.1;
-    }
+    margin-bottom:18px;
+
+    color:var(--verde-escuro);
+
+    font-family:"Playfair Display", serif;
+
+    font-size:clamp(34px,4vw,48px);
+
+    line-height:1.1;
+
+    text-align:center;
+
+}
+    .resumo-curso{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin:28px 0;
+
+}
+    .resumo-item{
+
+    min-width:190px;
+
+    padding:20px;
+
+    background:#F7FBF9;
+
+    border:1px solid rgba(23,79,67,.08);
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+    .resumo-item span{
+
+    display:block;
+
+    font-size:26px;
+
+    margin-bottom:8px;
+
+}
+    .resumo-item strong{
+
+    display:block;
+
+    color:var(--verde-escuro);
+
+    margin-bottom:4px;
+
+    font-size:15px;
+
+}
+    .resumo-item small{
+
+    color:var(--texto-suave);
+
+    font-size:15px;
+
+}
 
     .formulario-cabecalho p {
       color: var(--texto-suave);
@@ -669,143 +731,6 @@
 
   <main>
 
-    <section class="apresentacao">
-
-      <div class="container">
-
-        <div class="apresentacao-conteudo">
-
-          <div class="etiqueta">
-            🎧 Formação presencial
-          </div>
-
-          <h1>
-            Inscrição para a
-            <span>Imersão em Audiometria Tonal e Vocal</span>
-          </h1>
-
-          <p>
-            Preencha seus dados para solicitar a inscrição.
-            Após o envio, entraremos em contato com as orientações
-            para confirmação da vaga e pagamento.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <section class="informacoes">
-
-      <div class="container">
-
-        <div class="informacoes-grid">
-
-          <article class="informacao">
-
-            <div class="informacao-icone">
-              📍
-            </div>
-
-            <div>
-
-              <strong>
-                Modalidade
-              </strong>
-
-              <p>
-                Curso presencial
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="informacao">
-
-            <div class="informacao-icone">
-              🏙️
-            </div>
-
-            <div>
-
-              <strong>
-                Local
-              </strong>
-
-              <p>
-                Feira de Santana – BA
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="informacao">
-
-            <div class="informacao-icone">
-              ⏱️
-            </div>
-
-            <div>
-
-              <strong>
-                Carga horária
-              </strong>
-
-              <p>
-                INFORME A CARGA HORÁRIA
-              </p>
-
-            </div>
-
-          </article>
-
-
-          <article class="informacao">
-
-            <div class="informacao-icone">
-              💰
-            </div>
-
-            <div>
-
-              <strong>
-                Investimento
-              </strong>
-
-              <p>
-                INFORME O VALOR
-              </p>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <div class="container">
-
-      <div class="aviso">
-
-        <strong>Importante:</strong>
-        o preenchimento deste formulário não confirma automaticamente
-        a vaga. A inscrição será efetivada após nosso contato e a
-        confirmação do pagamento.
-
-      </div>
-
-    </div>
-
 
     <section
       id="formulario"
@@ -816,23 +741,43 @@
 
         <div class="formulario-card">
 
-          <div class="formulario-cabecalho">
+<div class="formulario-cabecalho">
 
-            <div class="formulario-icone">
-              ✉️
-            </div>
+  <h1>
+    Inscrição — Imersão em Audiometria Tonal e Vocal
+  </h1>
 
-            <h2>
-              Dados para inscrição
-            </h2>
+  <div class="resumo-curso">
 
-            <p>
-              Preencha as informações abaixo para que possamos
-              entrar em contato e orientar sobre a confirmação da vaga.
-            </p>
+    <div class="resumo-item">
 
-          </div>
+      <span>⏱️</span>
 
+      <strong>Carga horária</strong>
+
+      <small>10 horas</small>
+
+    </div>
+
+    <div class="resumo-item">
+
+      <span>💰</span>
+
+      <strong>Investimento</strong>
+
+      <small>R$ 350,00</small>
+
+    </div>
+
+  </div>
+
+  <p>
+    Preencha seus dados para solicitar sua inscrição.
+    Após o envio, entraremos em contato para confirmar a vaga
+    e enviar as orientações para o pagamento.
+  </p>
+
+</div>
 
           <form id="formularioImersao">
 
