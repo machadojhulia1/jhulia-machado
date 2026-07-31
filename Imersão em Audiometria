@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Curso presencial de Audiometria Tonal e Vocal para estudantes e profissionais de Fonoaudiologia, em Feira de Santana."
+  >
+
+  <title>Curso de Audiometria Tonal e Vocal</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <style>
+
+    /* ================================
+       CONFIGURAÇÕES GERAIS
+    ================================= */
+
+    :root {
+      --verde-escuro: #164f43;
+      --verde-principal: #236b5c;
+      --verde-medio: #579080;
+      --verde-claro: #e3efea;
+
+      --dourado: #c89b3c;
+      --dourado-claro: #f1dfb3;
+
+      --creme: #fbf8f2;
+      --branco: #ffffff;
+
+      --texto: #19352f;
+      --texto-suave: #61716c;
+
+      --borda: rgba(22, 79, 67, 0.12);
+
+      --sombra:
+        0 18px 50px rgba(26, 66, 57, 0.10);
+
+      --raio-grande: 32px;
+      --raio-medio: 22px;
+      --raio-pequeno: 14px;
+
+      --largura: 1180px;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      color: var(--texto);
+      font-family: "DM Sans", sans-serif;
+      background: var(--creme);
+      overflow-x: hidden;
+    }
+
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+
+    .container {
+      width: min(90%, var(--largura));
+      margin: 0 auto;
+    }
+
+
+    .secao {
+      padding: 110px 0;
+    }
+
+
+    .titulo-secao {
+      margin-bottom: 22px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 62px);
+      font-weight: 600;
+      line-height: 1.08;
+    }
+
+
+    .texto-secao {
+      max-width: 660px;
+
+      color: var(--texto-suave);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+
+    .etiqueta {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+
+      margin-bottom: 23px;
+      padding: 9px 16px;
+
+      color: var(--verde-escuro);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+
+      background: var(--dourado-claro);
+      border-radius: 999px;
+    }
+
+
+    .botao {
+      display: inline-flex;
+      min-height: 54px;
+      gap: 10px;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 25px;
+
+      font-size: 15px;
+      font-weight: 700;
+
+      border: 1px solid transparent;
+      border-radius: 999px;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .botao:hover {
+      transform: translateY(-3px);
+    }
+
+
+    .botao-principal {
+      color: var(--branco);
+      background: var(--verde-escuro);
+      box-shadow: 0 12px 28px rgba(22, 79, 67, 0.24);
+    }
+
+
+    .botao-principal:hover {
+      background: #0f4137;
+    }
+
+
+    .botao-secundario {
+      color: var(--verde-escuro);
+      background: transparent;
+      border-color: var(--verde-escuro);
+    }
+
+
+    .botao-secundario:hover {
+      color: var(--branco);
+      background: var(--verde-escuro);
+    }
+
+
+    /* ================================
+       CABEÇALHO
+    ================================= */
+
+    .cabecalho {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+
+      background: rgba(251, 248, 242, 0.92);
+      border-bottom: 1px solid rgba(22, 79, 67, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+
+    .cabecalho-conteudo {
+      display: flex;
+      min-height: 82px;
+
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    .marca {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+    }
+
+
+    .marca-icone {
+      display: grid;
+      width: 52px;
+      height: 52px;
+
+      place-items: center;
+
+      color: var(--dourado);
+      font-size: 24px;
+
+      border: 1px solid var(--dourado);
+      border-radius: 50%;
+    }
+
+
+    .marca-texto small {
+      display: block;
+
+      color: var(--dourado);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+
+    .marca-texto strong {
+      display: block;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: 17px;
+      line-height: 1.1;
+    }
+
+
+    .navegacao {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+
+    .navegacao a {
+      color: var(--texto);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+
+    .navegacao a:hover {
+      color: var(--verde-principal);
+    }
+
+
+    .menu-botao {
+      display: none;
+
+      color: var(--verde-escuro);
+      font-size: 28px;
+
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+
+    /* ================================
+       HERO
+    ================================= */
+
+    .hero {
+      position: relative;
+      padding: 80px 0 70px;
+      overflow: hidden;
+    }
+
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      top: -160px;
+      right: -130px;
+
+      width: 500px;
+      height: 500px;
+
+      background: rgba(227, 239, 234, 0.8);
+      border-radius: 50%;
+      filter: blur(2px);
+    }
+
+
+    .hero-conteudo {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+
+    .hero h1 {
+      margin-bottom: 25px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(52px, 6vw, 82px);
+      font-weight: 600;
+      line-height: 0.98;
+    }
+
+
+    .hero h1 span {
+      display: block;
+      margin-top: 11px;
+      color: var(--dourado);
+    }
+
+
+    .hero-descricao {
+      max-width: 575px;
+      margin-bottom: 28px;
+
+      color: var(--texto-suave);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+
+    .hero-botoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-bottom: 35px;
+    }
+
+
+    .hero-informacoes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+
+    .hero-informacao {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+
+      padding: 11px 14px;
+
+      color: var(--verde-escuro);
+      font-size: 13px;
+      font-weight: 600;
+
+      background: rgba(255, 255, 255, 0.75);
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+    }
+
+
+    .hero-imagem {
+      position: relative;
+    }
+
+
+    .hero-imagem-moldura {
+      position: relative;
+      min-height: 590px;
+      overflow: hidden;
+
+      background: #dde7e3;
+      border-radius:
+        170px 35px
+        170px 35px;
+
+      box-shadow: var(--sombra);
+    }
+
+
+    .hero-imagem-moldura img {
+      width: 100%;
+      height: 100%;
+      min-height: 590px;
+      object-fit: cover;
+    }
+
+
+    .hero-selo {
+      position: absolute;
+      right: -18px;
+      bottom: 35px;
+
+      display: grid;
+      width: 175px;
+      height: 130px;
+
+      place-items: center;
+      padding: 18px;
+
+      color: var(--branco);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.35;
+
+      background: var(--verde-escuro);
+      border: 3px solid var(--creme);
+      border-radius: 28px;
+      box-shadow: var(--sombra);
+    }
+
+
+    .hero-selo span {
+      display: block;
+      margin-bottom: 5px;
+
+      color: var(--dourado-claro);
+      font-size: 27px;
+    }
+
+
+    /* ================================
+       FAIXA DE INFORMAÇÕES
+    ================================= */
+
+    .faixa-dados {
+      position: relative;
+      z-index: 3;
+
+      margin-top: 25px;
+    }
+
+
+    .faixa-dados-conteudo {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      overflow: hidden;
+
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-medio);
+      box-shadow: var(--sombra);
+    }
+
+
+    .dado {
+      display: flex;
+      min-height: 120px;
+
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      border-right: 1px solid var(--borda);
+    }
+
+
+    .dado:last-child {
+      border-right: 0;
+    }
+
+
+    .dado-icone {
+      display: grid;
+      flex: 0 0 50px;
+      width: 50px;
+      height: 50px;
+
+      place-items: center;
+
+      color: var(--verde-escuro);
+      font-size: 21px;
+
+      background: var(--verde-claro);
+      border-radius: 50%;
+    }
+
+
+    .dado strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--verde-escuro);
+      font-size: 14px;
+    }
+
+
+    .dado span {
+      color: var(--texto-suave);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+
+    /* ================================
+       DIFERENCIAIS
+    ================================= */
+
+    .diferenciais-cabecalho {
+      max-width: 730px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+
+    .diferenciais-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+
+    .diferencial {
+      min-height: 310px;
+      padding: 38px 30px;
+
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-medio);
+      box-shadow: 0 14px 35px rgba(29, 71, 61, 0.07);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+
+    .diferencial:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--sombra);
+    }
+
+
+    .diferencial-icone {
+      display: grid;
+      width: 70px;
+      height: 70px;
+
+      place-items: center;
+      margin-bottom: 27px;
+
+      color: var(--verde-escuro);
+      font-size: 30px;
+
+      background: var(--verde-claro);
+      border-radius: 22px;
+    }
+
+
+    .diferencial h3 {
+      margin-bottom: 15px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+    }
+
+
+    .diferencial p {
+      color: var(--texto-suave);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+
+    /* ================================
+       O QUE VAI APRENDER
+    ================================= */
+
+    .aprendizado {
+      color: var(--branco);
+      background: var(--verde-escuro);
+    }
+
+
+    .aprendizado .titulo-secao {
+      color: var(--branco);
+    }
+
+
+    .aprendizado-conteudo {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+
+    .aprendizado-lista {
+      display: grid;
+      gap: 17px;
+      margin-top: 35px;
+      list-style: none;
+    }
+
+
+    .aprendizado-lista li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+
+    .aprendizado-lista li::before {
+      content: "✓";
+
+      display: grid;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+
+      place-items: center;
+      margin-top: 1px;
+
+      color: var(--verde-escuro);
+      font-size: 12px;
+      font-weight: 800;
+
+      background: var(--dourado);
+      border-radius: 50%;
+    }
+
+
+    .aprendizado-imagem {
+      min-height: 570px;
+      overflow: hidden;
+
+      border-radius: 35px 120px 35px 120px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .aprendizado-imagem img {
+      height: 570px;
+      object-fit: cover;
+    }
+
+
+    /* ================================
+       PÚBLICO
+    ================================= */
+
+    .publico-cabecalho {
+      max-width: 750px;
+      margin-bottom: 55px;
+    }
+
+
+    .publico-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+
+    .publico-card {
+      position: relative;
+      min-height: 330px;
+      padding: 38px 31px;
+
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-medio);
+    }
+
+
+    .publico-numero {
+      display: block;
+      margin-bottom: 30px;
+
+      color: rgba(22, 79, 67, 0.22);
+      font-family: "Playfair Display", serif;
+      font-size: 52px;
+      font-weight: 700;
+    }
+
+
+    .publico-card h3 {
+      margin-bottom: 16px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+
+    .publico-card p {
+      color: var(--texto-suave);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+
+    /* ================================
+       COMO FUNCIONA
+    ================================= */
+
+    .como-funciona {
+      background: #f2eee5;
+    }
+
+
+    .como-cabecalho {
+      max-width: 720px;
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+
+    .etapas {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+
+    .etapa {
+      position: relative;
+      min-height: 310px;
+      padding: 34px 25px;
+
+      text-align: center;
+
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: var(--raio-medio);
+    }
+
+
+    .etapa-numero {
+      display: grid;
+      width: 43px;
+      height: 43px;
+
+      place-items: center;
+      margin: 0 auto 22px;
+
+      color: var(--branco);
+      font-weight: 800;
+
+      background: var(--dourado);
+      border-radius: 50%;
+    }
+
+
+    .etapa-icone {
+      display: grid;
+      width: 68px;
+      height: 68px;
+
+      place-items: center;
+      margin: 0 auto 23px;
+
+      color: var(--verde-escuro);
+      font-size: 28px;
+
+      background: var(--verde-claro);
+      border-radius: 22px;
+    }
+
+
+    .etapa h3 {
+      margin-bottom: 12px;
+      color: var(--verde-escuro);
+      font-size: 18px;
+    }
+
+
+    .etapa p {
+      color: var(--texto-suave);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+
+    /* ================================
+       FRASE DE DESTAQUE
+    ================================= */
+
+    .frase {
+      padding: 120px 0;
+      text-align: center;
+    }
+
+
+    .frase blockquote {
+      max-width: 930px;
+      margin: 0 auto;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 6vw, 76px);
+      font-weight: 500;
+      line-height: 1.12;
+    }
+
+
+    .frase blockquote span {
+      color: var(--dourado);
+    }
+
+
+    /* ================================
+       INCLUSO
+    ================================= */
+
+    .incluso-conteudo {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+
+    .incluso-lista {
+      display: grid;
+      gap: 16px;
+      margin-top: 35px;
+      list-style: none;
+    }
+
+
+    .incluso-lista li {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+
+      color: var(--texto);
+      font-size: 16px;
+    }
+
+
+    .incluso-lista li::before {
+      content: "✓";
+
+      display: grid;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+
+      place-items: center;
+
+      color: var(--branco);
+      font-size: 12px;
+      font-weight: 800;
+
+      background: var(--verde-principal);
+      border-radius: 50%;
+    }
+
+
+    .incluso-card {
+      padding: 48px;
+
+      color: var(--branco);
+      background: var(--verde-escuro);
+      border-radius: var(--raio-grande);
+    }
+
+
+    .incluso-card h3 {
+      margin-bottom: 30px;
+
+      color: var(--dourado-claro);
+      font-family: "Playfair Display", serif;
+      font-size: 34px;
+    }
+
+
+    .incluso-dados {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+
+    .incluso-dado {
+      min-height: 145px;
+      padding: 24px;
+
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 18px;
+    }
+
+
+    .incluso-dado span {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--dourado);
+      font-size: 27px;
+    }
+
+
+    .incluso-dado strong {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 15px;
+    }
+
+
+    .incluso-dado small {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 12px;
+    }
+
+
+    /* ================================
+       FAQ
+    ================================= */
+
+    .faq {
+      background: #f2eee5;
+    }
+
+
+    .faq-conteudo {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+
+    .faq-lista {
+      display: grid;
+      gap: 13px;
+    }
+
+
+    .faq-item {
+      overflow: hidden;
+
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 16px;
+    }
+
+
+    .faq-pergunta {
+      display: flex;
+      width: 100%;
+      min-height: 72px;
+
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 18px 22px;
+
+      color: var(--verde-escuro);
+      text-align: left;
+      font-weight: 700;
+
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+
+    .faq-sinal {
+      color: var(--dourado);
+      font-size: 25px;
+      transition: transform 0.25s ease;
+    }
+
+
+    .faq-resposta {
+      max-height: 0;
+      overflow: hidden;
+
+      color: var(--texto-suave);
+      line-height: 1.7;
+
+      transition:
+        max-height 0.35s ease,
+        padding 0.35s ease;
+    }
+
+
+    .faq-resposta p {
+      padding: 0 22px;
+    }
+
+
+    .faq-item.ativo .faq-resposta {
+      max-height: 240px;
+      padding-bottom: 22px;
+    }
+
+
+    .faq-item.ativo .faq-sinal {
+      transform: rotate(45deg);
+    }
+
+
+    /* ================================
+       CTA FINAL
+    ================================= */
+
+    .cta {
+      padding: 105px 0;
+    }
+
+
+    .cta-conteudo {
+      position: relative;
+      overflow: hidden;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 45px;
+      align-items: center;
+
+      padding: 65px 70px;
+
+      color: var(--branco);
+      background: var(--verde-escuro);
+      border-radius: var(--raio-grande);
+    }
+
+
+    .cta-conteudo::after {
+      content: "";
+
+      position: absolute;
+      right: -80px;
+      bottom: -115px;
+
+      width: 330px;
+      height: 330px;
+
+      border: 1px solid rgba(200, 155, 60, 0.4);
+      border-radius: 50%;
+    }
+
+
+    .cta h2 {
+      max-width: 730px;
+
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 61px);
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+
+    .cta h2 span {
+      color: var(--dourado);
+    }
+
+
+    .cta p {
+      max-width: 670px;
+      margin-top: 15px;
+
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+
+    .cta .botao {
+      position: relative;
+      z-index: 2;
+
+      color: var(--verde-escuro);
+      background: var(--dourado);
+    }
+
+
+    /* ================================
+       RODAPÉ
+    ================================= */
+
+    .rodape {
+      padding: 60px 0 28px;
+      color: var(--branco);
+      background: #0d3d34;
+    }
+
+
+    .rodape-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 55px;
+      padding-bottom: 40px;
+    }
+
+
+    .rodape h3 {
+      margin-bottom: 15px;
+
+      color: var(--dourado-claro);
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+
+    .rodape p,
+    .rodape a {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    .rodape a:hover {
+      color: var(--dourado);
+    }
+
+
+    .rodape-links {
+      display: grid;
+      gap: 7px;
+    }
+
+
+    .rodape-final {
+      padding-top: 25px;
+
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      font-size: 12px;
+
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+
+    /* ================================
+       RESPONSIVIDADE
+    ================================= */
+
+    @media (max-width: 980px) {
+
+      .navegacao {
+        position: absolute;
+        top: 82px;
+        right: 5%;
+        left: 5%;
+
+        display: none;
+        padding: 22px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        background: var(--creme);
+        border: 1px solid var(--borda);
+        border-radius: 18px;
+        box-shadow: var(--sombra);
+      }
+
+
+      .navegacao.aberta {
+        display: flex;
+      }
+
+
+      .menu-botao {
+        display: block;
+      }
+
+
+      .cabecalho .botao-principal {
+        display: none;
+      }
+
+
+      .hero-conteudo,
+      .aprendizado-conteudo,
+      .incluso-conteudo,
+      .faq-conteudo {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-imagem {
+        order: -1;
+      }
+
+
+      .hero-imagem-moldura,
+      .hero-imagem-moldura img {
+        min-height: 490px;
+      }
+
+
+      .hero-selo {
+        right: 20px;
+      }
+
+
+      .faixa-dados-conteudo {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .dado:nth-child(2) {
+        border-right: 0;
+      }
+
+
+      .dado:nth-child(-n+2) {
+        border-bottom: 1px solid var(--borda);
+      }
+
+
+      .diferenciais-grid,
+      .publico-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .etapas {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .cta-conteudo {
+        grid-template-columns: 1fr;
+        padding: 55px 45px;
+      }
+
+
+      .rodape-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .secao {
+        padding: 78px 0;
+      }
+
+
+      .cabecalho-conteudo {
+        min-height: 72px;
+      }
+
+
+      .marca-icone {
+        width: 44px;
+        height: 44px;
+      }
+
+
+      .marca-texto strong {
+        font-size: 14px;
+      }
+
+
+      .hero {
+        padding-top: 35px;
+      }
+
+
+      .hero-conteudo {
+        gap: 45px;
+      }
+
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+
+      .hero-descricao {
+        font-size: 16px;
+      }
+
+
+      .hero-botoes {
+        flex-direction: column;
+      }
+
+
+      .hero-botoes .botao {
+        width: 100%;
+      }
+
+
+      .hero-imagem-moldura {
+        min-height: 380px;
+        border-radius: 90px 25px 90px 25px;
+      }
+
+
+      .hero-imagem-moldura img {
+        min-height: 380px;
+      }
+
+
+      .hero-selo {
+        position: relative;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+
+        border-radius: 18px;
+      }
+
+
+      .faixa-dados-conteudo {
+        grid-template-columns: 1fr;
+      }
+
+
+      .dado {
+        justify-content: flex-start;
+        border-right: 0;
+        border-bottom: 1px solid var(--borda);
+      }
+
+
+      .dado:last-child {
+        border-bottom: 0;
+      }
+
+
+      .diferencial,
+      .publico-card {
+        min-height: auto;
+      }
+
+
+      .aprendizado-conteudo {
+        gap: 45px;
+      }
+
+
+      .aprendizado-imagem,
+      .aprendizado-imagem img {
+        min-height: 390px;
+        height: 390px;
+      }
+
+
+      .etapas {
+        grid-template-columns: 1fr;
+      }
+
+
+      .incluso-card {
+        padding: 30px 22px;
+      }
+
+
+      .incluso-dados {
+        grid-template-columns: 1fr;
+      }
+
+
+      .faq-conteudo {
+        gap: 40px;
+      }
+
+
+      .cta {
+        padding: 70px 0;
+      }
+
+
+      .cta-conteudo {
+        padding: 42px 25px;
+      }
+
+
+      .cta .botao {
+        width: 100%;
+      }
+
+
+      .rodape-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       CABEÇALHO
+  ================================== -->
+
+  <header class="cabecalho">
+
+    <div class="container cabecalho-conteudo">
+
+      <a
+        href="#inicio"
+        class="marca"
+        aria-label="Início da página"
+      >
+
+        <div class="marca-icone">
+          🎧
+        </div>
+
+        <div class="marca-texto">
+
+          <small>
+            Curso de
+          </small>
+
+          <strong>
+            Audiometria<br>
+            Tonal e Vocal
+          </strong>
+
+        </div>
+
+      </a>
+
+
+      <nav
+        class="navegacao"
+        id="navegacao"
+      >
+
+        <a href="#curso">
+          O curso
+        </a>
+
+        <a href="#conteudo">
+          Conteúdo
+        </a>
+
+        <a href="#publico">
+          Para quem é
+        </a>
+
+        <a href="#funcionamento">
+          Como funciona
+        </a>
+
+        <a href="#duvidas">
+          Dúvidas
+        </a>
+
+      </nav>
+
+
+      <a
+        href="LINK-DE-INSCRICAO"
+        class="botao botao-principal"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Quero me inscrever
+      </a>
+
+
+      <button
+        class="menu-botao"
+        id="menuBotao"
+        aria-label="Abrir menu"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =================================
+         HERO
+    ================================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
+      <div class="container hero-conteudo">
+
+        <div class="hero-texto">
+
+          <span class="etiqueta">
+            📍 Formação presencial
+          </span>
+
+          <h1>
+            Domine a audiometria tonal e vocal
+            <span>
+              na prática clínica.
+            </span>
+          </h1>
+
+          <p class="hero-descricao">
+            Um curso presencial desenvolvido para estudantes e
+            profissionais que desejam compreender, executar e interpretar
+            os procedimentos audiométricos com mais segurança.
+          </p>
+
+
+          <div class="hero-botoes">
+
+            <a
+              href="LINK-DE-INSCRICAO"
+              class="botao botao-principal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ★ Quero me inscrever
+            </a>
+
+            <a
+              href="https://wa.me/5575981405190?text=Olá%2C%20gostaria%20de%20receber%20informações%20sobre%20o%20curso%20de%20Audiometria%20Tonal%20e%20Vocal."
+              class="botao botao-secundario"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ◉ Falar pelo WhatsApp
+            </a>
+
+          </div>
+
+
+          <div class="hero-informacoes">
+
+            <span class="hero-informacao">
+              📍 Feira de Santana
+            </span>
+
+            <span class="hero-informacao">
+              👥 Vagas limitadas
+            </span>
+
+            <span class="hero-informacao">
+              📜 Certificado incluso
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-imagem">
+
+          <div class="hero-imagem-moldura">
+
+            <img
+              src="audiometro-curso.png"
+              alt="Equipamento utilizado em avaliação audiológica"
+            >
+
+          </div>
+
+          <div class="hero-selo">
+
+            <div>
+
+              <span>
+                📍
+              </span>
+
+              Curso presencial<br>
+              em Feira de Santana
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         INFORMAÇÕES PRINCIPAIS
+    ================================== -->
+
+    <section class="faixa-dados">
+
+      <div class="container">
+
+        <div class="faixa-dados-conteudo">
+
+          <article class="dado">
+
+            <div class="dado-icone">
+              📜
+            </div>
+
+            <div>
+
+              <strong>
+                Certificado incluso
+              </strong>
+
+              <span>
+                Certificado de participação ao final.
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="dado">
+
+            <div class="dado-icone">
+              📍
+            </div>
+
+            <div>
+
+              <strong>
+                Curso presencial
+              </strong>
+
+              <span>
+                Realizado em Feira de Santana.
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="dado">
+
+            <div class="dado-icone">
+              👥
+            </div>
+
+            <div>
+
+              <strong>
+                Turma reduzida
+              </strong>
+
+              <span>
+                Mais proximidade e participação.
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="dado">
+
+            <div class="dado-icone">
+              🎧
+            </div>
+
+            <div>
+
+              <strong>
+                Treinamento prático
+              </strong>
+
+              <span>
+                Demonstrações e prática supervisionada.
+              </span>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         DIFERENCIAIS
+    ================================== -->
+
+    <section
+      class="secao"
+      id="curso"
+    >
+
+      <div class="container">
+
+        <div class="diferenciais-cabecalho">
+
+          <span class="etiqueta">
+            Uma formação para a prática
+          </span>
+
+          <h2 class="titulo-secao">
+            Por que fazer este curso?
+          </h2>
+
+          <p class="texto-secao">
+            Mais do que assistir a uma aula, você terá contato com
+            explicações objetivas, demonstrações e situações que fazem
+            parte da rotina audiológica.
+          </p>
+
+        </div>
+
+
+        <div class="diferenciais-grid">
+
+          <article class="diferencial">
+
+            <div class="diferencial-icone">
+              🎯
+            </div>
+
+            <h3>
+              Conteúdo objetivo
+            </h3>
+
+            <p>
+              Os temas serão apresentados de forma clara, com foco no
+              que você realmente precisa compreender para executar os
+              procedimentos com segurança.
+            </p>
+
+          </article>
+
+
+          <article class="diferencial">
+
+            <div class="diferencial-icone">
+              ⚙️
+            </div>
+
+            <h3>
+              Aprendizado prático
+            </h3>
+
+            <p>
+              Você acompanhará demonstrações passo a passo e terá a
+              oportunidade de praticar os procedimentos apresentados.
+            </p>
+
+          </article>
+
+
+          <article class="diferencial">
+
+            <div class="diferencial-icone">
+              🛡️
+            </div>
+
+            <h3>
+              Mais segurança clínica
+            </h3>
+
+            <p>
+              Desenvolva raciocínio clínico para realizar os exames,
+              interpretar os resultados e reconhecer possíveis erros.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         CONTEÚDO
+    ================================== -->
+
+    <section
+      class="secao aprendizado"
+      id="conteudo"
+    >
+
+      <div class="container aprendizado-conteudo">
+
+        <div>
+
+          <span class="etiqueta">
+            Conteúdo programático
+          </span>
+
+          <h2 class="titulo-secao">
+            O que você vai aprender
+          </h2>
+
+          <ul class="aprendizado-lista">
+
+            <li>
+              Fundamentos da audiometria tonal liminar.
+            </li>
+
+            <li>
+              Audiometria vocal e seus principais procedimentos.
+            </li>
+
+            <li>
+              Técnica correta para realização dos exames.
+            </li>
+
+            <li>
+              Instruções adequadas para o paciente.
+            </li>
+
+            <li>
+              Interpretação dos principais resultados audiométricos.
+            </li>
+
+            <li>
+              Identificação de erros comuns durante a avaliação.
+            </li>
+
+            <li>
+              Discussão de casos e situações clínicas.
+            </li>
+
+            <li>
+              Registro e organização adequada dos resultados.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="aprendizado-imagem">
+
+          <img
+            src="audiometro-curso.png"
+            alt="Audiômetro utilizado durante a formação"
+          >
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         PARA QUEM É
+    ================================== -->
+
+    <section
+      class="secao"
+      id="publico"
+    >
+
+      <div class="container">
+
+        <div class="publico-cabecalho">
+
+          <span class="etiqueta">
+            Público
+          </span>
+
+          <h2 class="titulo-secao">
+            Para quem é este curso?
+          </h2>
+
+          <p class="texto-secao">
+            A formação foi planejada tanto para quem está começando
+            quanto para profissionais que desejam revisar e fortalecer
+            sua prática.
+          </p>
+
+        </div>
+
+
+        <div class="publico-grid">
+
+          <article class="publico-card">
+
+            <span class="publico-numero">
+              01
+            </span>
+
+            <h3>
+              Estudantes de Fonoaudiologia
+            </h3>
+
+            <p>
+              Para quem deseja compreender os procedimentos desde a
+              base e se preparar melhor para as experiências práticas,
+              estágios e atendimentos.
+            </p>
+
+          </article>
+
+
+          <article class="publico-card">
+
+            <span class="publico-numero">
+              02
+            </span>
+
+            <h3>
+              Profissionais em início de atuação
+            </h3>
+
+            <p>
+              Para fonoaudiólogos que desejam revisar conceitos,
+              organizar o raciocínio clínico e ganhar mais confiança
+              durante as avaliações.
+            </p>
+
+          </article>
+
+
+          <article class="publico-card">
+
+            <span class="publico-numero">
+              03
+            </span>
+
+            <h3>
+              Profissionais que desejam atualização
+            </h3>
+
+            <p>
+              Para quem já atua, mas deseja rever técnicas, esclarecer
+              dúvidas e aprimorar a realização e interpretação dos exames.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         COMO FUNCIONA
+    ================================== -->
+
+    <section
+      class="secao como-funciona"
+      id="funcionamento"
+    >
+
+      <div class="container">
+
+        <div class="como-cabecalho">
+
+          <span class="etiqueta">
+            Etapas
+          </span>
+
+          <h2 class="titulo-secao">
+            Como funciona?
+          </h2>
+
+          <p class="texto-secao">
+            Uma experiência presencial planejada para que você compreenda
+            o conteúdo e tenha contato prático com os procedimentos.
+          </p>
+
+        </div>
+
+
+        <div class="etapas">
+
+          <article class="etapa">
+
+            <span class="etapa-numero">
+              01
+            </span>
+
+            <div class="etapa-icone">
+              📝
+            </div>
+
+            <h3>
+              Faça sua inscrição
+            </h3>
+
+            <p>
+              Preencha o formulário, envie seus dados e confirme a sua vaga.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="etapa-numero">
+              02
+            </span>
+
+            <div class="etapa-icone">
+              📍
+            </div>
+
+            <h3>
+              Compareça ao encontro
+            </h3>
+
+            <p>
+              O curso será realizado presencialmente em Feira de Santana.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="etapa-numero">
+              03
+            </span>
+
+            <div class="etapa-icone">
+              🎧
+            </div>
+
+            <h3>
+              Aprenda fazendo
+            </h3>
+
+            <p>
+              Acompanhe as demonstrações e participe do treinamento prático.
+            </p>
+
+          </article>
+
+
+          <article class="etapa">
+
+            <span class="etapa-numero">
+              04
+            </span>
+
+            <div class="etapa-icone">
+              📜
+            </div>
+
+            <h3>
+              Receba seu certificado
+            </h3>
+
+            <p>
+              Ao finalizar o curso, você receberá seu certificado de participação.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         FRASE
+    ================================== -->
+
+    <section class="frase">
+
+      <div class="container">
+
+        <blockquote>
+          “Você não vai apenas assistir.
+          <span>
+            Vai aprender fazendo.”
+          </span>
+        </blockquote>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         O QUE ESTÁ INCLUSO
+    ================================== -->
+
+    <section class="secao">
+
+      <div class="container incluso-conteudo">
+
+        <div>
+
+          <span class="etiqueta">
+            Sua inscrição inclui
+          </span>
+
+          <h2 class="titulo-secao">
+            O que está incluso
+          </h2>
+
+          <p class="texto-secao">
+            Recursos planejados para complementar sua experiência e
+            tornar o aprendizado ainda mais completo.
+          </p>
+
+          <ul class="incluso-lista">
+
+            <li>
+              Aula teórica presencial.
+            </li>
+
+            <li>
+              Demonstração prática dos procedimentos.
+            </li>
+
+            <li>
+              Treinamento prático supervisionado.
+            </li>
+
+            <li>
+              Material de apoio.
+            </li>
+
+            <li>
+              Discussão de casos clínicos.
+            </li>
+
+            <li>
+              Coffee break.
+            </li>
+
+            <li>
+              Certificado de participação.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="incluso-card">
+
+          <h3>
+            Informações da formação
+          </h3>
+
+          <div class="incluso-dados">
+
+            <div class="incluso-dado">
+
+              <span>
+                📍
+              </span>
+
+              <strong>
+                Local
+              </strong>
+
+              <small>
+                Feira de Santana – BA
+              </small>
+
+            </div>
+
+
+            <div class="incluso-dado">
+
+              <span>
+                👥
+              </span>
+
+              <strong>
+                Vagas
+              </strong>
+
+              <small>
+                Turma com vagas limitadas
+              </small>
+
+            </div>
+
+
+            <div class="incluso-dado">
+
+              <span>
+                📜
+              </span>
+
+              <strong>
+                Certificado
+              </strong>
+
+              <small>
+                Incluso na inscrição
+              </small>
+
+            </div>
+
+
+            <div class="incluso-dado">
+
+              <span>
+                🏥
+              </span>
+
+              <strong>
+                Apoio
+              </strong>
+
+              <small>
+                Clínica Viver Serviços em Saúde
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         FAQ
+    ================================== -->
+
+    <section
+      class="secao faq"
+      id="duvidas"
+    >
+
+      <div class="container faq-conteudo">
+
+        <div>
+
+          <span class="etiqueta">
+            Perguntas frequentes
+          </span>
+
+          <h2 class="titulo-secao">
+            Ainda ficou com alguma dúvida?
+          </h2>
+
+          <p class="texto-secao">
+            Veja as respostas para algumas das principais perguntas
+            sobre o curso.
+          </p>
+
+        </div>
+
+
+        <div class="faq-lista">
+
+          <article class="faq-item">
+
+            <button class="faq-pergunta">
+
+              <span>
+                O curso é presencial?
+              </span>
+
+              <span class="faq-sinal">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+              <p>
+                Sim. A formação será realizada presencialmente em
+                Feira de Santana, com momentos teóricos, demonstrações
+                e treinamento prático.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="faq-item">
+
+            <button class="faq-pergunta">
+
+              <span>
+                Estudantes podem participar?
+              </span>
+
+              <span class="faq-sinal">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+              <p>
+                Sim. O curso foi desenvolvido para estudantes de
+                Fonoaudiologia e também para profissionais que desejam
+                iniciar, revisar ou aprimorar sua prática em Audiologia.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="faq-item">
+
+            <button class="faq-pergunta">
+
+              <span>
+                Haverá treinamento prático?
+              </span>
+
+              <span class="faq-sinal">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+              <p>
+                Sim. Além do conteúdo teórico, haverá demonstração dos
+                procedimentos e treinamento prático supervisionado.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="faq-item">
+
+            <button class="faq-pergunta">
+
+              <span>
+                O certificado está incluso?
+              </span>
+
+              <span class="faq-sinal">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+              <p>
+                Sim. Todos os participantes que concluírem a formação
+                receberão certificado de participação.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="faq-item">
+
+            <button class="faq-pergunta">
+
+              <span>
+                Como faço minha inscrição?
+              </span>
+
+              <span class="faq-sinal">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-resposta">
+
+              <p>
+                Clique no botão “Quero me inscrever”, preencha o formulário
+                e siga as orientações para confirmar sua participação.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         CTA
+    ================================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-conteudo">
+
+          <div>
+
+            <h2>
+              Pronto para transformar
+              <span>
+                sua prática na Audiologia?
+              </span>
+            </h2>
+
+            <p>
+              Garanta sua vaga e desenvolva mais segurança para realizar
+              e interpretar a audiometria tonal e vocal.
+            </p>
+
+          </div>
+
+
+          <a
+            href="LINK-DE-INSCRICAO"
+            class="botao"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ★ Quero me inscrever
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =================================
+       RODAPÉ
+  ================================== -->
+
+  <footer class="rodape">
+
+    <div class="container">
+
+      <div class="rodape-grid">
+
+        <div>
+
+          <h3>
+            Curso de Audiometria Tonal e Vocal
+          </h3>
+
+          <p>
+            Formação presencial para estudantes e profissionais que
+            desejam aprender e atuar com mais segurança na Audiologia.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Contato
+          </h3>
+
+          <div class="rodape-links">
+
+            <a
+              href="https://wa.me/5575981405190"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp: (75) 98140-5190
+            </a>
+
+            <a
+              href="LINK-DO-INSTAGRAM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram: @machadojhulia
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Formação ministrada por
+          </h3>
+
+          <p>
+            <strong>
+              Jhulia Machado
+            </strong>
+            <br>
+            Fonoaudióloga
+            <br>
+            CRFa 6-XXXX
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="rodape-final">
+
+        © 2026 Jhulia Machado — Todos os direitos reservados.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <script>
+
+    /* MENU DO CELULAR */
+
+    const menuBotao = document.getElementById("menuBotao");
+    const navegacao = document.getElementById("navegacao");
+
+    menuBotao.addEventListener("click", function () {
+      navegacao.classList.toggle("aberta");
+    });
+
+
+    document
+      .querySelectorAll(".navegacao a")
+      .forEach(function (link) {
+
+        link.addEventListener("click", function () {
+          navegacao.classList.remove("aberta");
+        });
+
+      });
+
+
+    /* PERGUNTAS FREQUENTES */
+
+    const perguntas = document.querySelectorAll(".faq-pergunta");
+
+    perguntas.forEach(function (pergunta) {
+
+      pergunta.addEventListener("click", function () {
+
+        const itemAtual = pergunta.parentElement;
+
+        document
+          .querySelectorAll(".faq-item")
+          .forEach(function (item) {
+
+            if (item !== itemAtual) {
+              item.classList.remove("ativo");
+            }
+
+          });
+
+        itemAtual.classList.toggle("ativo");
+
+      });
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
