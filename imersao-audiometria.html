@@ -336,6 +336,7 @@
       background: rgba(227, 239, 234, 0.8);
       border-radius: 50%;
       filter: blur(2px);
+      z-index: 0;
     }
 
 
@@ -1395,6 +1396,15 @@
       .rodape-grid {
         grid-template-columns: 1fr;
       }
+      .hero::before {
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+}
 
     }
 
