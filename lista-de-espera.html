@@ -12,35 +12,43 @@
 
   <meta
     name="description"
-    content="Entre na lista de espera dos próximos cursos e formações em Audiologia."
+    content="Indique quais cursos de Audiologia gostaria de encontrar e receba informações sobre as próximas turmas."
   >
 
-  <title>Lista de Espera | Cursos Jhulia Machado</title>
+  <title>Próximos Cursos | Jhulia Machado</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <style>
 
     :root {
-      --verde: #145846;
-      --verde-escuro: #0c4033;
-      --verde-claro: #e7f0eb;
-      --dourado: #c89335;
-      --dourado-claro: #f5e3b7;
-      --creme: #fbf8f1;
+      --verde-escuro: #174f43;
+      --verde: #246a5a;
+      --verde-medio: #5e9585;
+      --verde-claro: #e5f1ed;
+
+      --dourado: #c99a3b;
+      --dourado-claro: #f5e5bd;
+
+      --creme: #fcf8f1;
       --branco: #ffffff;
-      --texto: #17352e;
-      --texto-suave: #66736f;
-      --borda: #e5ded1;
-      --sombra: 0 20px 55px rgba(30, 54, 46, 0.10);
+
+      --texto: #233d36;
+      --texto-suave: #63746e;
+
+      --borda: #e7ded1;
+
+      --sombra:
+        0 20px 55px rgba(34, 63, 54, 0.10);
     }
+
 
     * {
       margin: 0;
@@ -48,26 +56,25 @@
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
-      background: var(--creme);
+      overflow-x: hidden;
       color: var(--texto);
       font-family: "DM Sans", sans-serif;
-      line-height: 1.6;
+      background: var(--creme);
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
 
     a {
       color: inherit;
       text-decoration: none;
     }
+
 
     button,
     input,
@@ -76,332 +83,302 @@
       font: inherit;
     }
 
+
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1040px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* MENU */
+
+    /* =====================================
+       CABEÇALHO
+    ====================================== */
 
     .cabecalho {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(251, 248, 241, 0.95);
-      border-bottom: 1px solid rgba(20, 88, 70, 0.10);
-      backdrop-filter: blur(15px);
+
+      background: rgba(252, 248, 241, 0.96);
+      border-bottom: 1px solid rgba(23, 79, 67, 0.09);
+
+      backdrop-filter: blur(14px);
     }
 
+
     .cabecalho-conteudo {
-      min-height: 92px;
       display: flex;
+      min-height: 84px;
+
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
+
 
     .marca {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 13px;
     }
+
 
     .marca-icone {
-      width: 58px;
-      height: 58px;
+      display: grid;
+      width: 54px;
+      height: 54px;
+
+      place-items: center;
+
+      color: var(--dourado);
+      font-size: 23px;
+
+      background: var(--branco);
       border: 1px solid var(--dourado);
       border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--creme);
-      font-size: 27px;
     }
 
-    .marca-texto small {
-      display: block;
-      color: var(--dourado);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
 
     .marca-texto strong {
       display: block;
-      max-width: 210px;
-      color: var(--verde);
+
+      color: var(--verde-escuro);
       font-family: "Playfair Display", serif;
-      font-size: 21px;
-      line-height: 1.08;
+      font-size: 20px;
+      line-height: 1.05;
     }
 
-    .navegacao {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      font-size: 15px;
-      font-weight: 600;
-    }
 
-    .navegacao a {
-      transition: color 0.2s ease;
-    }
+    .marca-texto small {
+      display: block;
+      margin-top: 4px;
 
-    .navegacao a:hover {
       color: var(--dourado);
-    }
-
-    .botao-menu {
-      min-height: 52px;
-      padding: 0 28px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--verde);
-      color: var(--branco);
+      font-size: 10px;
       font-weight: 700;
-      box-shadow: 0 14px 30px rgba(20, 88, 70, 0.18);
-      transition:
-        transform 0.2s ease,
-        background 0.2s ease;
-    }
-
-    .botao-menu:hover {
-      background: var(--verde-escuro);
-      transform: translateY(-2px);
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 72px 0 52px;
-    }
-
-    .hero-conteudo {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      align-items: center;
-      gap: 70px;
-    }
-
-    .etiqueta {
-      width: fit-content;
-      margin-bottom: 24px;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: var(--dourado-claro);
-      color: var(--verde);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
     }
 
-    .hero h1 {
-      max-width: 560px;
-      margin-bottom: 22px;
-      color: var(--verde);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(48px, 6vw, 78px);
-      line-height: 0.98;
-      letter-spacing: -0.035em;
+
+    .voltar {
+      display: inline-flex;
+      min-height: 44px;
+
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      padding: 0 18px;
+
+      color: var(--verde-escuro);
+      font-size: 12px;
+      font-weight: 700;
+
+      border: 1px solid var(--verde);
+      border-radius: 999px;
+
+      transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
     }
 
-    .hero-descricao {
-      max-width: 590px;
-      margin-bottom: 30px;
-      color: var(--texto-suave);
-      font-size: 18px;
-      line-height: 1.8;
+
+    .voltar:hover {
+      color: var(--branco);
+      background: var(--verde);
+      transform: translateY(-2px);
     }
 
-    .hero-vantagens {
-      display: grid;
-      gap: 16px;
-    }
 
-    .hero-vantagem {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
+    /* =====================================
+       TÍTULO PRINCIPAL
+    ====================================== */
 
-    .hero-vantagem-icone {
-      flex: 0 0 40px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--dourado-claro);
-      color: var(--verde);
-      font-size: 18px;
-    }
-
-    .hero-vantagem p {
-      max-width: 440px;
-      color: var(--texto);
-      font-size: 15px;
-    }
-
-    .hero-imagem {
+    .apresentacao {
       position: relative;
-      min-height: 520px;
-      border-radius: 32px;
       overflow: hidden;
+
+      padding: 65px 0 42px;
+    }
+
+
+    .apresentacao::before {
+      content: "";
+
+      position: absolute;
+      top: -150px;
+      right: -130px;
+
+      width: 350px;
+      height: 300px;
+
+      background: var(--verde-claro);
+      border-radius: 48% 52% 62% 38% / 46% 40% 60% 54%;
+    }
+
+
+    .apresentacao-conteudo {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+
+    .apresentacao h1 {
+      margin-bottom: 17px;
+
+      color: var(--verde-escuro);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(44px, 6vw, 68px);
+      font-weight: 600;
+      line-height: 1.04;
+      letter-spacing: -1px;
+    }
+
+
+    .apresentacao h1 span {
+      color: var(--dourado);
+    }
+
+
+    .apresentacao p {
+      max-width: 700px;
+      margin: 0 auto;
+
+      color: var(--texto-suave);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+
+    /* =====================================
+       CURSOS
+    ====================================== */
+
+    .cursos {
+      padding: 10px 0 42px;
+    }
+
+
+    .cursos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px;
+    }
+
+
+    .curso {
+      display: flex;
+      min-height: 110px;
+
+      align-items: center;
+      gap: 16px;
+
+      padding: 21px;
+
+      background: var(--branco);
+      border: 1px solid rgba(23, 79, 67, 0.08);
+      border-radius: 19px;
+
+      box-shadow: 0 12px 28px rgba(34, 63, 54, 0.06);
+    }
+
+
+    .curso-icone {
+      display: grid;
+      flex: 0 0 52px;
+
+      width: 52px;
+      height: 52px;
+
+      place-items: center;
+
+      font-size: 22px;
+
+      background: var(--verde-claro);
+      border-radius: 50%;
+    }
+
+
+    .curso:nth-child(2) .curso-icone,
+    .curso:nth-child(4) .curso-icone {
+      background: var(--dourado-claro);
+    }
+
+
+    .curso strong {
+      display: block;
+      margin-bottom: 4px;
+
+      color: var(--verde-escuro);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+
+    .curso span {
+      color: var(--texto-suave);
+      font-size: 12px;
+    }
+
+
+    /* =====================================
+       FORMULÁRIO
+    ====================================== */
+
+    .formulario-secao {
+      padding: 10px 0 90px;
+    }
+
+
+    .formulario-card {
+      padding: 50px;
+
+      background: rgba(255, 255, 255, 0.91);
+      border: 1px solid rgba(23, 79, 67, 0.08);
+      border-radius: 31px;
+
       box-shadow: var(--sombra);
     }
 
-    .hero-imagem img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      object-fit: cover;
-    }
 
-    .hero-imagem-aviso {
-      position: absolute;
-      right: 26px;
-      bottom: 26px;
-      max-width: 270px;
-      padding: 22px;
-      border: 1px solid rgba(255, 255, 255, 0.50);
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.90);
-      box-shadow: 0 18px 40px rgba(28, 46, 40, 0.12);
-      backdrop-filter: blur(10px);
-    }
+    .formulario-cabecalho {
+      max-width: 690px;
+      margin: 0 auto 36px;
 
-    .hero-imagem-aviso strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--verde);
-      font-family: "Playfair Display", serif;
-      font-size: 24px;
-    }
-
-    .hero-imagem-aviso span {
-      color: var(--texto-suave);
-      font-size: 14px;
-    }
-
-    /* BENEFÍCIOS */
-
-    .beneficios {
-      padding: 55px 0 80px;
-    }
-
-    .titulo-secao {
-      max-width: 700px;
-      margin: 0 auto 46px;
       text-align: center;
     }
 
-    .titulo-secao h2 {
-      margin-bottom: 14px;
-      color: var(--verde);
+
+    .formulario-cabecalho h2 {
+      margin-bottom: 11px;
+
+      color: var(--verde-escuro);
       font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4vw, 50px);
-      line-height: 1.08;
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.1;
     }
 
-    .titulo-secao p {
+
+    .formulario-cabecalho p {
       color: var(--texto-suave);
-      font-size: 17px;
-    }
-
-    .beneficios-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-    }
-
-    .beneficio {
-      min-height: 225px;
-      padding: 30px;
-      text-align: center;
-      border-right: 1px solid var(--borda);
-    }
-
-    .beneficio:last-child {
-      border-right: none;
-    }
-
-    .beneficio-icone {
-      width: 68px;
-      height: 68px;
-      margin: 0 auto 20px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: #eee8d8;
-      color: var(--verde);
-      font-size: 29px;
-    }
-
-    .beneficio h3 {
-      margin-bottom: 9px;
-      color: var(--verde);
-      font-size: 17px;
-    }
-
-    .beneficio p {
-      color: var(--texto-suave);
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.7;
     }
 
-    /* FORMULÁRIO */
-
-    .formulario-secao {
-      padding: 30px 0 100px;
-    }
-
-    .formulario-card {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 55px;
-      border: 1px solid rgba(20, 88, 70, 0.08);
-      border-radius: 34px;
-      background: rgba(255, 255, 255, 0.82);
-      box-shadow: var(--sombra);
-    }
-
-    .formulario-titulo {
-      max-width: 720px;
-      margin: 0 auto 36px;
-      text-align: center;
-    }
-
-    .formulario-icone {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 16px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--dourado-claro);
-      font-size: 26px;
-    }
-
-    .formulario-titulo h2 {
-      margin-bottom: 12px;
-      color: var(--verde);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(32px, 4vw, 46px);
-    }
-
-    .formulario-titulo p {
-      color: var(--texto-suave);
-      font-size: 16px;
-    }
 
     .formulario-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      gap: 19px;
     }
+
 
     .campo {
       display: flex;
@@ -409,249 +386,244 @@
       gap: 8px;
     }
 
+
     .campo-largo {
       grid-column: 1 / -1;
     }
 
+
     .campo label {
       color: var(--texto);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
+
 
     .campo input,
     .campo select,
     .campo textarea {
       width: 100%;
-      border: 1px solid var(--borda);
-      border-radius: 14px;
-      outline: none;
-      background: var(--branco);
+
       color: var(--texto);
+      background: var(--branco);
+      border: 1px solid var(--borda);
+      border-radius: 13px;
+
+      outline: none;
+
       transition:
         border-color 0.2s ease,
         box-shadow 0.2s ease;
     }
 
+
     .campo input,
     .campo select {
-      height: 58px;
-      padding: 0 18px;
+      height: 56px;
+      padding: 0 17px;
     }
 
+
     .campo textarea {
-      min-height: 130px;
-      padding: 17px 18px;
+      min-height: 120px;
+      padding: 16px 17px;
+
       resize: vertical;
     }
+
 
     .campo input:focus,
     .campo select:focus,
     .campo textarea:focus {
       border-color: var(--verde);
-      box-shadow: 0 0 0 4px rgba(20, 88, 70, 0.08);
+      box-shadow: 0 0 0 4px rgba(36, 106, 90, 0.10);
     }
 
+
+    .campo-ajuda {
+      color: var(--texto-suave);
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+
+    .consentimento {
+      grid-column: 1 / -1;
+
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+
+      margin-top: 3px;
+      padding: 17px;
+
+      background: var(--verde-claro);
+      border-radius: 14px;
+    }
+
+
+    .consentimento input {
+      flex: 0 0 18px;
+
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+    }
+
+
+    .consentimento label {
+      color: var(--texto);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+
     .botao-formulario {
+      display: flex;
       width: min(100%, 390px);
       min-height: 58px;
-      margin: 30px auto 0;
-      border: none;
-      border-radius: 999px;
-      display: flex;
+
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      background: var(--verde);
+      gap: 12px;
+
+      margin: 29px auto 0;
+
       color: var(--branco);
-      cursor: pointer;
+      font-size: 15px;
       font-weight: 800;
-      font-size: 16px;
-      box-shadow: 0 16px 35px rgba(20, 88, 70, 0.22);
+
+      background: var(--verde);
+      border: 0;
+      border-radius: 999px;
+
+      cursor: pointer;
+
+      box-shadow: 0 15px 32px rgba(36, 106, 90, 0.22);
+
       transition:
         transform 0.2s ease,
         background 0.2s ease;
     }
 
+
     .botao-formulario:hover {
-      background: var(--verde-escuro);
       transform: translateY(-2px);
+      background: var(--verde-escuro);
     }
+
 
     .privacidade {
-      margin-top: 18px;
+      margin-top: 17px;
+
       color: var(--texto-suave);
+      font-size: 11px;
       text-align: center;
-      font-size: 13px;
     }
 
-    /* RODAPÉ */
+
+    /* =====================================
+       RODAPÉ
+    ====================================== */
 
     .rodape {
-      border-top: 1px solid var(--borda);
-      background: #f4eee3;
-    }
+      padding: 29px 0;
 
-    .rodape-conteudo {
-      min-height: 180px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .rodape-texto {
-      max-width: 380px;
-      justify-self: end;
-      color: var(--texto-suave);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .rodape-final {
-      padding: 20px;
-      background: var(--verde);
-      color: rgba(255, 255, 255, 0.85);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 12px;
       text-align: center;
-      font-size: 13px;
+
+      background: var(--verde-escuro);
     }
 
-    /* RESPONSIVO */
 
-    @media (max-width: 980px) {
+    /* =====================================
+       CELULAR
+    ====================================== */
 
-      .navegacao {
-        display: none;
-      }
-
-      .hero-conteudo {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .hero-texto {
-        text-align: center;
-      }
-
-      .etiqueta {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero h1,
-      .hero-descricao {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-vantagens {
-        max-width: 600px;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      .beneficios-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .beneficio:nth-child(2) {
-        border-right: none;
-      }
-
-      .beneficio:nth-child(-n + 2) {
-        border-bottom: 1px solid var(--borda);
-      }
-
-    }
-
-    @media (max-width: 680px) {
+    @media (max-width: 760px) {
 
       .container {
-        width: min(100% - 28px, 1180px);
+        width: min(100% - 28px, 1040px);
       }
+
 
       .cabecalho-conteudo {
-        min-height: 76px;
+        min-height: 74px;
       }
 
+
       .marca-icone {
-        width: 47px;
-        height: 47px;
-        font-size: 22px;
+        width: 46px;
+        height: 46px;
       }
+
 
       .marca-texto strong {
         font-size: 17px;
       }
 
-      .botao-menu {
-        min-height: 44px;
-        padding: 0 18px;
-        font-size: 13px;
+
+      .marca-texto small {
+        font-size: 8px;
       }
 
-      .hero {
-        padding-top: 50px;
+
+      .voltar {
+        min-height: 40px;
+        padding: 0 13px;
+        font-size: 10px;
       }
 
-      .hero h1 {
-        font-size: 49px;
+
+      .apresentacao {
+        padding-top: 45px;
       }
 
-      .hero-descricao {
-        font-size: 16px;
+
+      .apresentacao h1 {
+        font-size: 42px;
       }
 
-      .hero-imagem,
-      .hero-imagem img {
-        min-height: 390px;
+
+      .apresentacao p {
+        font-size: 15px;
       }
 
-      .hero-imagem-aviso {
-        right: 16px;
-        bottom: 16px;
-        left: 16px;
-        max-width: none;
-      }
 
-      .beneficios-grid {
+      .cursos-grid {
         grid-template-columns: 1fr;
       }
 
-      .beneficio {
-        border-right: none;
-        border-bottom: 1px solid var(--borda);
-      }
-
-      .beneficio:last-child {
-        border-bottom: none;
-      }
 
       .formulario-card {
-        padding: 36px 20px;
-        border-radius: 24px;
+        padding: 34px 19px;
+        border-radius: 23px;
       }
+
 
       .formulario-grid {
         grid-template-columns: 1fr;
       }
 
-      .campo-largo {
+
+      .campo-largo,
+      .consentimento {
         grid-column: auto;
       }
 
-      .rodape-conteudo {
-        grid-template-columns: 1fr;
-        padding: 40px 0;
-        text-align: center;
+    }
+
+
+    @media (max-width: 430px) {
+
+      .marca-texto {
+        display: none;
       }
 
-      .rodape .marca {
-        justify-content: center;
-      }
 
-      .rodape-texto {
-        justify-self: center;
+      .apresentacao h1 {
+        font-size: 37px;
       }
 
     }
@@ -660,13 +632,22 @@
 
 </head>
 
+
 <body>
+
+
+  <!-- =====================================
+       CABEÇALHO
+  ====================================== -->
 
   <header class="cabecalho">
 
     <div class="container cabecalho-conteudo">
 
-      <a href="index.html" class="marca">
+      <a
+        href="index.html#cursos"
+        class="marca"
+      >
 
         <div class="marca-icone">
           🎧
@@ -674,214 +655,54 @@
 
         <div class="marca-texto">
 
-          <small>
-            Cursos e formações
-          </small>
-
           <strong>
-            Jhulia Machado
+            Cursos e formações
           </strong>
+
+          <small>
+            Jhulia Machado
+          </small>
 
         </div>
 
       </a>
 
-      <nav class="navegacao">
 
-        <a href="index.html">
-          Início
-        </a>
-
-        <a href="index.html#sobre">
-          Sobre mim
-        </a>
-
-        <a href="index.html#projeto">
-          Pequenos Viajantes
-        </a>
-
-        <a href="index.html#cursos">
-          Cursos
-        </a>
-
-        <a href="index.html#contato">
-          Contato
-        </a>
-
-      </nav>
-
-      <a href="#formulario" class="botao-menu">
-        Entrar na lista
+      <a
+        href="index.html#cursos"
+        class="voltar"
+      >
+        ← Voltar aos cursos
       </a>
 
     </div>
 
   </header>
 
+
+  <!-- =====================================
+       CONTEÚDO
+  ====================================== -->
+
   <main>
 
-    <section class="hero">
 
-      <div class="container hero-conteudo">
-
-        <div class="hero-texto">
-
-          <div class="etiqueta">
-            Lista de espera
-          </div>
-
-          <h1>
-            Em breve, novos cursos por aqui!
-          </h1>
-
-          <p class="hero-descricao">
-            Entre para a lista de espera e seja uma das primeiras
-            pessoas a saber quando novas turmas e formações forem abertas.
-          </p>
-
-          <div class="hero-vantagens">
-
-            <div class="hero-vantagem">
-
-              <div class="hero-vantagem-icone">
-                🔔
-              </div>
-
-              <p>
-                Você será avisada ou avisado em primeira mão sobre
-                novas turmas, datas e novidades.
-              </p>
-
-            </div>
-
-            <div class="hero-vantagem">
-
-              <div class="hero-vantagem-icone">
-                ✉️
-              </div>
-
-              <p>
-                Sem mensagens desnecessárias. Entraremos em contato
-                apenas quando houver informações importantes.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="hero-imagem">
-
-          <img
-            src="lista-espera-cursos.jpg"
-            alt="Notebook representando a abertura de novos cursos"
-          >
-
-          <div class="hero-imagem-aviso">
-
-            <strong>
-              Novos cursos
-            </strong>
-
-            <span>
-              Conteúdos pensados para estudantes e profissionais.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="beneficios">
+    <section class="apresentacao">
 
       <div class="container">
 
-        <div class="titulo-secao">
+        <div class="apresentacao-conteudo">
 
-          <h2>
-            O que você terá ao entrar na lista?
-          </h2>
+          <h1>
+            Em breve,
+            <span>novos cursos por aqui!</span>
+          </h1>
 
           <p>
-            Você poderá acompanhar os próximos lançamentos e indicar
-            quais formações gostaria de encontrar por aqui.
+            Indique qual formação desperta seu interesse.
+            A procura por cada tema ajudará a definir os próximos
+            cursos e a abertura de novas turmas.
           </p>
-
-        </div>
-
-        <div class="beneficios-grid">
-
-          <article class="beneficio">
-
-            <div class="beneficio-icone">
-              📅
-            </div>
-
-            <h3>
-              Aviso antecipado
-            </h3>
-
-            <p>
-              Saiba com prioridade quando novas turmas e cursos
-              estiverem disponíveis.
-            </p>
-
-          </article>
-
-          <article class="beneficio">
-
-            <div class="beneficio-icone">
-              🎁
-            </div>
-
-            <h3>
-              Condições especiais
-            </h3>
-
-            <p>
-              Quem estiver na lista poderá receber informações
-              e condições exclusivas.
-            </p>
-
-          </article>
-
-          <article class="beneficio">
-
-            <div class="beneficio-icone">
-              👥
-            </div>
-
-            <h3>
-              Vagas prioritárias
-            </h3>
-
-            <p>
-              Tenha a oportunidade de se organizar antes da abertura
-              oficial das inscrições.
-            </p>
-
-          </article>
-
-          <article class="beneficio">
-
-            <div class="beneficio-icone">
-              🎓
-            </div>
-
-            <h3>
-              Formação de qualidade
-            </h3>
-
-            <p>
-              Cursos pensados para a prática e para o desenvolvimento
-              de estudantes e profissionais.
-            </p>
-
-          </article>
 
         </div>
 
@@ -889,33 +710,131 @@
 
     </section>
 
-    <section id="formulario" class="formulario-secao">
+
+    <section class="cursos">
+
+      <div class="container">
+
+        <div class="cursos-grid">
+
+
+          <article class="curso">
+
+            <div class="curso-icone">
+              🎯
+            </div>
+
+            <div>
+
+              <strong>
+                Mascaramento Clínico sem Complicações
+              </strong>
+
+              <span>
+                Lista de interesse
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="curso">
+
+            <div class="curso-icone">
+              📊
+            </div>
+
+            <div>
+
+              <strong>
+                Interpretação de Audiogramas na Prática Clínica
+              </strong>
+
+              <span>
+                Lista de interesse
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="curso">
+
+            <div class="curso-icone">
+              📝
+            </div>
+
+            <div>
+
+              <strong>
+                Laudo Audiológico: da Avaliação à Escrita
+              </strong>
+
+              <span>
+                Lista de interesse
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <article class="curso">
+
+            <div class="curso-icone">
+              👂
+            </div>
+
+            <div>
+
+              <strong>
+                Imitanciometria na Prática
+              </strong>
+
+              <span>
+                Lista de interesse
+              </span>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="formulario-secao">
 
       <div class="container">
 
         <div class="formulario-card">
 
-          <div class="formulario-titulo">
 
-            <div class="formulario-icone">
-              ✉️
-            </div>
+          <div class="formulario-cabecalho">
 
             <h2>
-              Quero entrar na lista de espera
+              Qual curso você gostaria de fazer?
             </h2>
 
             <p>
-              Indique qual curso despertou seu interesse. Caso não
-              encontre a opção desejada, conte qual formação gostaria
-              de ver por aqui.
+              Preencha seus dados, escolha um dos cursos ou indique
+              outro tema que gostaria de encontrar por aqui.
             </p>
 
           </div>
 
+
           <form id="formularioLista">
 
+
             <div class="formulario-grid">
+
 
               <div class="campo">
 
@@ -926,28 +845,12 @@
                 <input
                   type="text"
                   id="nome"
-                  name="nome"
                   placeholder="Digite seu nome"
                   required
                 >
 
               </div>
 
-              <div class="campo">
-
-                <label for="email">
-                  E-mail
-                </label>
-
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="seuemail@exemplo.com"
-                  required
-                >
-
-              </div>
 
               <div class="campo">
 
@@ -958,22 +861,66 @@
                 <input
                   type="tel"
                   id="whatsapp"
-                  name="whatsapp"
                   placeholder="(75) 99999-9999"
                   required
                 >
 
               </div>
 
+
               <div class="campo">
 
+                <label for="email">
+                  E-mail
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                >
+
+              </div>
+
+
+              <div class="campo">
+
+                <label for="perfil">
+                  Você é:
+                </label>
+
+                <select
+                  id="perfil"
+                  required
+                >
+
+                  <option value="">
+                    Selecione
+                  </option>
+
+                  <option value="Estudante de Fonoaudiologia">
+                    Estudante de Fonoaudiologia
+                  </option>
+
+                  <option value="Fonoaudiólogo(a)">
+                    Fonoaudiólogo(a)
+                  </option>
+
+
+                </select>
+
+              </div>
+
+
+              <div class="campo campo-largo">
+
                 <label for="curso">
-                  Qual curso despertou seu interesse?
+                  Curso de interesse
                 </label>
 
                 <select
                   id="curso"
-                  name="curso"
                   required
                 >
 
@@ -1005,36 +952,63 @@
 
               </div>
 
+
               <div class="campo campo-largo">
 
-                <label for="sugestao">
-                  Qual outro curso você gostaria de encontrar?
+                <label for="outroCurso">
+                  Outro curso ou tema que gostaria de encontrar
                 </label>
 
                 <textarea
-                  id="sugestao"
-                  name="sugestao"
-                  placeholder="Exemplo: Audiometria infantil, Processamento Auditivo, Voz, Linguagem ou outro tema."
+                  id="outroCurso"
+                  placeholder="Exemplo: Audiometria infantil, Linguagem, Voz ou outro tema."
                 ></textarea>
+
+                <span class="campo-ajuda">
+                  Campo opcional. Preencha caso queira sugerir
+                  uma formação diferente das opções acima.
+                </span>
 
               </div>
 
+
+              <div class="consentimento">
+
+                <input
+                  type="checkbox"
+                  id="autorizacao"
+                  required
+                >
+
+                <label for="autorizacao">
+                  Autorizo o contato pelos dados informados quando houver
+                  novidades, abertura de turma ou informações sobre os
+                  cursos selecionados.
+                </label>
+
+              </div>
+
+
             </div>
+
 
             <button
               type="submit"
               class="botao-formulario"
             >
-              Quero entrar na lista
+              Quero ser avisado(a)
               <span>→</span>
             </button>
 
+
             <p class="privacidade">
-              🔒 Seus dados serão utilizados apenas para o contato
-              relacionado aos cursos e formações.
+              🔒 Os dados serão utilizados apenas para comunicações
+              relacionadas aos cursos e formações.
             </p>
 
+
           </form>
+
 
         </div>
 
@@ -1042,89 +1016,98 @@
 
     </section>
 
+
   </main>
+
+
+  <!-- =====================================
+       RODAPÉ
+  ====================================== -->
 
   <footer class="rodape">
 
-    <div class="container rodape-conteudo">
-
-      <a href="index.html" class="marca">
-
-        <div class="marca-icone">
-          🎧
-        </div>
-
-        <div class="marca-texto">
-
-          <small>
-            Cursos e formações
-          </small>
-
-          <strong>
-            Jhulia Machado
-          </strong>
-
-        </div>
-
-      </a>
-
-      <p class="rodape-texto">
-        Formação prática, conhecimento de qualidade e experiências
-        pensadas para contribuir com a sua jornada profissional.
-      </p>
-
-    </div>
-
-    <div class="rodape-final">
-      © 2026 Jhulia Machado. Todos os direitos reservados.
-    </div>
+    © 2026 Jhulia Machado • Todos os direitos reservados.
 
   </footer>
 
+
+  <!-- =====================================
+       ENVIO PELO WHATSAPP
+  ====================================== -->
+
   <script>
 
-    const formulario = document.getElementById("formularioLista");
+    const formulario =
+      document.getElementById("formularioLista");
+
 
     formulario.addEventListener("submit", function(event) {
 
       event.preventDefault();
 
-      const nome = document.getElementById("nome").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const whatsapp = document.getElementById("whatsapp").value.trim();
-      const curso = document.getElementById("curso").value;
-      const sugestao = document.getElementById("sugestao").value.trim();
+
+      const nome =
+        document.getElementById("nome").value.trim();
+
+
+      const whatsapp =
+        document.getElementById("whatsapp").value.trim();
+
+
+      const email =
+        document.getElementById("email").value.trim();
+
+
+      const perfil =
+        document.getElementById("perfil").value;
+
+
+      const curso =
+        document.getElementById("curso").value;
+
+
+      const outroCurso =
+        document.getElementById("outroCurso").value.trim();
+
 
       const numeroDestino = "5575981405190";
 
+
       let mensagem =
-`Olá! Gostaria de entrar na lista de espera dos cursos.
+`Olá! Gostaria de registrar meu interesse nos próximos cursos.
 
 Nome: ${nome}
-E-mail: ${email}
 WhatsApp: ${whatsapp}
+E-mail: ${email}
+Perfil: ${perfil}
 Curso de interesse: ${curso}`;
 
-      if (sugestao !== "") {
+
+      if (outroCurso !== "") {
 
         mensagem += `
 
-Curso ou tema que gostaria de encontrar: ${sugestao}`;
+Outro curso ou tema sugerido:
+${outroCurso}`;
 
       }
 
+
       mensagem += `
 
-Autorizo o contato quando houver novidades sobre os cursos.`;
+Autorizo o contato quando houver novidades ou abertura de novas turmas.`;
+
 
       const linkWhatsApp =
         `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
+
 
       window.location.href = linkWhatsApp;
 
     });
 
   </script>
+
 
 </body>
 
