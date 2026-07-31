@@ -12,7 +12,7 @@
 
   <meta
     name="description"
-    content="Formulário de interesse e inscrição para o projeto Pequenos Viajantes."
+    content="Inscrição para o projeto Pequenos Viajantes."
   >
 
   <title>Inscrição | Pequenos Viajantes</title>
@@ -31,7 +31,6 @@
     :root {
       --verde-escuro: #174f43;
       --verde: #246a5a;
-      --verde-medio: #6ba291;
       --verde-claro: #e5f1ed;
 
       --azul: #2e9fda;
@@ -47,12 +46,12 @@
       --branco: #ffffff;
 
       --texto: #233d36;
-      --texto-suave: #61736c;
+      --texto-suave: #63746e;
 
-      --borda: #e8dfd2;
+      --borda: #e7ded1;
 
       --sombra:
-        0 20px 55px rgba(34, 63, 54, 0.11);
+        0 20px 55px rgba(34, 63, 54, 0.10);
     }
 
     * {
@@ -90,20 +89,19 @@
     }
 
     .container {
-      width: min(1160px, calc(100% - 40px));
+      width: min(1080px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    /* =====================================
-       CABEÇALHO
-    ====================================== */
+
+    /* CABEÇALHO */
 
     .cabecalho {
       position: sticky;
       top: 0;
       z-index: 1000;
 
-      background: rgba(252, 248, 241, 0.95);
+      background: rgba(252, 248, 241, 0.96);
       border-bottom: 1px solid rgba(23, 79, 67, 0.09);
 
       backdrop-filter: blur(14px);
@@ -111,11 +109,11 @@
 
     .cabecalho-conteudo {
       display: flex;
-      min-height: 88px;
+      min-height: 84px;
 
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 25px;
     }
 
     .marca {
@@ -125,24 +123,20 @@
     }
 
     .marca-logo {
-      width: 65px;
-      height: 65px;
-
+      width: 59px;
+      height: 59px;
       padding: 5px;
 
       object-fit: contain;
 
       background: var(--branco);
       border: 1px solid rgba(46, 159, 218, 0.25);
-      border-radius: 18px;
-    }
-
-    .marca-texto {
-      display: flex;
-      flex-direction: column;
+      border-radius: 17px;
     }
 
     .marca-texto strong {
+      display: block;
+
       color: var(--verde-escuro);
       font-family: "Playfair Display", serif;
       font-size: 21px;
@@ -150,338 +144,226 @@
     }
 
     .marca-texto small {
+      display: block;
       margin-top: 5px;
 
       color: var(--amarelo);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
     }
 
-    .navegacao {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .navegacao a {
-      color: var(--texto);
-      font-size: 14px;
-      font-weight: 600;
-
-      transition: color 0.2s ease;
-    }
-
-    .navegacao a:hover {
-      color: var(--azul);
-    }
-
-    .botao-menu {
+    .voltar {
       display: inline-flex;
-      min-height: 48px;
+      min-height: 45px;
 
       align-items: center;
       justify-content: center;
+      gap: 8px;
 
-      padding: 0 23px;
+      padding: 0 19px;
 
-      color: var(--branco);
-      font-size: 14px;
+      color: var(--verde-escuro);
+      font-size: 13px;
       font-weight: 700;
 
-      background: var(--verde);
+      border: 1px solid var(--verde);
       border-radius: 999px;
 
-      box-shadow: 0 12px 26px rgba(36, 106, 90, 0.18);
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
     }
 
-    /* =====================================
-       HERO
-    ====================================== */
+    .voltar:hover {
+      color: var(--branco);
+      background: var(--verde);
+    }
 
-    .hero {
+
+    /* APRESENTAÇÃO OBJETIVA */
+
+    .apresentacao {
       position: relative;
       overflow: hidden;
 
-      padding: 70px 0 60px;
-
-      background:
-        radial-gradient(
-          circle at 5% 15%,
-          rgba(46, 159, 218, 0.08),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 95% 75%,
-          rgba(242, 110, 145, 0.07),
-          transparent 25%
-        ),
-        var(--creme);
+      padding: 58px 0 36px;
     }
 
-    .hero::before {
+    .apresentacao::before {
       content: "";
 
       position: absolute;
-      top: -150px;
-      left: -130px;
+      top: -130px;
+      left: -110px;
 
-      width: 350px;
-      height: 300px;
+      width: 310px;
+      height: 260px;
 
       background: var(--verde-claro);
-      border-radius: 43% 57% 62% 38% / 51% 38% 62% 49%;
+      border-radius: 46% 54% 62% 38% / 48% 39% 61% 52%;
     }
 
-    .hero-conteudo {
+    .apresentacao-conteudo {
       position: relative;
       z-index: 2;
 
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 65px;
-      align-items: center;
+      max-width: 790px;
+      margin: 0 auto;
+
+      text-align: center;
     }
 
     .etiqueta {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
 
-      margin-bottom: 22px;
+      margin-bottom: 19px;
       padding: 8px 15px;
 
       color: var(--verde-escuro);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
 
       background: var(--amarelo-claro);
       border-radius: 999px;
     }
 
-    .hero h1 {
-      max-width: 570px;
-      margin-bottom: 22px;
+    .apresentacao h1 {
+      margin-bottom: 16px;
 
       color: var(--verde-escuro);
       font-family: "Playfair Display", serif;
-      font-size: clamp(47px, 6vw, 75px);
+      font-size: clamp(42px, 6vw, 65px);
       font-weight: 600;
-      line-height: 1.01;
-      letter-spacing: -1.5px;
+      line-height: 1.04;
+      letter-spacing: -1px;
     }
 
-    .hero h1 span {
-      display: block;
-      margin-top: 7px;
-
+    .apresentacao h1 span {
       color: var(--rosa);
     }
 
-    .hero-descricao {
-      max-width: 580px;
-      margin-bottom: 29px;
+    .apresentacao p {
+      max-width: 690px;
+      margin: 0 auto;
 
-      color: var(--texto-suave);
-      font-size: 17px;
-      line-height: 1.8;
-    }
-
-    .hero-destaques {
-      display: grid;
-      gap: 15px;
-    }
-
-    .hero-destaque {
-      display: flex;
-      gap: 13px;
-      align-items: flex-start;
-    }
-
-    .hero-destaque-icone {
-      display: grid;
-      flex: 0 0 42px;
-
-      width: 42px;
-      height: 42px;
-
-      place-items: center;
-
-      background: var(--azul-claro);
-      border-radius: 50%;
-    }
-
-    .hero-destaque:nth-child(2) .hero-destaque-icone {
-      background: var(--rosa-claro);
-    }
-
-    .hero-destaque p {
-      max-width: 440px;
-
-      color: var(--texto);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .hero-imagem {
-      position: relative;
-      min-height: 520px;
-
-      overflow: hidden;
-
-      border-radius: 44% 56% 38% 62% / 44% 39% 61% 56%;
-      box-shadow: var(--sombra);
-    }
-
-    .hero-imagem img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .hero-selo {
-      position: absolute;
-      right: 25px;
-      bottom: 25px;
-
-      max-width: 255px;
-      padding: 20px 22px;
-
-      background: rgba(255, 255, 255, 0.93);
-      border: 1px solid rgba(255, 255, 255, 0.70);
-      border-radius: 20px;
-
-      box-shadow: 0 17px 35px rgba(36, 62, 54, 0.14);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-selo strong {
-      display: block;
-      margin-bottom: 5px;
-
-      color: var(--verde-escuro);
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-    }
-
-    .hero-selo span {
-      color: var(--texto-suave);
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    /* =====================================
-       ORIENTAÇÕES
-    ====================================== */
-
-    .orientacoes {
-      padding: 65px 0 50px;
-    }
-
-    .titulo-secao {
-      max-width: 720px;
-      margin: 0 auto 42px;
-      text-align: center;
-    }
-
-    .titulo-secao h2 {
-      margin-bottom: 13px;
-
-      color: var(--verde-escuro);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4vw, 49px);
-      line-height: 1.08;
-    }
-
-    .titulo-secao p {
       color: var(--texto-suave);
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    .orientacoes-grid {
+
+    /* INFORMAÇÕES PRINCIPAIS */
+
+    .informacoes {
+      padding: 14px 0 48px;
+    }
+
+    .informacoes-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 17px;
     }
 
-    .orientacao {
-      min-height: 240px;
-      padding: 30px;
+    .informacao {
+      display: flex;
+      min-height: 125px;
 
-      text-align: center;
+      align-items: center;
+      gap: 15px;
+
+      padding: 23px;
 
       background: var(--branco);
       border: 1px solid rgba(23, 79, 67, 0.08);
-      border-radius: 23px;
-      box-shadow: 0 13px 30px rgba(34, 63, 54, 0.07);
+      border-radius: 20px;
+
+      box-shadow: 0 12px 28px rgba(34, 63, 54, 0.07);
     }
 
-    .orientacao-icone {
+    .informacao-icone {
       display: grid;
+      flex: 0 0 54px;
 
-      width: 66px;
-      height: 66px;
+      width: 54px;
+      height: 54px;
 
       place-items: center;
-      margin: 0 auto 19px;
 
-      font-size: 28px;
+      font-size: 23px;
 
-      background: var(--azul-claro);
+      background: var(--amarelo-claro);
       border-radius: 50%;
     }
 
-    .orientacao:nth-child(2) .orientacao-icone {
+    .informacao:nth-child(2) .informacao-icone {
+      background: var(--azul-claro);
+    }
+
+    .informacao:nth-child(3) .informacao-icone {
       background: var(--rosa-claro);
     }
 
-    .orientacao:nth-child(3) .orientacao-icone {
-      background: var(--amarelo-claro);
-    }
-
-    .orientacao h3 {
-      margin-bottom: 10px;
+    .informacao strong {
+      display: block;
+      margin-bottom: 4px;
 
       color: var(--verde-escuro);
-      font-size: 17px;
+      font-size: 14px;
     }
 
-    .orientacao p {
+    .informacao p {
       color: var(--texto-suave);
       font-size: 14px;
-      line-height: 1.7;
+      line-height: 1.45;
     }
 
-    /* =====================================
-       FORMULÁRIO
-    ====================================== */
+
+    /* AVISO */
+
+    .aviso {
+      max-width: 920px;
+      margin: 0 auto 40px;
+      padding: 19px 22px;
+
+      color: var(--texto);
+      font-size: 14px;
+      line-height: 1.65;
+      text-align: center;
+
+      background: var(--verde-claro);
+      border-radius: 16px;
+    }
+
+    .aviso strong {
+      color: var(--verde-escuro);
+    }
+
+
+    /* FORMULÁRIO */
 
     .formulario-secao {
-      padding: 45px 0 100px;
+      padding: 0 0 90px;
     }
 
     .formulario-card {
-      max-width: 1050px;
-      margin: 0 auto;
-      padding: 55px;
+      padding: 50px;
 
-      background: rgba(255, 255, 255, 0.87);
+      background: rgba(255, 255, 255, 0.90);
       border: 1px solid rgba(23, 79, 67, 0.08);
-      border-radius: 34px;
+      border-radius: 31px;
 
       box-shadow: var(--sombra);
     }
 
     .formulario-cabecalho {
-      max-width: 735px;
-      margin: 0 auto 40px;
+      max-width: 680px;
+      margin: 0 auto 37px;
 
       text-align: center;
     }
@@ -489,30 +371,30 @@
     .formulario-icone {
       display: grid;
 
-      width: 65px;
-      height: 65px;
+      width: 61px;
+      height: 61px;
 
       place-items: center;
-      margin: 0 auto 17px;
+      margin: 0 auto 15px;
 
-      font-size: 27px;
+      font-size: 26px;
 
-      background: var(--amarelo-claro);
+      background: var(--azul-claro);
       border-radius: 50%;
     }
 
     .formulario-cabecalho h2 {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
 
       color: var(--verde-escuro);
       font-family: "Playfair Display", serif;
-      font-size: clamp(34px, 4vw, 48px);
+      font-size: clamp(32px, 4vw, 45px);
       line-height: 1.1;
     }
 
     .formulario-cabecalho p {
       color: var(--texto-suave);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.7;
     }
 
@@ -534,7 +416,7 @@
 
     .campo label {
       color: var(--texto);
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
     }
 
@@ -546,7 +428,7 @@
       color: var(--texto);
       background: var(--branco);
       border: 1px solid var(--borda);
-      border-radius: 14px;
+      border-radius: 13px;
 
       outline: none;
 
@@ -557,13 +439,13 @@
 
     .campo input,
     .campo select {
-      height: 58px;
-      padding: 0 18px;
+      height: 56px;
+      padding: 0 17px;
     }
 
     .campo textarea {
-      min-height: 135px;
-      padding: 17px 18px;
+      min-height: 120px;
+      padding: 16px 17px;
 
       resize: vertical;
     }
@@ -577,18 +459,19 @@
 
     .campo-ajuda {
       color: var(--texto-suave);
-      font-size: 12px;
+      font-size: 11px;
+      line-height: 1.5;
     }
 
     .consentimento {
       grid-column: 1 / -1;
 
       display: flex;
-      gap: 12px;
       align-items: flex-start;
+      gap: 11px;
 
-      margin-top: 5px;
-      padding: 18px;
+      margin-top: 3px;
+      padding: 17px;
 
       background: var(--verde-claro);
       border-radius: 14px;
@@ -599,28 +482,28 @@
 
       width: 18px;
       height: 18px;
-      margin-top: 3px;
+      margin-top: 2px;
     }
 
     .consentimento label {
       color: var(--texto);
-      font-size: 13px;
+      font-size: 12px;
       line-height: 1.6;
     }
 
     .botao-formulario {
       display: flex;
       width: min(100%, 390px);
-      min-height: 59px;
+      min-height: 58px;
 
       align-items: center;
       justify-content: center;
-      gap: 13px;
+      gap: 12px;
 
-      margin: 31px auto 0;
+      margin: 29px auto 0;
 
       color: var(--branco);
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
 
       background: var(--verde);
@@ -629,7 +512,7 @@
 
       cursor: pointer;
 
-      box-shadow: 0 15px 34px rgba(36, 106, 90, 0.23);
+      box-shadow: 0 15px 32px rgba(36, 106, 90, 0.22);
 
       transition:
         transform 0.2s ease,
@@ -642,159 +525,81 @@
     }
 
     .privacidade {
-      margin-top: 18px;
+      margin-top: 17px;
 
       color: var(--texto-suave);
-      font-size: 12px;
+      font-size: 11px;
       text-align: center;
     }
 
-    /* =====================================
-       RODAPÉ
-    ====================================== */
+
+    /* RODAPÉ */
 
     .rodape {
-      color: var(--branco);
+      padding: 29px 0;
 
-      background:
-        linear-gradient(
-          125deg,
-          #134a3e,
-          #216657
-        );
-    }
-
-    .rodape-conteudo {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-
-      min-height: 190px;
-    }
-
-    .rodape .marca-texto strong {
-      color: var(--branco);
-    }
-
-    .rodape-texto {
-      max-width: 460px;
-      justify-self: end;
-
-      color: rgba(255, 255, 255, 0.80);
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    .rodape-final {
-      padding: 20px;
-
-      color: rgba(255, 255, 255, 0.67);
+      color: rgba(255, 255, 255, 0.78);
       font-size: 12px;
       text-align: center;
 
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      background: var(--verde-escuro);
     }
 
-    /* =====================================
-       RESPONSIVIDADE
-    ====================================== */
 
-    @media (max-width: 950px) {
+    /* RESPONSIVIDADE */
 
-      .navegacao {
-        display: none;
-      }
-
-      .hero-conteudo {
-        grid-template-columns: 1fr;
-        gap: 45px;
-      }
-
-      .hero-texto {
-        text-align: center;
-      }
-
-      .etiqueta {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .hero h1,
-      .hero-descricao {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .hero-destaques {
-        max-width: 610px;
-        margin: 0 auto;
-        text-align: left;
-      }
-
-      .orientacoes-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .orientacao {
-        min-height: auto;
-      }
-
-    }
-
-    @media (max-width: 680px) {
+    @media (max-width: 760px) {
 
       .container {
-        width: min(100% - 28px, 1160px);
+        width: min(100% - 28px, 1080px);
       }
 
       .cabecalho-conteudo {
-        min-height: 76px;
+        min-height: 74px;
       }
 
       .marca-logo {
-        width: 49px;
-        height: 49px;
+        width: 47px;
+        height: 47px;
       }
 
       .marca-texto strong {
         font-size: 17px;
       }
 
-      .botao-menu {
-        min-height: 43px;
-        padding: 0 16px;
-        font-size: 12px;
+      .marca-texto small {
+        font-size: 9px;
       }
 
-      .hero {
-        padding-top: 48px;
+      .voltar {
+        min-height: 40px;
+        padding: 0 14px;
+        font-size: 11px;
       }
 
-      .hero h1 {
-        font-size: 44px;
+      .apresentacao {
+        padding-top: 44px;
       }
 
-      .hero-descricao {
-        font-size: 16px;
+      .apresentacao h1 {
+        font-size: 43px;
       }
 
-      .hero-imagem,
-      .hero-imagem img {
-        min-height: 390px;
+      .apresentacao p {
+        font-size: 15px;
       }
 
-      .hero-selo {
-        right: 15px;
-        bottom: 15px;
-        left: 15px;
+      .informacoes-grid {
+        grid-template-columns: 1fr;
+      }
 
-        max-width: none;
+      .informacao {
+        min-height: auto;
       }
 
       .formulario-card {
-        padding: 36px 20px;
-        border-radius: 24px;
+        padding: 34px 19px;
+        border-radius: 23px;
       }
 
       .formulario-grid {
@@ -806,19 +611,16 @@
         grid-column: auto;
       }
 
-      .rodape-conteudo {
-        grid-template-columns: 1fr;
+    }
 
-        padding: 42px 0;
-        text-align: center;
+    @media (max-width: 430px) {
+
+      .marca-texto {
+        display: none;
       }
 
-      .rodape .marca {
-        justify-content: center;
-      }
-
-      .rodape-texto {
-        justify-self: center;
+      .apresentacao h1 {
+        font-size: 38px;
       }
 
     }
@@ -833,7 +635,10 @@
 
     <div class="container cabecalho-conteudo">
 
-      <a href="pequenos-viajantes.html" class="marca">
+      <a
+        href="pequenos-viajantes.html"
+        class="marca"
+      >
 
         <img
           src="WhatsApp Image 2026-07-30 at 09.34.21.jpeg"
@@ -855,189 +660,113 @@
 
       </a>
 
-      <nav class="navegacao">
-
-        <a href="index.html">
-          Início
-        </a>
-
-        <a href="pequenos-viajantes.html">
-          O projeto
-        </a>
-
-        <a href="pequenos-viajantes.html#como-funciona">
-          Como funciona
-        </a>
-
-        <a href="pequenos-viajantes.html#para-quem">
-          Para quem é
-        </a>
-
-        <a href="pequenos-viajantes.html#duvidas">
-          Dúvidas
-        </a>
-
-      </nav>
-
-      <a href="#formulario" class="botao-menu">
-        Quero inscrever
+      <a
+        href="pequenos-viajantes.html"
+        class="voltar"
+      >
+        ← Voltar ao projeto
       </a>
 
     </div>
 
   </header>
 
+
   <main>
 
-    <section class="hero">
-
-      <div class="container hero-conteudo">
-
-        <div class="hero-texto">
-
-          <div class="etiqueta">
-            ✈ Interesse e inscrição
-          </div>
-
-          <h1>
-            Uma nova experiência pode começar
-            <span>
-              por aqui.
-            </span>
-          </h1>
-
-          <p class="hero-descricao">
-            Preencha as informações abaixo para demonstrar interesse
-            em uma das próximas turmas do Pequenos Viajantes.
-            Entraremos em contato com as orientações sobre disponibilidade,
-            datas e próximos passos.
-          </p>
-
-          <div class="hero-destaques">
-
-            <div class="hero-destaque">
-
-              <div class="hero-destaque-icone">
-                💬
-              </div>
-
-              <p>
-                As informações serão utilizadas para entrarmos em contato
-                com o responsável pela criança.
-              </p>
-
-            </div>
-
-            <div class="hero-destaque">
-
-              <div class="hero-destaque-icone">
-                🌎
-              </div>
-
-              <p>
-                O preenchimento registra seu interesse, mas a vaga será
-                confirmada somente após nosso contato.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="hero-imagem">
-
-          <img
-            src="criancas-brincando.webp"
-            alt="Crianças brincando durante uma experiência infantil"
-          >
-
-          <div class="hero-selo">
-
-            <strong>
-              Pequenos Viajantes
-            </strong>
-
-            <span>
-              Encontros temáticos com experiências, interação,
-              descobertas e desenvolvimento.
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="orientacoes">
+    <section class="apresentacao">
 
       <div class="container">
 
-        <div class="titulo-secao">
+        <div class="apresentacao-conteudo">
 
-          <h2>
-            Antes de preencher
-          </h2>
+          <div class="etiqueta">
+            ✈ Inscrição
+          </div>
+
+          <h1>
+            Inscrição para o
+            <span>Pequenos Viajantes</span>
+          </h1>
 
           <p>
-            Algumas informações importantes para que o cadastro
-            aconteça de forma clara e organizada.
+            Preencha os dados do responsável e da criança.
+            Após o envio, entraremos em contato para confirmar
+            disponibilidade, turma e próximos passos.
           </p>
 
         </div>
 
-        <div class="orientacoes-grid">
+      </div>
 
-          <article class="orientacao">
+    </section>
 
-            <div class="orientacao-icone">
+
+    <section class="informacoes">
+
+      <div class="container">
+
+        <div class="informacoes-grid">
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              💰
+            </div>
+
+            <div>
+
+              <strong>
+                Investimento
+              </strong>
+
+              <p>
+                R$ 100 por criança
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
+              ⏱️
+            </div>
+
+            <div>
+
+              <strong>
+                Duração
+              </strong>
+
+              <p>
+                3 horas de experiência
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="informacao">
+
+            <div class="informacao-icone">
               👧
             </div>
 
-            <h3>
-              Momento destinado às crianças
-            </h3>
+            <div>
 
-            <p>
-              Os encontros são experiências preparadas para as crianças.
-              Os responsáveis realizam a entrega e a retirada.
-            </p>
+              <strong>
+                Participação
+              </strong>
 
-          </article>
+              <p>
+                Momento destinado às crianças
+              </p>
 
-          <article class="orientacao">
-
-            <div class="orientacao-icone">
-              👥
             </div>
-
-            <h3>
-              Turmas organizadas
-            </h3>
-
-            <p>
-              As turmas são formadas considerando idade, disponibilidade
-              e características de cada proposta.
-            </p>
-
-          </article>
-
-          <article class="orientacao">
-
-            <div class="orientacao-icone">
-              💌
-            </div>
-
-            <h3>
-              Confirmação por contato
-            </h3>
-
-            <p>
-              Após o preenchimento, entraremos em contato para informar
-              sobre turma, data, horário, local e confirmação da vaga.
-            </p>
 
           </article>
 
@@ -1046,6 +775,20 @@
       </div>
 
     </section>
+
+
+    <div class="container">
+
+      <div class="aviso">
+
+        <strong>Importante:</strong>
+        o preenchimento deste formulário registra o interesse,
+        mas a vaga será confirmada somente após nosso contato.
+
+      </div>
+
+    </div>
+
 
     <section
       id="formulario"
@@ -1063,20 +806,21 @@
             </div>
 
             <h2>
-              Quero inscrever uma criança
+              Dados para inscrição
             </h2>
 
             <p>
-              Preencha os dados do responsável e da criança.
-              Ao finalizar, uma mensagem será preparada para envio
-              pelo WhatsApp.
+              Informe os dados abaixo para que possamos entrar
+              em contato com o responsável.
             </p>
 
           </div>
 
+
           <form id="formularioPequenosViajantes">
 
             <div class="formulario-grid">
+
 
               <div class="campo">
 
@@ -1087,12 +831,12 @@
                 <input
                   type="text"
                   id="responsavel"
-                  name="responsavel"
                   placeholder="Digite o nome do responsável"
                   required
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1103,12 +847,12 @@
                 <input
                   type="text"
                   id="crianca"
-                  name="crianca"
                   placeholder="Digite o nome da criança"
                   required
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1119,7 +863,6 @@
                 <input
                   type="number"
                   id="idade"
-                  name="idade"
                   min="1"
                   max="15"
                   placeholder="Exemplo: 4"
@@ -1127,6 +870,7 @@
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1137,10 +881,10 @@
                 <input
                   type="date"
                   id="nascimento"
-                  name="nascimento"
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1151,12 +895,12 @@
                 <input
                   type="tel"
                   id="whatsapp"
-                  name="whatsapp"
                   placeholder="(75) 99999-9999"
                   required
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1167,12 +911,12 @@
                 <input
                   type="email"
                   id="email"
-                  name="email"
                   placeholder="seuemail@exemplo.com"
                   required
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1183,12 +927,12 @@
                 <input
                   type="text"
                   id="cidade"
-                  name="cidade"
                   placeholder="Digite sua cidade"
                   required
                 >
 
               </div>
+
 
               <div class="campo">
 
@@ -1198,12 +942,11 @@
 
                 <select
                   id="turno"
-                  name="turno"
                   required
                 >
 
                   <option value="">
-                    Selecione um período
+                    Selecione
                   </option>
 
                   <option value="Manhã">
@@ -1222,42 +965,25 @@
 
               </div>
 
-              <div class="campo campo-largo">
-
-                <label for="interesse">
-                  O que despertou seu interesse no projeto?
-                </label>
-
-                <textarea
-                  id="interesse"
-                  name="interesse"
-                  placeholder="Conte brevemente por que gostaria que a criança participasse do Pequenos Viajantes."
-                ></textarea>
-
-                <span class="campo-ajuda">
-                  Esta pergunta é opcional.
-                </span>
-
-              </div>
 
               <div class="campo campo-largo">
 
                 <label for="observacoes">
-                  Existe alguma informação importante que devemos conhecer?
+                  Alguma observação importante?
                 </label>
 
                 <textarea
                   id="observacoes"
-                  name="observacoes"
-                  placeholder="Você pode deixar observações sobre adaptação, comunicação, rotina ou outras informações relevantes."
+                  placeholder="Informe apenas o que considerar necessário para este primeiro contato."
                 ></textarea>
 
                 <span class="campo-ajuda">
-                  Evite colocar informações médicas detalhadas nesta etapa.
-                  Caso necessário, conversaremos de forma reservada posteriormente.
+                  Campo opcional. Informações mais detalhadas poderão
+                  ser conversadas posteriormente de forma reservada.
                 </span>
 
               </div>
+
 
               <div class="consentimento">
 
@@ -1268,26 +994,28 @@
                 >
 
                 <label for="autorizacao">
-                  Estou ciente de que este cadastro representa uma manifestação
-                  de interesse e não confirma automaticamente a vaga. Autorizo
-                  o contato da equipe do Pequenos Viajantes pelos dados informados.
+                  Estou ciente de que este cadastro não confirma
+                  automaticamente a vaga e autorizo o contato pelos
+                  dados informados.
                 </label>
 
               </div>
 
             </div>
 
+
             <button
               type="submit"
               class="botao-formulario"
             >
-              Enviar interesse
+              Enviar dados
               <span>→</span>
             </button>
 
+
             <p class="privacidade">
-              🔒 Os dados informados serão utilizados apenas para o contato
-              relacionado ao projeto Pequenos Viajantes.
+              🔒 Os dados serão utilizados somente para o contato
+              relacionado ao Pequenos Viajantes.
             </p>
 
           </form>
@@ -1300,45 +1028,13 @@
 
   </main>
 
+
   <footer class="rodape">
 
-    <div class="container rodape-conteudo">
-
-      <a href="pequenos-viajantes.html" class="marca">
-
-        <img
-          src="WhatsApp Image 2026-07-30 at 09.34.21.jpeg"
-          alt="Logo Pequenos Viajantes"
-          class="marca-logo"
-        >
-
-        <div class="marca-texto">
-
-          <strong>
-            Pequenos Viajantes
-          </strong>
-
-          <small>
-            Projeto
-          </small>
-
-        </div>
-
-      </a>
-
-      <p class="rodape-texto">
-        Experiências planejadas para estimular comunicação,
-        interação, autonomia e criatividade de forma leve,
-        acolhedora e significativa.
-      </p>
-
-    </div>
-
-    <div class="rodape-final">
-      © 2026 Pequenos Viajantes. Todos os direitos reservados.
-    </div>
+    © 2026 Pequenos Viajantes • Todos os direitos reservados.
 
   </footer>
+
 
   <script>
 
@@ -1373,16 +1069,13 @@
       const turno =
         document.getElementById("turno").value;
 
-      const interesse =
-        document.getElementById("interesse").value.trim();
-
       const observacoes =
         document.getElementById("observacoes").value.trim();
 
       const numeroDestino = "5575981405190";
 
       let mensagem =
-`Olá! Gostaria de registrar o interesse de uma criança no projeto Pequenos Viajantes.
+`Olá! Gostaria de registrar o interesse de uma criança no Pequenos Viajantes.
 
 Responsável: ${responsavel}
 Criança: ${crianca}
@@ -1391,16 +1084,9 @@ Data de nascimento: ${nascimento || "Não informada"}
 WhatsApp: ${whatsapp}
 E-mail: ${email}
 Cidade: ${cidade}
-Melhor período: ${turno}`;
-
-      if (interesse !== "") {
-
-        mensagem += `
-
-O que despertou o interesse:
-${interesse}`;
-
-      }
+Melhor período: ${turno}
+Investimento informado: R$ 100 por criança
+Duração informada: 3 horas`;
 
       if (observacoes !== "") {
 
@@ -1413,7 +1099,7 @@ ${observacoes}`;
 
       mensagem += `
 
-Estou ciente de que o preenchimento não confirma automaticamente a vaga.`;
+Estou ciente de que o cadastro não confirma automaticamente a vaga.`;
 
       const linkWhatsApp =
         `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensagem)}`;
